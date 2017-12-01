@@ -1,0 +1,1509 @@
+2017-11-17 10:16:35.862 - debug: Format Public API Config
+2017-11-17 10:16:35.988 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-11-17 10:16:35.864 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-11-17 10:16:35.864 - debug: parseField GET:/favorites
+2017-11-17 10:16:35.864 - debug: parseField GET:/workgroups
+2017-11-17 10:16:35.888 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-11-17 10:16:36.138 - error: Loading Remote api passport error. Try it later
+2017-11-17 10:16:36.138 - error:  FetchError: request to http://192.168.0.203:8081/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8081
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-11-17 10:16:36.139 - error: Loading Remote api resource error. Try it later
+2017-11-17 10:16:36.139 - error:  FetchError: request to http://192.168.0.203:8082/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8082
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-11-17 10:16:36.142 - error: Loading Remote api VCGpassport error. Try it later
+2017-11-17 10:16:36.142 - error:  FetchError: request to http://dev.passportservice.vcg.com/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:80
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-11-17 10:16:38.983 - debug:  Router get /message/sendsms
+2017-11-17 10:16:38.984 - debug:  Router get /message/check
+2017-11-17 10:16:38.984 - debug:  Router get /damSearcher/searchDam
+2017-11-17 10:16:38.984 - debug:  Router get /damSearcher/searchDamFolder
+2017-11-17 10:16:38.984 - debug:  Router get /folders
+2017-11-17 10:16:38.984 - debug:  Router post /folders/:id/sub_folders
+2017-11-17 10:16:38.984 - debug:  Router get /folderitems/v2/:folderId
+2017-11-17 10:16:38.985 - debug:  Router post /favorites
+2017-11-17 10:16:38.985 - debug:  Router get /favorites
+2017-11-17 10:16:38.985 - debug:  Router delete /favorites
+2017-11-17 10:16:38.985 - debug:  Router post /assets/downloadurl
+2017-11-17 10:16:38.985 - debug:  Router post /oauth2/access_token
+2017-11-17 10:16:38.986 - debug:  Router post /oauth2/refresh_token
+2017-11-17 10:16:38.986 - debug:  Router post /user
+2017-11-17 10:16:38.986 - debug:  Router post /assets/upload
+2017-11-17 10:16:38.986 - debug:  Router get /workgorups
+2017-11-17 10:16:38.986 - debug:  Router post /users
+2017-11-17 10:16:38.986 - debug:  Router post /userFolderPermissionList
+2017-11-17 10:16:38.986 - debug:  Router post /assets/downloadurl
+2017-11-17 10:16:38.986 - debug:  Router post /download/verify
+2017-11-17 10:16:38.986 - debug:  Router get /workgroups
+2017-11-17 10:16:38.986 - debug:  Router get /assets/:id
+2017-11-17 10:16:38.986 - debug:  Router get /assets/batch
+2017-11-17 10:16:38.986 - debug:  Router get /search
+2017-11-17 10:16:38.986 - debug:  Router get /profile
+2017-11-17 10:16:38.987 - debug:  Router get /download/proxy/:file
+2017-11-17 10:17:19.867 - info: SessionID 3TH0Z5MXKKcRwLQ5XF9DQoIjPo03aTft    3TH0Z5MXKKcRwLQ5XF9DQoIjPo03aTft
+2017-11-17 10:17:19.872 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:17:26.495 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:17:26.505 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:17:36.581 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:17:36.582 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:19:26.505 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:19:26.505 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:19:36.585 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:19:36.595 - info: set rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:19:36.595 - info: del rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:05.946 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:05.947 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:07.118 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:07.119 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:07.334 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-11-17 10:21:07.335 - info: begin init user
+2017-11-17 10:21:07.344 - info: init user  error : 
+2017-11-17 10:21:34.965 - debug: Format Public API Config
+2017-11-17 10:21:35.069 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-11-17 10:21:34.966 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-11-17 10:21:34.966 - debug: parseField GET:/favorites
+2017-11-17 10:21:34.967 - debug: parseField GET:/workgroups
+2017-11-17 10:21:34.979 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-11-17 10:21:35.314 - verbose: ensureLogin
+2017-11-17 10:21:35.314 - verbose: handleProxy
+2017-11-17 10:21:35.315 - info: Proxy GET:/deleteuser/deleteByUserId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.315 - verbose: proxyReject
+2017-11-17 10:21:35.315 - verbose: ensureLogin
+2017-11-17 10:21:35.315 - verbose: handleProxy
+2017-11-17 10:21:35.315 - info: Proxy GET:/health To dev.passportservice.vcg.com
+2017-11-17 10:21:35.315 - verbose: handleProxy
+2017-11-17 10:21:35.316 - info: Proxy GET:/message/check To dev.passportservice.vcg.com
+2017-11-17 10:21:35.316 - verbose: ensureLogin
+2017-11-17 10:21:35.316 - verbose: handleProxy
+2017-11-17 10:21:35.316 - info: Proxy POST:/message/check To dev.passportservice.vcg.com
+2017-11-17 10:21:35.316 - verbose: proxyReject
+2017-11-17 10:21:35.317 - verbose: ensureLogin
+2017-11-17 10:21:35.317 - verbose: handleProxy
+2017-11-17 10:21:35.317 - info: Proxy GET:/message/sendMail To dev.passportservice.vcg.com
+2017-11-17 10:21:35.317 - verbose: ensureLogin
+2017-11-17 10:21:35.317 - verbose: handleProxy
+2017-11-17 10:21:35.317 - info: Proxy POST:/message/sendMail To dev.passportservice.vcg.com
+2017-11-17 10:21:35.317 - verbose: handleProxy
+2017-11-17 10:21:35.317 - info: Proxy GET:/message/sendsms To dev.passportservice.vcg.com
+2017-11-17 10:21:35.317 - verbose: ensureLogin
+2017-11-17 10:21:35.317 - verbose: handleProxy
+2017-11-17 10:21:35.318 - info: Proxy POST:/message/sendsms To dev.passportservice.vcg.com
+2017-11-17 10:21:35.318 - verbose: ensureLogin
+2017-11-17 10:21:35.318 - verbose: handleProxy
+2017-11-17 10:21:35.318 - info: Proxy GET:/user/emailIsExist To dev.passportservice.vcg.com
+2017-11-17 10:21:35.318 - verbose: ensureLogin
+2017-11-17 10:21:35.318 - verbose: handleProxy
+2017-11-17 10:21:35.318 - info: Proxy GET:/user/getByOutId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.319 - verbose: ensureLogin
+2017-11-17 10:21:35.319 - verbose: handleProxy
+2017-11-17 10:21:35.319 - info: Proxy GET:/user/getByUserId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.319 - verbose: ensureLogin
+2017-11-17 10:21:35.319 - verbose: handleProxy
+2017-11-17 10:21:35.319 - info: Proxy POST:/user/getByUserIds To dev.passportservice.vcg.com
+2017-11-17 10:21:35.319 - verbose: ensureLogin
+2017-11-17 10:21:35.319 - verbose: handleProxy
+2017-11-17 10:21:35.319 - info: Proxy GET:/user/getByUserName To dev.passportservice.vcg.com
+2017-11-17 10:21:35.319 - verbose: ensureLogin
+2017-11-17 10:21:35.319 - verbose: handleProxy
+2017-11-17 10:21:35.319 - info: Proxy GET:/user/getThirdPartyByUserId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.320 - verbose: ensureLogin
+2017-11-17 10:21:35.320 - verbose: handleProxy
+2017-11-17 10:21:35.320 - info: Proxy GET:/user/getUserByTGT To dev.passportservice.vcg.com
+2017-11-17 10:21:35.320 - verbose: ensureLogin
+2017-11-17 10:21:35.320 - verbose: handleProxy
+2017-11-17 10:21:35.320 - info: Proxy GET:/user/getUsersByAccountId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.320 - verbose: ensureLogin
+2017-11-17 10:21:35.320 - verbose: handleProxy
+2017-11-17 10:21:35.320 - info: Proxy GET:/user/getUsersByRealName To dev.passportservice.vcg.com
+2017-11-17 10:21:35.320 - verbose: ensureLogin
+2017-11-17 10:21:35.320 - verbose: handleProxy
+2017-11-17 10:21:35.320 - info: Proxy GET:/user/mobileIsExist To dev.passportservice.vcg.com
+2017-11-17 10:21:35.320 - verbose: ensureLogin
+2017-11-17 10:21:35.320 - verbose: handleProxy
+2017-11-17 10:21:35.320 - info: Proxy POST:/user/modifyPwd To dev.passportservice.vcg.com
+2017-11-17 10:21:35.321 - verbose: handleProxy
+2017-11-17 10:21:35.321 - info: Proxy POST:/user/register To dev.passportservice.vcg.com
+2017-11-17 10:21:35.321 - verbose: proxyReject
+2017-11-17 10:21:35.322 - verbose: ensureLogin
+2017-11-17 10:21:35.322 - verbose: handleProxy
+2017-11-17 10:21:35.322 - info: Proxy POST:/user/resetPwd To dev.passportservice.vcg.com
+2017-11-17 10:21:35.322 - verbose: ensureLogin
+2017-11-17 10:21:35.322 - verbose: handleProxy
+2017-11-17 10:21:35.322 - info: Proxy POST:/user/thirdPartyMeger To dev.passportservice.vcg.com
+2017-11-17 10:21:35.322 - verbose: proxyReject
+2017-11-17 10:21:35.322 - verbose: ensureLogin
+2017-11-17 10:21:35.322 - verbose: handleProxy
+2017-11-17 10:21:35.322 - info: Proxy POST:/user/update To dev.passportservice.vcg.com
+2017-11-17 10:21:35.322 - verbose: ensureLogin
+2017-11-17 10:21:35.322 - verbose: handleProxy
+2017-11-17 10:21:35.322 - info: Proxy POST:/user/updateUser To dev.passportservice.vcg.com
+2017-11-17 10:21:35.322 - verbose: ensureLogin
+2017-11-17 10:21:35.322 - verbose: handleProxy
+2017-11-17 10:21:35.323 - info: Proxy GET:/user/userIsExist To dev.passportservice.vcg.com
+2017-11-17 10:21:35.323 - verbose: ensureLogin
+2017-11-17 10:21:35.323 - verbose: handleProxy
+2017-11-17 10:21:35.323 - info: Proxy POST:/user/userMeger To dev.passportservice.vcg.com
+2017-11-17 10:21:35.323 - verbose: ensureLogin
+2017-11-17 10:21:35.323 - verbose: handleProxy
+2017-11-17 10:21:35.323 - info: Proxy GET:/user/userNameIsExist To dev.passportservice.vcg.com
+2017-11-17 10:21:35.323 - verbose: ensureLogin
+2017-11-17 10:21:35.323 - verbose: handleProxy
+2017-11-17 10:21:35.324 - info: Proxy POST:/user/v2/acceptAgreement To dev.passportservice.vcg.com
+2017-11-17 10:21:35.324 - verbose: ensureLogin
+2017-11-17 10:21:35.324 - verbose: handleProxy
+2017-11-17 10:21:35.324 - info: Proxy GET:/user/v2/clickPurchaseBtn To dev.passportservice.vcg.com
+2017-11-17 10:21:35.324 - verbose: ensureLogin
+2017-11-17 10:21:35.324 - verbose: handleProxy
+2017-11-17 10:21:35.325 - info: Proxy GET:/user/v2/getByUserId To dev.passportservice.vcg.com
+2017-11-17 10:21:35.325 - verbose: ensureLogin
+2017-11-17 10:21:35.325 - verbose: handleProxy
+2017-11-17 10:21:35.325 - info: Proxy POST:/user/v2/list To dev.passportservice.vcg.com
+2017-11-17 10:21:35.325 - verbose: ensureLogin
+2017-11-17 10:21:35.326 - verbose: handleProxy
+2017-11-17 10:21:35.326 - info: Proxy POST:/user/v2/register To dev.passportservice.vcg.com
+2017-11-17 10:21:35.326 - verbose: ensureLogin
+2017-11-17 10:21:35.326 - verbose: handleProxy
+2017-11-17 10:21:35.326 - info: Proxy POST:/user/v2/setUserLogined To dev.passportservice.vcg.com
+2017-11-17 10:21:35.326 - verbose: ensureLogin
+2017-11-17 10:21:35.326 - verbose: handleProxy
+2017-11-17 10:21:35.326 - info: Proxy POST:/user/v2/update To dev.passportservice.vcg.com
+2017-11-17 10:21:35.326 - verbose: ensureLogin
+2017-11-17 10:21:35.326 - verbose: handleProxy
+2017-11-17 10:21:35.327 - info: Proxy POST:/vcglogin/access To dev.passportservice.vcg.com
+2017-11-17 10:21:35.327 - verbose: ensureLogin
+2017-11-17 10:21:35.327 - verbose: handleProxy
+2017-11-17 10:21:35.327 - info: Proxy POST:/vcglogin/login To dev.passportservice.vcg.com
+2017-11-17 10:21:35.327 - verbose: ensureLogin
+2017-11-17 10:21:35.327 - verbose: handleProxy
+2017-11-17 10:21:35.327 - info: Proxy GET:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.327 - verbose: ensureLogin
+2017-11-17 10:21:35.328 - verbose: handleProxy
+2017-11-17 10:21:35.328 - info: Proxy HEAD:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.328 - verbose: ensureLogin
+2017-11-17 10:21:35.328 - verbose: handleProxy
+2017-11-17 10:21:35.328 - info: Proxy POST:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.328 - verbose: ensureLogin
+2017-11-17 10:21:35.329 - verbose: handleProxy
+2017-11-17 10:21:35.329 - info: Proxy PUT:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.329 - verbose: ensureLogin
+2017-11-17 10:21:35.329 - verbose: handleProxy
+2017-11-17 10:21:35.329 - info: Proxy DELETE:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.329 - verbose: ensureLogin
+2017-11-17 10:21:35.330 - verbose: handleProxy
+2017-11-17 10:21:35.330 - info: Proxy OPTIONS:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.330 - verbose: ensureLogin
+2017-11-17 10:21:35.331 - verbose: handleProxy
+2017-11-17 10:21:35.331 - info: Proxy PATCH:/vcglogin/logout To dev.passportservice.vcg.com
+2017-11-17 10:21:35.331 - verbose: ensureLogin
+2017-11-17 10:21:35.331 - verbose: handleProxy
+2017-11-17 10:21:35.331 - info: Proxy GET:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.331 - verbose: ensureLogin
+2017-11-17 10:21:35.331 - verbose: handleProxy
+2017-11-17 10:21:35.331 - info: Proxy HEAD:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.331 - verbose: ensureLogin
+2017-11-17 10:21:35.331 - verbose: handleProxy
+2017-11-17 10:21:35.332 - info: Proxy POST:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.332 - verbose: ensureLogin
+2017-11-17 10:21:35.332 - verbose: handleProxy
+2017-11-17 10:21:35.332 - info: Proxy PUT:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.332 - verbose: ensureLogin
+2017-11-17 10:21:35.332 - verbose: handleProxy
+2017-11-17 10:21:35.332 - info: Proxy DELETE:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.332 - verbose: ensureLogin
+2017-11-17 10:21:35.332 - verbose: handleProxy
+2017-11-17 10:21:35.332 - info: Proxy OPTIONS:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.332 - verbose: ensureLogin
+2017-11-17 10:21:35.332 - verbose: handleProxy
+2017-11-17 10:21:35.333 - info: Proxy PATCH:/vcglogin/outLogin To dev.passportservice.vcg.com
+2017-11-17 10:21:35.345 - verbose: ensureLogin
+2017-11-17 10:21:35.345 - verbose: handleProxy
+2017-11-17 10:21:35.345 - info: Proxy GET:/apiWhiteList/isHaveIp To 192.168.0.203:8081
+2017-11-17 10:21:35.345 - verbose: ensureLogin
+2017-11-17 10:21:35.345 - verbose: handleProxy
+2017-11-17 10:21:35.345 - info: Proxy POST:/apiWhiteList/isHaveIp To 192.168.0.203:8081
+2017-11-17 10:21:35.346 - verbose: ensureLogin
+2017-11-17 10:21:35.346 - verbose: handleProxy
+2017-11-17 10:21:35.346 - info: Proxy GET:/apiWhiteList/listByIp To 192.168.0.203:8081
+2017-11-17 10:21:35.346 - verbose: ensureLogin
+2017-11-17 10:21:35.346 - verbose: handleProxy
+2017-11-17 10:21:35.346 - info: Proxy POST:/apiWhiteList/listByIp To 192.168.0.203:8081
+2017-11-17 10:21:35.347 - verbose: ensureLogin
+2017-11-17 10:21:35.347 - verbose: handleProxy
+2017-11-17 10:21:35.347 - info: Proxy GET:/customer/view To 192.168.0.203:8081
+2017-11-17 10:21:35.347 - verbose: proxyReject
+2017-11-17 10:21:35.347 - verbose: ensureLogin
+2017-11-17 10:21:35.347 - verbose: handleProxy
+2017-11-17 10:21:35.348 - info: Proxy GET:/health To 192.168.0.203:8081
+2017-11-17 10:21:35.348 - verbose: handleProxy
+2017-11-17 10:21:35.348 - info: Proxy GET:/message/check To 192.168.0.203:8081
+2017-11-17 10:21:35.348 - verbose: ensureLogin
+2017-11-17 10:21:35.349 - verbose: handleProxy
+2017-11-17 10:21:35.349 - info: Proxy POST:/message/sendInvitationCodeSms To 192.168.0.203:8081
+2017-11-17 10:21:35.349 - verbose: proxyReject
+2017-11-17 10:21:35.349 - verbose: ensureLogin
+2017-11-17 10:21:35.349 - verbose: handleProxy
+2017-11-17 10:21:35.350 - info: Proxy GET:/message/sendMail To 192.168.0.203:8081
+2017-11-17 10:21:35.350 - verbose: proxyReject
+2017-11-17 10:21:35.351 - verbose: ensureLogin
+2017-11-17 10:21:35.352 - verbose: handleProxy
+2017-11-17 10:21:35.352 - info: Proxy POST:/message/sendNoticeMail To 192.168.0.203:8081
+2017-11-17 10:21:35.352 - verbose: proxyReject
+2017-11-17 10:21:35.352 - verbose: ensureLogin
+2017-11-17 10:21:35.352 - verbose: handleProxy
+2017-11-17 10:21:35.352 - info: Proxy POST:/message/sendNoticeSms To 192.168.0.203:8081
+2017-11-17 10:21:35.352 - verbose: handleProxy
+2017-11-17 10:21:35.353 - info: Proxy GET:/message/sendsms To 192.168.0.203:8081
+2017-11-17 10:21:35.353 - verbose: handleProxy
+2017-11-17 10:21:35.353 - info: Proxy GET:/message/sendsmsForExistMobile To 192.168.0.203:8081
+2017-11-17 10:21:35.353 - verbose: ensureLogin
+2017-11-17 10:21:35.353 - verbose: handleProxy
+2017-11-17 10:21:35.353 - info: Proxy GET:/oauth/view To 192.168.0.203:8081
+2017-11-17 10:21:35.353 - verbose: ensureLogin
+2017-11-17 10:21:35.354 - verbose: apiAuth
+2017-11-17 10:21:35.354 - verbose: handleProxy
+2017-11-17 10:21:35.354 - info: Proxy GET:/permission/list To 192.168.0.203:8081
+2017-11-17 10:21:35.354 - verbose: ensureLogin
+2017-11-17 10:21:35.354 - verbose: handleProxy
+2017-11-17 10:21:35.354 - info: Proxy GET:/permission/rolePermission To 192.168.0.203:8081
+2017-11-17 10:21:35.354 - verbose: ensureLogin
+2017-11-17 10:21:35.355 - verbose: handleProxy
+2017-11-17 10:21:35.355 - info: Proxy GET:/permission/userPermission To 192.168.0.203:8081
+2017-11-17 10:21:35.355 - verbose: ensureLogin
+2017-11-17 10:21:35.355 - verbose: handleProxy
+2017-11-17 10:21:35.355 - info: Proxy GET:/permission/view To 192.168.0.203:8081
+2017-11-17 10:21:35.355 - verbose: ensureLogin
+2017-11-17 10:21:35.355 - verbose: handleProxy
+2017-11-17 10:21:35.355 - info: Proxy GET:/permission/viewByCode To 192.168.0.203:8081
+2017-11-17 10:21:35.356 - verbose: proxyReject
+2017-11-17 10:21:35.356 - verbose: ensureLogin
+2017-11-17 10:21:35.356 - verbose: handleProxy
+2017-11-17 10:21:35.356 - info: Proxy POST:/resevt/folderadd To 192.168.0.203:8081
+2017-11-17 10:21:35.356 - verbose: proxyReject
+2017-11-17 10:21:35.356 - verbose: ensureLogin
+2017-11-17 10:21:35.356 - verbose: handleProxy
+2017-11-17 10:21:35.356 - info: Proxy POST:/resevt/folderdelete To 192.168.0.203:8081
+2017-11-17 10:21:35.356 - verbose: ensureLogin
+2017-11-17 10:21:35.356 - verbose: handleProxy
+2017-11-17 10:21:35.356 - info: Proxy POST:/role/create To 192.168.0.203:8081
+2017-11-17 10:21:35.356 - verbose: ensureLogin
+2017-11-17 10:21:35.357 - verbose: handleProxy
+2017-11-17 10:21:35.357 - info: Proxy GET:/role/initRoles To 192.168.0.203:8081
+2017-11-17 10:21:35.357 - verbose: proxyReject
+2017-11-17 10:21:35.357 - verbose: ensureLogin
+2017-11-17 10:21:35.357 - verbose: handleProxy
+2017-11-17 10:21:35.357 - info: Proxy GET:/role/list To 192.168.0.203:8081
+2017-11-17 10:21:35.357 - verbose: ensureLogin
+2017-11-17 10:21:35.357 - verbose: handleProxy
+2017-11-17 10:21:35.357 - info: Proxy POST:/role/update To 192.168.0.203:8081
+2017-11-17 10:21:35.357 - verbose: ensureLogin
+2017-11-17 10:21:35.357 - verbose: handleProxy
+2017-11-17 10:21:35.357 - info: Proxy GET:/role/:id To 192.168.0.203:8081
+2017-11-17 10:21:35.358 - verbose: ensureLogin
+2017-11-17 10:21:35.358 - verbose: apiAuth
+2017-11-17 10:21:35.358 - verbose: handleProxy
+2017-11-17 10:21:35.358 - info: Proxy GET:/rolePermission/list To 192.168.0.203:8081
+2017-11-17 10:21:35.358 - verbose: ensureLogin
+2017-11-17 10:21:35.358 - verbose: apiAuth
+2017-11-17 10:21:35.359 - verbose: handleProxy
+2017-11-17 10:21:35.359 - info: Proxy GET:/rolePermission/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.359 - verbose: ensureLogin
+2017-11-17 10:21:35.359 - verbose: handleProxy
+2017-11-17 10:21:35.359 - info: Proxy POST:/sysNotice/create To 192.168.0.203:8081
+2017-11-17 10:21:35.359 - verbose: ensureLogin
+2017-11-17 10:21:35.359 - verbose: handleProxy
+2017-11-17 10:21:35.360 - info: Proxy POST:/sysNotice/delete To 192.168.0.203:8081
+2017-11-17 10:21:35.360 - verbose: ensureLogin
+2017-11-17 10:21:35.360 - verbose: handleProxy
+2017-11-17 10:21:35.360 - info: Proxy GET:/sysNotice/list To 192.168.0.203:8081
+2017-11-17 10:21:35.360 - verbose: ensureLogin
+2017-11-17 10:21:35.360 - verbose: handleProxy
+2017-11-17 10:21:35.360 - info: Proxy POST:/sysNotice/list To 192.168.0.203:8081
+2017-11-17 10:21:35.365 - verbose: ensureLogin
+2017-11-17 10:21:35.365 - verbose: handleProxy
+2017-11-17 10:21:35.365 - info: Proxy GET:/sysNotice/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.365 - verbose: ensureLogin
+2017-11-17 10:21:35.365 - verbose: handleProxy
+2017-11-17 10:21:35.366 - info: Proxy POST:/sysNotice/update To 192.168.0.203:8081
+2017-11-17 10:21:35.366 - verbose: ensureLogin
+2017-11-17 10:21:35.366 - verbose: handleProxy
+2017-11-17 10:21:35.366 - info: Proxy GET:/sysNotice/view To 192.168.0.203:8081
+2017-11-17 10:21:35.367 - verbose: ensureLogin
+2017-11-17 10:21:35.367 - verbose: handleProxy
+2017-11-17 10:21:35.367 - info: Proxy POST:/sysNoticeUser/create To 192.168.0.203:8081
+2017-11-17 10:21:35.367 - verbose: ensureLogin
+2017-11-17 10:21:35.367 - verbose: handleProxy
+2017-11-17 10:21:35.368 - info: Proxy POST:/sysNoticeUser/delete To 192.168.0.203:8081
+2017-11-17 10:21:35.368 - verbose: ensureLogin
+2017-11-17 10:21:35.368 - verbose: handleProxy
+2017-11-17 10:21:35.368 - info: Proxy GET:/sysNoticeUser/list To 192.168.0.203:8081
+2017-11-17 10:21:35.368 - verbose: ensureLogin
+2017-11-17 10:21:35.368 - verbose: handleProxy
+2017-11-17 10:21:35.368 - info: Proxy POST:/sysNoticeUser/list To 192.168.0.203:8081
+2017-11-17 10:21:35.368 - verbose: ensureLogin
+2017-11-17 10:21:35.369 - verbose: handleProxy
+2017-11-17 10:21:35.369 - info: Proxy GET:/sysNoticeUser/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.369 - verbose: ensureLogin
+2017-11-17 10:21:35.369 - verbose: handleProxy
+2017-11-17 10:21:35.370 - info: Proxy POST:/sysNoticeUser/update To 192.168.0.203:8081
+2017-11-17 10:21:35.370 - verbose: ensureLogin
+2017-11-17 10:21:35.370 - verbose: handleProxy
+2017-11-17 10:21:35.370 - info: Proxy GET:/sysNoticeUser/view To 192.168.0.203:8081
+2017-11-17 10:21:35.371 - verbose: ensureLogin
+2017-11-17 10:21:35.371 - verbose: customIdMid
+2017-11-17 10:21:35.372 - verbose: handleProxy
+2017-11-17 10:21:35.372 - info: Proxy GET:/user/allUserList To 192.168.0.203:8081
+2017-11-17 10:21:35.373 - verbose: ensureLogin
+2017-11-17 10:21:35.373 - verbose: handleProxy
+2017-11-17 10:21:35.373 - info: Proxy GET:/user/auth To 192.168.0.203:8081
+2017-11-17 10:21:35.373 - verbose: ensureLogin
+2017-11-17 10:21:35.374 - verbose: apiAuth
+2017-11-17 10:21:35.374 - verbose: handleProxy
+2017-11-17 10:21:35.375 - info: Proxy POST:/user/create To 192.168.0.203:8081
+2017-11-17 10:21:35.375 - verbose: ensureLogin
+2017-11-17 10:21:35.375 - verbose: handleProxy
+2017-11-17 10:21:35.376 - info: Proxy GET:/user/customerUserList To 192.168.0.203:8081
+2017-11-17 10:21:35.376 - verbose: handleProxy
+2017-11-17 10:21:35.376 - info: Proxy POST:/user/findPwd To 192.168.0.203:8081
+2017-11-17 10:21:35.377 - verbose: ensureLogin
+2017-11-17 10:21:35.377 - verbose: handleProxy
+2017-11-17 10:21:35.377 - info: Proxy GET:/user/folderauth To 192.168.0.203:8081
+2017-11-17 10:21:35.377 - verbose: ensureLogin
+2017-11-17 10:21:35.377 - verbose: handleProxy
+2017-11-17 10:21:35.377 - info: Proxy GET:/user/getUserByTGT To 192.168.0.203:8081
+2017-11-17 10:21:35.377 - verbose: ensureLogin
+2017-11-17 10:21:35.377 - verbose: handleProxy
+2017-11-17 10:21:35.378 - info: Proxy GET:/user/getUserManageFolders To 192.168.0.203:8081
+2017-11-17 10:21:35.380 - verbose: ensureLogin
+2017-11-17 10:21:35.380 - verbose: handleProxy
+2017-11-17 10:21:35.380 - info: Proxy POST:/user/get_userlist To 192.168.0.203:8081
+2017-11-17 10:21:35.380 - verbose: ensureLogin
+2017-11-17 10:21:35.380 - verbose: handleProxy
+2017-11-17 10:21:35.380 - info: Proxy GET:/user/isVcgLogin To 192.168.0.203:8081
+2017-11-17 10:21:35.380 - verbose: proxyReject
+2017-11-17 10:21:35.381 - verbose: ensureLogin
+2017-11-17 10:21:35.381 - verbose: handleProxy
+2017-11-17 10:21:35.381 - info: Proxy POST:/user/join_workgroup To 192.168.0.203:8081
+2017-11-17 10:21:35.381 - verbose: proxyReject
+2017-11-17 10:21:35.381 - verbose: ensureLogin
+2017-11-17 10:21:35.381 - verbose: handleProxy
+2017-11-17 10:21:35.381 - info: Proxy POST:/user/login To 192.168.0.203:8081
+2017-11-17 10:21:35.381 - verbose: proxyReject
+2017-11-17 10:21:35.381 - verbose: ensureLogin
+2017-11-17 10:21:35.382 - verbose: handleProxy
+2017-11-17 10:21:35.382 - info: Proxy GET:/user/logout To 192.168.0.203:8081
+2017-11-17 10:21:35.382 - verbose: ensureLogin
+2017-11-17 10:21:35.382 - verbose: handleProxy
+2017-11-17 10:21:35.382 - info: Proxy GET:/user/modifyPwd To 192.168.0.203:8081
+2017-11-17 10:21:35.382 - verbose: proxyReject
+2017-11-17 10:21:35.382 - verbose: ensureLogin
+2017-11-17 10:21:35.382 - verbose: handleProxy
+2017-11-17 10:21:35.382 - info: Proxy GET:/user/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.382 - verbose: ensureLogin
+2017-11-17 10:21:35.382 - verbose: handleProxy
+2017-11-17 10:21:35.382 - info: Proxy GET:/user/resetPwd To 192.168.0.203:8081
+2017-11-17 10:21:35.383 - verbose: proxyReject
+2017-11-17 10:21:35.383 - verbose: ensureLogin
+2017-11-17 10:21:35.383 - verbose: handleProxy
+2017-11-17 10:21:35.383 - info: Proxy POST:/user/search To 192.168.0.203:8081
+2017-11-17 10:21:35.383 - verbose: ensureLogin
+2017-11-17 10:21:35.383 - verbose: handleProxy
+2017-11-17 10:21:35.383 - info: Proxy POST:/user/setStatus To 192.168.0.203:8081
+2017-11-17 10:21:35.383 - verbose: proxyReject
+2017-11-17 10:21:35.383 - verbose: ensureLogin
+2017-11-17 10:21:35.383 - verbose: handleProxy
+2017-11-17 10:21:35.383 - info: Proxy GET:/user/simpleInfoPageList To 192.168.0.203:8081
+2017-11-17 10:21:35.383 - verbose: ensureLogin
+2017-11-17 10:21:35.383 - verbose: handleProxy
+2017-11-17 10:21:35.384 - info: Proxy GET:/user/surplusDownAmount To 192.168.0.203:8081
+2017-11-17 10:21:35.384 - verbose: ensureLogin
+2017-11-17 10:21:35.384 - verbose: handleProxy
+2017-11-17 10:21:35.384 - info: Proxy GET:/user/surplusDownCount To 192.168.0.203:8081
+2017-11-17 10:21:35.384 - verbose: proxyReject
+2017-11-17 10:21:35.384 - verbose: ensureLogin
+2017-11-17 10:21:35.384 - verbose: handleProxy
+2017-11-17 10:21:35.384 - info: Proxy GET:/user/ungroupedUsersPageList To 192.168.0.203:8081
+2017-11-17 10:21:35.384 - verbose: proxyReject
+2017-11-17 10:21:35.384 - verbose: ensureLogin
+2017-11-17 10:21:35.384 - verbose: handleProxy
+2017-11-17 10:21:35.384 - info: Proxy POST:/user/update To 192.168.0.203:8081
+2017-11-17 10:21:35.384 - verbose: ensureLogin
+2017-11-17 10:21:35.385 - verbose: handleProxy
+2017-11-17 10:21:35.385 - info: Proxy GET:/user/updateDownAmount To 192.168.0.203:8081
+2017-11-17 10:21:35.385 - verbose: ensureLogin
+2017-11-17 10:21:35.385 - verbose: handleProxy
+2017-11-17 10:21:35.385 - info: Proxy GET:/user/updateDownCount To 192.168.0.203:8081
+2017-11-17 10:21:35.385 - verbose: ensureLogin
+2017-11-17 10:21:35.385 - verbose: handleProxy
+2017-11-17 10:21:35.385 - info: Proxy GET:/user/userCustomerId To 192.168.0.203:8081
+2017-11-17 10:21:35.385 - verbose: ensureLogin
+2017-11-17 10:21:35.385 - verbose: handleProxy
+2017-11-17 10:21:35.385 - info: Proxy GET:/user/userFolderPermissionList To 192.168.0.203:8081
+2017-11-17 10:21:35.385 - verbose: ensureLogin
+2017-11-17 10:21:35.385 - verbose: handleProxy
+2017-11-17 10:21:35.386 - info: Proxy GET:/user/userFolderPermissionListByextendid To 192.168.0.203:8081
+2017-11-17 10:21:35.386 - verbose: ensureLogin
+2017-11-17 10:21:35.386 - verbose: handleProxy
+2017-11-17 10:21:35.386 - info: Proxy GET:/user/userInfo To 192.168.0.203:8081
+2017-11-17 10:21:35.386 - verbose: ensureLogin
+2017-11-17 10:21:35.386 - verbose: handleProxy
+2017-11-17 10:21:35.386 - info: Proxy GET:/user/userPermissionList To 192.168.0.203:8081
+2017-11-17 10:21:35.386 - verbose: ensureLogin
+2017-11-17 10:21:35.386 - verbose: handleProxy
+2017-11-17 10:21:35.386 - info: Proxy GET:/user/view To 192.168.0.203:8081
+2017-11-17 10:21:35.386 - verbose: ensureLogin
+2017-11-17 10:21:35.388 - verbose: apiAuth
+2017-11-17 10:21:35.388 - verbose: handleProxy
+2017-11-17 10:21:35.388 - info: Proxy GET:/user/:id To 192.168.0.203:8081
+2017-11-17 10:21:35.388 - verbose: ensureLogin
+2017-11-17 10:21:35.389 - verbose: handleProxy
+2017-11-17 10:21:35.389 - info: Proxy POST:/userFolderPermission/deleteByFolderIds To 192.168.0.203:8081
+2017-11-17 10:21:35.389 - verbose: ensureLogin
+2017-11-17 10:21:35.389 - verbose: handleProxy
+2017-11-17 10:21:35.389 - info: Proxy GET:/userFolderPermission/getByFolderId To 192.168.0.203:8081
+2017-11-17 10:21:35.389 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.390 - info: Proxy GET:/userFolderPermission/getListByFolderId To 192.168.0.203:8081
+2017-11-17 10:21:35.390 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.390 - info: Proxy GET:/userFolderPermission/getListByUserId To 192.168.0.203:8081
+2017-11-17 10:21:35.390 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.390 - info: Proxy POST:/userFolderPermission/insertList To 192.168.0.203:8081
+2017-11-17 10:21:35.390 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.390 - info: Proxy POST:/userFolderPermission/setByFolderId To 192.168.0.203:8081
+2017-11-17 10:21:35.390 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.390 - info: Proxy GET:/vcg/vcgOAuth2Info To 192.168.0.203:8081
+2017-11-17 10:21:35.390 - verbose: ensureLogin
+2017-11-17 10:21:35.390 - verbose: handleProxy
+2017-11-17 10:21:35.391 - info: Proxy POST:/vcgMediaPurpose/create To 192.168.0.203:8081
+2017-11-17 10:21:35.391 - verbose: ensureLogin
+2017-11-17 10:21:35.391 - verbose: handleProxy
+2017-11-17 10:21:35.391 - info: Proxy POST:/vcgMediaPurpose/delete To 192.168.0.203:8081
+2017-11-17 10:21:35.391 - verbose: ensureLogin
+2017-11-17 10:21:35.391 - verbose: handleProxy
+2017-11-17 10:21:35.391 - info: Proxy GET:/vcgMediaPurpose/finListBycusid To 192.168.0.203:8081
+2017-11-17 10:21:35.391 - verbose: ensureLogin
+2017-11-17 10:21:35.392 - verbose: handleProxy
+2017-11-17 10:21:35.392 - info: Proxy GET:/vcgMediaPurpose/finObjBycusidAndcode To 192.168.0.203:8081
+2017-11-17 10:21:35.392 - verbose: ensureLogin
+2017-11-17 10:21:35.392 - verbose: handleProxy
+2017-11-17 10:21:35.392 - info: Proxy GET:/vcgMediaPurpose/list To 192.168.0.203:8081
+2017-11-17 10:21:35.392 - verbose: ensureLogin
+2017-11-17 10:21:35.392 - verbose: handleProxy
+2017-11-17 10:21:35.392 - info: Proxy POST:/vcgMediaPurpose/list To 192.168.0.203:8081
+2017-11-17 10:21:35.392 - verbose: ensureLogin
+2017-11-17 10:21:35.392 - verbose: handleProxy
+2017-11-17 10:21:35.392 - info: Proxy GET:/vcgMediaPurpose/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.392 - verbose: ensureLogin
+2017-11-17 10:21:35.392 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy POST:/vcgMediaPurpose/pageList To 192.168.0.203:8081
+2017-11-17 10:21:35.393 - verbose: ensureLogin
+2017-11-17 10:21:35.393 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy POST:/vcgMediaPurpose/update To 192.168.0.203:8081
+2017-11-17 10:21:35.393 - verbose: ensureLogin
+2017-11-17 10:21:35.393 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy GET:/vcgMediaPurpose/view To 192.168.0.203:8081
+2017-11-17 10:21:35.393 - verbose: ensureLogin
+2017-11-17 10:21:35.393 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy POST:/workgroupFolderPermission/deleteByFolderIds To 192.168.0.203:8081
+2017-11-17 10:21:35.393 - verbose: ensureLogin
+2017-11-17 10:21:35.393 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy GET:/workgroupFolderPermission/getByFolderId To 192.168.0.203:8081
+2017-11-17 10:21:35.393 - verbose: ensureLogin
+2017-11-17 10:21:35.393 - verbose: handleProxy
+2017-11-17 10:21:35.393 - info: Proxy POST:/workgroupFolderPermission/setByFolderId To 192.168.0.203:8081
+2017-11-17 10:21:35.394 - verbose: ensureLogin
+2017-11-17 10:21:35.394 - verbose: handleProxy
+2017-11-17 10:21:35.394 - info: Proxy POST:/workgroupFolderPermission/setByFolderIdAndseq To 192.168.0.203:8081
+2017-11-17 10:21:35.394 - verbose: ensureLogin
+2017-11-17 10:21:35.394 - verbose: handleProxy
+2017-11-17 10:21:35.394 - info: Proxy GET:/workgroupFolderRole/getWorkgroupFoldersRole To 192.168.0.203:8081
+2017-11-17 10:21:35.394 - verbose: ensureLogin
+2017-11-17 10:21:35.394 - verbose: handleProxy
+2017-11-17 10:21:35.395 - info: Proxy POST:/workgroupFolderRole/setWorkgroupFoldersRole To 192.168.0.203:8081
+2017-11-17 10:21:35.395 - verbose: proxyReject
+2017-11-17 10:21:35.395 - verbose: ensureLogin
+2017-11-17 10:21:35.395 - verbose: apiAuth
+2017-11-17 10:21:35.395 - verbose: handleProxy
+2017-11-17 10:21:35.396 - info: Proxy GET:/workgroups To 192.168.0.203:8081
+2017-11-17 10:21:35.396 - verbose: proxyReject
+2017-11-17 10:21:35.396 - verbose: ensureLogin
+2017-11-17 10:21:35.396 - verbose: apiAuth
+2017-11-17 10:21:35.396 - verbose: handleProxy
+2017-11-17 10:21:35.396 - info: Proxy POST:/workgroups/create To 192.168.0.203:8081
+2017-11-17 10:21:35.396 - verbose: ensureLogin
+2017-11-17 10:21:35.396 - verbose: apiAuth
+2017-11-17 10:21:35.396 - verbose: handleProxy
+2017-11-17 10:21:35.396 - info: Proxy GET:/workgroups/:id To 192.168.0.203:8081
+2017-11-17 10:21:35.396 - verbose: ensureLogin
+2017-11-17 10:21:35.396 - verbose: apiAuth
+2017-11-17 10:21:35.396 - verbose: handleProxy
+2017-11-17 10:21:35.396 - info: Proxy PUT:/workgroups/:id To 192.168.0.203:8081
+2017-11-17 10:21:35.396 - verbose: ensureLogin
+2017-11-17 10:21:35.396 - verbose: apiAuth
+2017-11-17 10:21:35.396 - verbose: handleProxy
+2017-11-17 10:21:35.396 - info: Proxy DELETE:/workgroups/:id To 192.168.0.203:8081
+2017-11-17 10:21:35.922 - verbose: ensureLogin
+2017-11-17 10:21:35.923 - verbose: handleProxy
+2017-11-17 10:21:35.923 - info: Proxy POST:/applydownload/create To 192.168.0.203:8082
+2017-11-17 10:21:35.923 - verbose: ensureLogin
+2017-11-17 10:21:35.923 - verbose: handleProxy
+2017-11-17 10:21:35.923 - info: Proxy GET:/applydownload/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.923 - verbose: ensureLogin
+2017-11-17 10:21:35.923 - verbose: handleProxy
+2017-11-17 10:21:35.923 - info: Proxy POST:/applydownload/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.924 - verbose: ensureLogin
+2017-11-17 10:21:35.924 - verbose: handleProxy
+2017-11-17 10:21:35.924 - info: Proxy GET:/applydownload/updateStatus To 192.168.0.203:8082
+2017-11-17 10:21:35.924 - verbose: ensureLogin
+2017-11-17 10:21:35.924 - verbose: handleProxy
+2017-11-17 10:21:35.924 - info: Proxy GET:/applydownload/view To 192.168.0.203:8082
+2017-11-17 10:21:35.924 - verbose: ensureLogin
+2017-11-17 10:21:35.924 - verbose: apiAuth
+2017-11-17 10:21:35.924 - verbose: handleProxy
+2017-11-17 10:21:35.924 - info: Proxy POST:/assets To 192.168.0.203:8082
+2017-11-17 10:21:35.924 - verbose: ensureLogin
+2017-11-17 10:21:35.924 - verbose: canViewAssets$
+2017-11-17 10:21:35.924 - verbose: handleProxy
+2017-11-17 10:21:35.924 - info: Proxy GET:/assets/batch To 192.168.0.203:8082
+2017-11-17 10:21:35.924 - verbose: ensureLogin
+2017-11-17 10:21:35.924 - verbose: canManageAssets$
+2017-11-17 10:21:35.924 - verbose: handleProxy
+2017-11-17 10:21:35.925 - info: Proxy DELETE:/assets/batchDel/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.925 - verbose: ensureLogin
+2017-11-17 10:21:35.925 - verbose: canManageAssets$
+2017-11-17 10:21:35.925 - verbose: handleProxy
+2017-11-17 10:21:35.925 - info: Proxy POST:/assets/batchUpdate To 192.168.0.203:8082
+2017-11-17 10:21:35.925 - verbose: ensureLogin
+2017-11-17 10:21:35.925 - verbose: handleProxy
+2017-11-17 10:21:35.925 - info: Proxy POST:/assets/batchUpdate2 To 192.168.0.203:8082
+2017-11-17 10:21:35.925 - verbose: ensureLogin
+2017-11-17 10:21:35.925 - verbose: handleProxy
+2017-11-17 10:21:35.925 - info: Proxy GET:/assets/del To 192.168.0.203:8082
+2017-11-17 10:21:35.925 - verbose: proxyReject
+2017-11-17 10:21:35.925 - verbose: ensureLogin
+2017-11-17 10:21:35.925 - verbose: jsonParser
+2017-11-17 10:21:35.925 - verbose: canDownloadAssets$
+2017-11-17 10:21:35.925 - verbose: handleProxy
+2017-11-17 10:21:35.925 - debug: find path to rename /assets/downloadurl
+2017-11-17 10:21:35.926 - verbose: ensureLogin
+2017-11-17 10:21:35.926 - verbose: handleProxy
+2017-11-17 10:21:35.926 - info: Proxy Rename API POST:/assets/downloadurl To 192.168.0.203:8082
+2017-11-17 10:21:35.926 - info: Proxy POST:/assets/download To 192.168.0.203:8082
+2017-11-17 10:21:35.926 - verbose: ensureLogin
+2017-11-17 10:21:35.926 - verbose: customIdMid
+2017-11-17 10:21:35.926 - verbose: handleProxy
+2017-11-17 10:21:35.926 - info: Proxy GET:/assets/downloadCheck To 192.168.0.203:8082
+2017-11-17 10:21:35.926 - verbose: ensureLogin
+2017-11-17 10:21:35.926 - verbose: handleProxy
+2017-11-17 10:21:35.926 - info: Proxy POST:/assets/downloadMaster To 192.168.0.203:8082
+2017-11-17 10:21:35.926 - verbose: ensureLogin
+2017-11-17 10:21:35.926 - verbose: handleProxy
+2017-11-17 10:21:35.926 - info: Proxy POST:/assets/downloadUrl To 192.168.0.203:8082
+2017-11-17 10:21:35.927 - verbose: ensureLogin
+2017-11-17 10:21:35.927 - verbose: handleProxy
+2017-11-17 10:21:35.927 - info: Proxy GET:/assets/getFolders To 192.168.0.203:8082
+2017-11-17 10:21:35.927 - verbose: ensureLogin
+2017-11-17 10:21:35.927 - verbose: folderAuth
+2017-11-17 10:21:35.927 - verbose: handleProxy
+2017-11-17 10:21:35.927 - info: Proxy GET:/assets/loadAssets/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.927 - verbose: ensureLogin
+2017-11-17 10:21:35.927 - verbose: jsonParser
+2017-11-17 10:21:35.927 - verbose: apiAuth
+2017-11-17 10:21:35.927 - verbose:  
+2017-11-17 10:21:35.927 - verbose: handleProxy
+2017-11-17 10:21:35.927 - info: Proxy PUT:/assets/review To 192.168.0.203:8082
+2017-11-17 10:21:35.927 - verbose: ensureLogin
+2017-11-17 10:21:35.927 - verbose: handleProxy
+2017-11-17 10:21:35.928 - info: Proxy GET:/assets/save-vcg-assets To 192.168.0.203:8082
+2017-11-17 10:21:35.928 - verbose: ensureLogin
+2017-11-17 10:21:35.928 - verbose: handleProxy
+2017-11-17 10:21:35.928 - info: Proxy GET:/assets/search To 192.168.0.203:8082
+2017-11-17 10:21:35.928 - verbose: ensureLogin
+2017-11-17 10:21:35.928 - verbose: canManageAssets$
+2017-11-17 10:21:35.928 - verbose: handleProxy
+2017-11-17 10:21:35.928 - info: Proxy POST:/assets/update/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.928 - verbose: ensureLogin
+2017-11-17 10:21:35.928 - verbose: handleProxy
+2017-11-17 10:21:35.928 - info: Proxy GET:/assets/vcgDownload To 192.168.0.203:8082
+2017-11-17 10:21:35.928 - verbose: ensureLogin
+2017-11-17 10:21:35.928 - verbose: canViewAssets$
+2017-11-17 10:21:35.928 - verbose: handleProxy
+2017-11-17 10:21:35.928 - info: Proxy GET:/assets/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.928 - verbose: ensureLogin
+2017-11-17 10:21:35.928 - verbose: canManageAssets$
+2017-11-17 10:21:35.928 - verbose: handleProxy
+2017-11-17 10:21:35.929 - info: Proxy DELETE:/assets/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.929 - verbose: ensureLogin
+2017-11-17 10:21:35.929 - verbose: canViewAssets$
+2017-11-17 10:21:35.929 - verbose: handleProxy
+2017-11-17 10:21:35.929 - info: Proxy GET:/assets/:id/keywords To 192.168.0.203:8082
+2017-11-17 10:21:35.929 - verbose: ensureLogin
+2017-11-17 10:21:35.929 - verbose: canManageAssets$
+2017-11-17 10:21:35.929 - verbose: handleProxy
+2017-11-17 10:21:35.929 - info: Proxy PUT:/assets/:id/keywords To 192.168.0.203:8082
+2017-11-17 10:21:35.929 - verbose: ensureLogin
+2017-11-17 10:21:35.929 - verbose: apiAuth
+2017-11-17 10:21:35.929 - verbose: handleProxy
+2017-11-17 10:21:35.929 - info: Proxy PUT:/assets/:id/online To 192.168.0.203:8082
+2017-11-17 10:21:35.929 - verbose: ensureLogin
+2017-11-17 10:21:35.929 - verbose: handleProxy
+2017-11-17 10:21:35.929 - info: Proxy POST:/damSearcher/clientSearchDam To 192.168.0.203:8082
+2017-11-17 10:21:35.929 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/damSearcher/searchDam To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/damSearcher/searchDamFolder To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/damSearcher/searchFordambom To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/damSearcher/searchSubfolders To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/demo/userFolderPermissionList To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy GET:/demo/workgroupFolderRole To 192.168.0.203:8082
+2017-11-17 10:21:35.930 - verbose: ensureLogin
+2017-11-17 10:21:35.930 - verbose: handleProxy
+2017-11-17 10:21:35.930 - info: Proxy DELETE:/download/batch To 192.168.0.203:8082
+2017-11-17 10:21:35.931 - verbose: ensureLogin
+2017-11-17 10:21:35.931 - verbose: handleProxy
+2017-11-17 10:21:35.931 - info: Proxy POST:/download/checkDownPermission To 192.168.0.203:8082
+2017-11-17 10:21:35.931 - verbose: ensureLogin
+2017-11-17 10:21:35.931 - verbose: handleProxy
+2017-11-17 10:21:35.931 - info: Proxy POST:/download/create4Vcg To 192.168.0.203:8082
+2017-11-17 10:21:35.931 - verbose: ensureLogin
+2017-11-17 10:21:35.931 - verbose: handleProxy
+2017-11-17 10:21:35.931 - info: Proxy GET:/download/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.931 - verbose: ensureLogin
+2017-11-17 10:21:35.931 - verbose: handleProxy
+2017-11-17 10:21:35.931 - info: Proxy GET:/download/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.932 - debug: find path to rename /favorites
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.932 - info: Proxy Rename API POST:/favorites To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - info: Proxy POST:/favorite/create To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.932 - info: Proxy POST:/favorite/create-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.932 - info: Proxy POST:/favorite/createVcg To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.932 - info: Proxy POST:/favorite/createVcg-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.932 - verbose: ensureLogin
+2017-11-17 10:21:35.932 - verbose: handleProxy
+2017-11-17 10:21:35.933 - debug: find path to rename /favorites
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy Rename API DELETE:/favorites To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - info: Proxy DELETE:/favorite/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy DELETE:/favorite/delete-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy DELETE:/favorite/deleteVcg To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy DELETE:/favorite/deleteVcg-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy GET:/favorite/download-check To 192.168.0.203:8082
+2017-11-17 10:21:35.933 - verbose: ensureLogin
+2017-11-17 10:21:35.933 - verbose: handleProxy
+2017-11-17 10:21:35.933 - info: Proxy GET:/favorite/moveFavorites To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - debug: find path to rename /favorites
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - info: Proxy Rename API GET:/favorites To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - info: Proxy GET:/favorite/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - info: Proxy GET:/favorite/pageList-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - info: Proxy GET:/favorite/vcgFavorites To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - info: Proxy GET:/favorite/vcgFavorites-fav To 192.168.0.203:8082
+2017-11-17 10:21:35.934 - verbose: ensureLogin
+2017-11-17 10:21:35.934 - verbose: handleProxy
+2017-11-17 10:21:35.934 - info: Proxy POST:/folderitems/checkDel/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy POST:/folderitems/copy To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: apiAuth
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy GET:/folderitems/count To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy POST:/folderitems/move To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy GET:/folderitems/provider To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy GET:/folderitems/unInstockAssetsCount To 192.168.0.203:8082
+2017-11-17 10:21:35.935 - verbose: ensureLogin
+2017-11-17 10:21:35.935 - verbose: handleProxy
+2017-11-17 10:21:35.935 - info: Proxy GET:/folderitems/v2/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.936 - verbose: ensureLogin
+2017-11-17 10:21:35.936 - verbose: folderAuth
+2017-11-17 10:21:35.936 - verbose: handleProxy
+2017-11-17 10:21:35.936 - info: Proxy GET:/folderitems/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.936 - verbose: ensureLogin
+2017-11-17 10:21:35.936 - verbose: folderAuth
+2017-11-17 10:21:35.936 - verbose: handleProxy
+2017-11-17 10:21:35.936 - info: Proxy POST:/folderitems/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.936 - verbose: ensureLogin
+2017-11-17 10:21:35.936 - verbose: jsonParser
+2017-11-17 10:21:35.936 - verbose: canManageAssets$
+2017-11-17 10:21:35.936 - verbose: handleProxy
+2017-11-17 10:21:35.936 - info: Proxy DELETE:/folderitems/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.936 - verbose: ensureLogin
+2017-11-17 10:21:35.936 - verbose: apiAuth
+2017-11-17 10:21:35.936 - verbose: customIdMid
+2017-11-17 10:21:35.936 - verbose: handleProxy
+2017-11-17 10:21:35.936 - info: Proxy POST:/folders/copy To 192.168.0.203:8082
+2017-11-17 10:21:35.937 - verbose: ensureLogin
+2017-11-17 10:21:35.937 - verbose: handleProxy
+2017-11-17 10:21:35.937 - info: Proxy POST:/folders/count To 192.168.0.203:8082
+2017-11-17 10:21:35.937 - verbose: ensureLogin
+2017-11-17 10:21:35.937 - verbose: handleProxy
+2017-11-17 10:21:35.937 - info: Proxy GET:/folders/getById To 192.168.0.203:8082
+2017-11-17 10:21:35.937 - verbose: ensureLogin
+2017-11-17 10:21:35.937 - verbose: handleProxy
+2017-11-17 10:21:35.938 - info: Proxy GET:/folders/getPermissionFolderidsByFolderId To 192.168.0.203:8082
+2017-11-17 10:21:35.938 - verbose: ensureLogin
+2017-11-17 10:21:35.938 - verbose: handleProxy
+2017-11-17 10:21:35.938 - info: Proxy GET:/folders/getPermissionFolderidsByseq To 192.168.0.203:8082
+2017-11-17 10:21:35.938 - verbose: proxyReject
+2017-11-17 10:21:35.938 - verbose: ensureLogin
+2017-11-17 10:21:35.938 - verbose: handleProxy
+2017-11-17 10:21:35.938 - info: Proxy GET:/folders/isBatchExist To 192.168.0.203:8082
+2017-11-17 10:21:35.938 - verbose: proxyReject
+2017-11-17 10:21:35.938 - verbose: ensureLogin
+2017-11-17 10:21:35.938 - verbose: handleProxy
+2017-11-17 10:21:35.938 - info: Proxy GET:/folders/isExist To 192.168.0.203:8082
+2017-11-17 10:21:35.938 - verbose: ensureLogin
+2017-11-17 10:21:35.938 - verbose: handleProxy
+2017-11-17 10:21:35.939 - info: Proxy GET:/folders/list To 192.168.0.203:8082
+2017-11-17 10:21:35.939 - verbose: ensureLogin
+2017-11-17 10:21:35.939 - verbose: customIdMid
+2017-11-17 10:21:35.939 - verbose: handleProxy
+2017-11-17 10:21:35.939 - info: Proxy POST:/folders/merge To 192.168.0.203:8082
+2017-11-17 10:21:35.939 - verbose: ensureLogin
+2017-11-17 10:21:35.939 - verbose: apiAuth
+2017-11-17 10:21:35.939 - verbose: customIdMid
+2017-11-17 10:21:35.939 - verbose: handleProxy
+2017-11-17 10:21:35.939 - info: Proxy POST:/folders/move To 192.168.0.203:8082
+2017-11-17 10:21:35.939 - verbose: ensureLogin
+2017-11-17 10:21:35.939 - verbose: handleProxy
+2017-11-17 10:21:35.939 - info: Proxy GET:/folders/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.939 - verbose: ensureLogin
+2017-11-17 10:21:35.939 - verbose: handleProxy
+2017-11-17 10:21:35.940 - info: Proxy GET:/folders/updateextendByid To 192.168.0.203:8082
+2017-11-17 10:21:35.940 - verbose: ensureLogin
+2017-11-17 10:21:35.940 - verbose: customIdMid
+2017-11-17 10:21:35.940 - verbose: handleProxy
+2017-11-17 10:21:35.940 - info: Proxy GET:/folders/viewVcgFolder To 192.168.0.203:8082
+2017-11-17 10:21:35.940 - verbose: ensureLogin
+2017-11-17 10:21:35.940 - verbose: handleProxy
+2017-11-17 10:21:35.940 - info: Proxy GET:/folders/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.940 - verbose: ensureLogin
+2017-11-17 10:21:35.940 - verbose: apiAuth
+2017-11-17 10:21:35.940 - verbose: customIdMid
+2017-11-17 10:21:35.940 - verbose: handleProxy
+2017-11-17 10:21:35.940 - info: Proxy POST:/folders/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.940 - verbose: ensureLogin
+2017-11-17 10:21:35.940 - verbose: apiAuth
+2017-11-17 10:21:35.940 - verbose: customIdMid
+2017-11-17 10:21:35.940 - verbose: handleProxy
+2017-11-17 10:21:35.940 - info: Proxy PUT:/folders/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.940 - verbose: ensureLogin
+2017-11-17 10:21:35.940 - verbose: apiAuth
+2017-11-17 10:21:35.940 - verbose: customIdMid
+2017-11-17 10:21:35.940 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy DELETE:/folders/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.941 - verbose: ensureLogin
+2017-11-17 10:21:35.941 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy POST:/folders/:id/parent_sub_folders To 192.168.0.203:8082
+2017-11-17 10:21:35.941 - verbose: ensureLogin
+2017-11-17 10:21:35.941 - verbose: folderPermissionsMid
+2017-11-17 10:21:35.941 - verbose: customIdMid
+2017-11-17 10:21:35.941 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy POST:/folders/:id/sub_folders To 192.168.0.203:8082
+2017-11-17 10:21:35.941 - verbose: ensureLogin
+2017-11-17 10:21:35.941 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy POST:/group/create To 192.168.0.203:8082
+2017-11-17 10:21:35.941 - verbose: ensureLogin
+2017-11-17 10:21:35.941 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy GET:/group/list To 192.168.0.203:8082
+2017-11-17 10:21:35.941 - verbose: ensureLogin
+2017-11-17 10:21:35.941 - verbose: handleProxy
+2017-11-17 10:21:35.941 - info: Proxy GET:/group/set-sortnumber To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: proxyReject
+2017-11-17 10:21:35.942 - verbose: ensureLogin
+2017-11-17 10:21:35.942 - verbose: handleProxy
+2017-11-17 10:21:35.942 - info: Proxy GET:/health To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: ensureLogin
+2017-11-17 10:21:35.942 - verbose: canViewAssets$
+2017-11-17 10:21:35.942 - verbose: handleProxy
+2017-11-17 10:21:35.942 - info: Proxy GET:/image/:id/extension/ To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: ensureLogin
+2017-11-17 10:21:35.942 - verbose: canManageAssets$
+2017-11-17 10:21:35.942 - verbose: handleProxy
+2017-11-17 10:21:35.942 - info: Proxy POST:/image/:id/extension/ To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: ensureLogin
+2017-11-17 10:21:35.942 - verbose: canManageAssets$
+2017-11-17 10:21:35.942 - verbose: handleProxy
+2017-11-17 10:21:35.942 - info: Proxy PUT:/image/:id/extension/ To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: ensureLogin
+2017-11-17 10:21:35.942 - verbose: canManageAssets$
+2017-11-17 10:21:35.942 - verbose: handleProxy
+2017-11-17 10:21:35.942 - info: Proxy DELETE:/image/:id/extension/ To 192.168.0.203:8082
+2017-11-17 10:21:35.942 - verbose: proxyReject
+2017-11-17 10:21:35.943 - verbose: ensureLogin
+2017-11-17 10:21:35.943 - verbose: handleProxy
+2017-11-17 10:21:35.943 - info: Proxy POST:/images To 192.168.0.203:8082
+2017-11-17 10:21:35.943 - verbose: ensureLogin
+2017-11-17 10:21:35.943 - verbose: jsonParser
+2017-11-17 10:21:35.943 - verbose: canManageAssets$
+2017-11-17 10:21:35.943 - verbose: handleProxy
+2017-11-17 10:21:35.943 - info: Proxy DELETE:/images/ To 192.168.0.203:8082
+2017-11-17 10:21:35.943 - verbose: ensureLogin
+2017-11-17 10:21:35.943 - verbose: jsonParser
+2017-11-17 10:21:35.943 - verbose: canViewAssets$
+2017-11-17 10:21:35.943 - verbose: handleProxy
+2017-11-17 10:21:35.944 - info: Proxy POST:/images/batch To 192.168.0.203:8082
+2017-11-17 10:21:35.944 - verbose: ensureLogin
+2017-11-17 10:21:35.944 - verbose: apiAuth
+2017-11-17 10:21:35.944 - verbose: handleProxy
+2017-11-17 10:21:35.944 - info: Proxy GET:/images/page To 192.168.0.203:8082
+2017-11-17 10:21:35.944 - verbose: ensureLogin
+2017-11-17 10:21:35.944 - verbose: folderPermissionsMid
+2017-11-17 10:21:35.944 - verbose: canViewAssets$
+2017-11-17 10:21:35.944 - verbose: handleProxy
+2017-11-17 10:21:35.944 - info: Proxy GET:/images/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.944 - verbose: ensureLogin
+2017-11-17 10:21:35.944 - verbose: canManageAssets$
+2017-11-17 10:21:35.944 - verbose: handleProxy
+2017-11-17 10:21:35.944 - info: Proxy PUT:/images/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.944 - verbose: ensureLogin
+2017-11-17 10:21:35.944 - verbose: canManageAssets$
+2017-11-17 10:21:35.944 - verbose: handleProxy
+2017-11-17 10:21:35.944 - info: Proxy DELETE:/images/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: canViewAssets$
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.945 - info: Proxy GET:/images/:id/exif To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: proxyReject
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.945 - info: Proxy GET:/images/:id/folders To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: canManageAssets$
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.945 - info: Proxy PUT:/images/:id/rotation To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.945 - info: Proxy POST:/importtask/create To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.945 - info: Proxy POST:/importtask/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.945 - verbose: ensureLogin
+2017-11-17 10:21:35.945 - verbose: handleProxy
+2017-11-17 10:21:35.946 - info: Proxy GET:/importtask/list To 192.168.0.203:8082
+2017-11-17 10:21:35.946 - verbose: ensureLogin
+2017-11-17 10:21:35.946 - verbose: handleProxy
+2017-11-17 10:21:35.946 - info: Proxy POST:/importtask/list To 192.168.0.203:8082
+2017-11-17 10:21:35.946 - verbose: ensureLogin
+2017-11-17 10:21:35.946 - verbose: handleProxy
+2017-11-17 10:21:35.946 - info: Proxy POST:/importtask/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.946 - verbose: ensureLogin
+2017-11-17 10:21:35.946 - verbose: handleProxy
+2017-11-17 10:21:35.946 - info: Proxy POST:/importtask/update To 192.168.0.203:8082
+2017-11-17 10:21:35.947 - verbose: ensureLogin
+2017-11-17 10:21:35.947 - verbose: handleProxy
+2017-11-17 10:21:35.947 - info: Proxy GET:/importtask/view To 192.168.0.203:8082
+2017-11-17 10:21:35.947 - verbose: ensureLogin
+2017-11-17 10:21:35.947 - verbose: jsonParser
+2017-11-17 10:21:35.947 - verbose: canSubmitUploadedAssets$
+2017-11-17 10:21:35.947 - verbose: handleProxy
+2017-11-17 10:21:35.947 - info: Proxy POST:/instocks/ To 192.168.0.203:8082
+2017-11-17 10:21:35.947 - verbose: ensureLogin
+2017-11-17 10:21:35.947 - verbose: handleProxy
+2017-11-17 10:21:35.947 - info: Proxy POST:/instocks/localIn To 192.168.0.203:8082
+2017-11-17 10:21:35.947 - verbose: ensureLogin
+2017-11-17 10:21:35.947 - verbose: handleProxy
+2017-11-17 10:21:35.947 - info: Proxy GET:/paramConfig/getDiskInfo To 192.168.0.203:8082
+2017-11-17 10:21:35.947 - verbose: ensureLogin
+2017-11-17 10:21:35.947 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy GET:/paramConfig/list To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy POST:/paramConfig/upload To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy GET:/paramConfig/view-by-key To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: proxyReject
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy POST:/resAudioUpload/create To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: proxyReject
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy POST:/resAudioUpload/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: proxyReject
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.948 - info: Proxy GET:/resAudioUpload/list To 192.168.0.203:8082
+2017-11-17 10:21:35.948 - verbose: proxyReject
+2017-11-17 10:21:35.948 - verbose: ensureLogin
+2017-11-17 10:21:35.948 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy POST:/resAudioUpload/list To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: proxyReject
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.949 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy GET:/resAudioUpload/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: proxyReject
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.949 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy POST:/resAudioUpload/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: proxyReject
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.949 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy POST:/resAudioUpload/update To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: proxyReject
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.949 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy GET:/resAudioUpload/view To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.949 - verbose: handleProxy
+2017-11-17 10:21:35.949 - info: Proxy POST:/resFavorite/create To 192.168.0.203:8082
+2017-11-17 10:21:35.949 - verbose: ensureLogin
+2017-11-17 10:21:35.950 - verbose: handleProxy
+2017-11-17 10:21:35.950 - info: Proxy DELETE:/resFavorite/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.950 - verbose: ensureLogin
+2017-11-17 10:21:35.950 - verbose: handleProxy
+2017-11-17 10:21:35.950 - info: Proxy GET:/resFavorite/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.950 - verbose: ensureLogin
+2017-11-17 10:21:35.950 - verbose: handleProxy
+2017-11-17 10:21:35.950 - info: Proxy POST:/resFavorite/update To 192.168.0.203:8082
+2017-11-17 10:21:35.950 - verbose: ensureLogin
+2017-11-17 10:21:35.950 - verbose: handleProxy
+2017-11-17 10:21:35.950 - info: Proxy GET:/resFavorite/view To 192.168.0.203:8082
+2017-11-17 10:21:35.950 - verbose: ensureLogin
+2017-11-17 10:21:35.950 - verbose: canManageAssets$
+2017-11-17 10:21:35.950 - verbose: handleProxy
+2017-11-17 10:21:35.951 - info: Proxy GET:/resImageUpload/batchDelByIds/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.951 - verbose: ensureLogin
+2017-11-17 10:21:35.951 - verbose: canManageAssets$
+2017-11-17 10:21:35.951 - verbose: handleProxy
+2017-11-17 10:21:35.951 - info: Proxy POST:/resImageUpload/batchUpdate To 192.168.0.203:8082
+2017-11-17 10:21:35.951 - verbose: proxyReject
+2017-11-17 10:21:35.951 - verbose: ensureLogin
+2017-11-17 10:21:35.951 - verbose: handleProxy
+2017-11-17 10:21:35.951 - info: Proxy POST:/resImageUpload/create To 192.168.0.203:8082
+2017-11-17 10:21:35.951 - verbose: ensureLogin
+2017-11-17 10:21:35.951 - verbose: canManageAssets$
+2017-11-17 10:21:35.951 - verbose: handleProxy
+2017-11-17 10:21:35.951 - info: Proxy GET:/resImageUpload/delById/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.951 - verbose: ensureLogin
+2017-11-17 10:21:35.951 - verbose: apiAuth
+2017-11-17 10:21:35.951 - verbose: handleProxy
+2017-11-17 10:21:35.951 - info: Proxy GET:/resImageUpload/folderUploads/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.951 - verbose: ensureLogin
+2017-11-17 10:21:35.951 - verbose: apiAuth
+2017-11-17 10:21:35.951 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy GET:/resImageUpload/list To 192.168.0.203:8082
+2017-11-17 10:21:35.952 - verbose: ensureLogin
+2017-11-17 10:21:35.952 - verbose: apiAuth
+2017-11-17 10:21:35.952 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy POST:/resImageUpload/list To 192.168.0.203:8082
+2017-11-17 10:21:35.952 - verbose: ensureLogin
+2017-11-17 10:21:35.952 - verbose: folderAuth
+2017-11-17 10:21:35.952 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy GET:/resImageUpload/myFolderUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.952 - verbose: ensureLogin
+2017-11-17 10:21:35.952 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy GET:/resImageUpload/myUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.952 - verbose: ensureLogin
+2017-11-17 10:21:35.952 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy POST:/resImageUpload/myUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.952 - verbose: ensureLogin
+2017-11-17 10:21:35.952 - verbose: canManageAssets$
+2017-11-17 10:21:35.952 - verbose: handleProxy
+2017-11-17 10:21:35.952 - info: Proxy GET:/resImageUpload/rotate/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.953 - verbose: proxyReject
+2017-11-17 10:21:35.953 - verbose: ensureLogin
+2017-11-17 10:21:35.953 - verbose: handleProxy
+2017-11-17 10:21:35.953 - info: Proxy GET:/resImageUpload/testResize/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.953 - verbose: ensureLogin
+2017-11-17 10:21:35.953 - verbose: canManageAssets$
+2017-11-17 10:21:35.953 - verbose: handleProxy
+2017-11-17 10:21:35.953 - info: Proxy POST:/resImageUpload/update/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.953 - verbose: ensureLogin
+2017-11-17 10:21:35.953 - verbose: canViewAssets$
+2017-11-17 10:21:35.953 - verbose: handleProxy
+2017-11-17 10:21:35.953 - info: Proxy GET:/resImageUpload/view/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.953 - verbose: ensureLogin
+2017-11-17 10:21:35.953 - verbose: canViewAssets$
+2017-11-17 10:21:35.953 - verbose: handleProxy
+2017-11-17 10:21:35.953 - info: Proxy GET:/resImageUpload/:id/exif To 192.168.0.203:8082
+2017-11-17 10:21:35.953 - verbose: proxyReject
+2017-11-17 10:21:35.953 - verbose: ensureLogin
+2017-11-17 10:21:35.953 - verbose: handleProxy
+2017-11-17 10:21:35.953 - info: Proxy POST:/resImageUploadBatch/create To 192.168.0.203:8082
+2017-11-17 10:21:35.954 - verbose: proxyReject
+2017-11-17 10:21:35.954 - verbose: ensureLogin
+2017-11-17 10:21:35.954 - verbose: handleProxy
+2017-11-17 10:21:35.954 - info: Proxy POST:/resImageUploadBatch/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.954 - verbose: proxyReject
+2017-11-17 10:21:35.954 - verbose: ensureLogin
+2017-11-17 10:21:35.954 - verbose: handleProxy
+2017-11-17 10:21:35.954 - info: Proxy GET:/resImageUploadBatch/list To 192.168.0.203:8082
+2017-11-17 10:21:35.954 - verbose: proxyReject
+2017-11-17 10:21:35.954 - verbose: ensureLogin
+2017-11-17 10:21:35.954 - verbose: handleProxy
+2017-11-17 10:21:35.954 - info: Proxy POST:/resImageUploadBatch/list To 192.168.0.203:8082
+2017-11-17 10:21:35.954 - verbose: proxyReject
+2017-11-17 10:21:35.954 - verbose: ensureLogin
+2017-11-17 10:21:35.954 - verbose: handleProxy
+2017-11-17 10:21:35.954 - info: Proxy GET:/resImageUploadBatch/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.954 - verbose: proxyReject
+2017-11-17 10:21:35.954 - verbose: ensureLogin
+2017-11-17 10:21:35.954 - verbose: handleProxy
+2017-11-17 10:21:35.955 - info: Proxy POST:/resImageUploadBatch/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.955 - verbose: proxyReject
+2017-11-17 10:21:35.955 - verbose: ensureLogin
+2017-11-17 10:21:35.955 - verbose: handleProxy
+2017-11-17 10:21:35.955 - info: Proxy POST:/resImageUploadBatch/update To 192.168.0.203:8082
+2017-11-17 10:21:35.955 - verbose: proxyReject
+2017-11-17 10:21:35.955 - verbose: ensureLogin
+2017-11-17 10:21:35.955 - verbose: handleProxy
+2017-11-17 10:21:35.955 - info: Proxy GET:/resImageUploadBatch/view To 192.168.0.203:8082
+2017-11-17 10:21:35.955 - verbose: proxyReject
+2017-11-17 10:21:35.955 - verbose: ensureLogin
+2017-11-17 10:21:35.955 - verbose: handleProxy
+2017-11-17 10:21:35.955 - info: Proxy POST:/resImageUploadMeta/create To 192.168.0.203:8082
+2017-11-17 10:21:35.955 - verbose: proxyReject
+2017-11-17 10:21:35.955 - verbose: ensureLogin
+2017-11-17 10:21:35.955 - verbose: handleProxy
+2017-11-17 10:21:35.955 - info: Proxy POST:/resImageUploadMeta/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.956 - verbose: proxyReject
+2017-11-17 10:21:35.956 - verbose: ensureLogin
+2017-11-17 10:21:35.956 - verbose: handleProxy
+2017-11-17 10:21:35.956 - info: Proxy GET:/resImageUploadMeta/list To 192.168.0.203:8082
+2017-11-17 10:21:35.956 - verbose: proxyReject
+2017-11-17 10:21:35.956 - verbose: ensureLogin
+2017-11-17 10:21:35.956 - verbose: handleProxy
+2017-11-17 10:21:35.956 - info: Proxy POST:/resImageUploadMeta/list To 192.168.0.203:8082
+2017-11-17 10:21:35.956 - verbose: proxyReject
+2017-11-17 10:21:35.956 - verbose: ensureLogin
+2017-11-17 10:21:35.956 - verbose: handleProxy
+2017-11-17 10:21:35.956 - info: Proxy GET:/resImageUploadMeta/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.956 - verbose: proxyReject
+2017-11-17 10:21:35.957 - verbose: ensureLogin
+2017-11-17 10:21:35.957 - verbose: handleProxy
+2017-11-17 10:21:35.957 - info: Proxy POST:/resImageUploadMeta/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.957 - verbose: proxyReject
+2017-11-17 10:21:35.957 - verbose: ensureLogin
+2017-11-17 10:21:35.957 - verbose: handleProxy
+2017-11-17 10:21:35.957 - info: Proxy POST:/resImageUploadMeta/update To 192.168.0.203:8082
+2017-11-17 10:21:35.957 - verbose: proxyReject
+2017-11-17 10:21:35.957 - verbose: ensureLogin
+2017-11-17 10:21:35.957 - verbose: handleProxy
+2017-11-17 10:21:35.957 - info: Proxy GET:/resImageUploadMeta/view To 192.168.0.203:8082
+2017-11-17 10:21:35.957 - verbose: proxyReject
+2017-11-17 10:21:35.957 - verbose: ensureLogin
+2017-11-17 10:21:35.957 - verbose: handleProxy
+2017-11-17 10:21:35.957 - info: Proxy POST:/resImageUploadRelease/create To 192.168.0.203:8082
+2017-11-17 10:21:35.957 - verbose: proxyReject
+2017-11-17 10:21:35.957 - verbose: ensureLogin
+2017-11-17 10:21:35.957 - verbose: handleProxy
+2017-11-17 10:21:35.957 - info: Proxy POST:/resImageUploadRelease/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.957 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.958 - info: Proxy GET:/resImageUploadRelease/list To 192.168.0.203:8082
+2017-11-17 10:21:35.958 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.958 - info: Proxy POST:/resImageUploadRelease/list To 192.168.0.203:8082
+2017-11-17 10:21:35.958 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.958 - info: Proxy GET:/resImageUploadRelease/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.958 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.958 - info: Proxy POST:/resImageUploadRelease/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.958 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.958 - info: Proxy POST:/resImageUploadRelease/update To 192.168.0.203:8082
+2017-11-17 10:21:35.958 - verbose: proxyReject
+2017-11-17 10:21:35.958 - verbose: ensureLogin
+2017-11-17 10:21:35.958 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy GET:/resImageUploadRelease/view To 192.168.0.203:8082
+2017-11-17 10:21:35.959 - verbose: proxyReject
+2017-11-17 10:21:35.959 - verbose: ensureLogin
+2017-11-17 10:21:35.959 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy POST:/resRootFolders/create To 192.168.0.203:8082
+2017-11-17 10:21:35.959 - verbose: proxyReject
+2017-11-17 10:21:35.959 - verbose: ensureLogin
+2017-11-17 10:21:35.959 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy POST:/resRootFolders/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.959 - verbose: proxyReject
+2017-11-17 10:21:35.959 - verbose: ensureLogin
+2017-11-17 10:21:35.959 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy GET:/resRootFolders/list To 192.168.0.203:8082
+2017-11-17 10:21:35.959 - verbose: proxyReject
+2017-11-17 10:21:35.959 - verbose: ensureLogin
+2017-11-17 10:21:35.959 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy POST:/resRootFolders/list To 192.168.0.203:8082
+2017-11-17 10:21:35.959 - verbose: proxyReject
+2017-11-17 10:21:35.959 - verbose: ensureLogin
+2017-11-17 10:21:35.959 - verbose: handleProxy
+2017-11-17 10:21:35.959 - info: Proxy GET:/resRootFolders/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: proxyReject
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.960 - info: Proxy POST:/resRootFolders/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: proxyReject
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.960 - info: Proxy POST:/resRootFolders/update To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: proxyReject
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.960 - info: Proxy GET:/resRootFolders/view To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: canManageAssets$
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.960 - info: Proxy GET:/resVideoUpload/batchDelByIds/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: proxyReject
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.960 - info: Proxy POST:/resVideoUpload/create To 192.168.0.203:8082
+2017-11-17 10:21:35.960 - verbose: ensureLogin
+2017-11-17 10:21:35.960 - verbose: canManageAssets$
+2017-11-17 10:21:35.960 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy GET:/resVideoUpload/delById/:folderId To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.961 - verbose: canDownloadAssets$
+2017-11-17 10:21:35.961 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy GET:/resVideoUpload/getOrigURL/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.961 - verbose: canDownloadAssets$
+2017-11-17 10:21:35.961 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy POST:/resVideoUpload/getOrigURL/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.961 - verbose: folderAuth
+2017-11-17 10:21:35.961 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy GET:/resVideoUpload/myFolderUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.961 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy GET:/resVideoUpload/unFolders To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.961 - verbose: canManageAssets$
+2017-11-17 10:21:35.961 - verbose: handleProxy
+2017-11-17 10:21:35.961 - info: Proxy POST:/resVideoUpload/update/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.961 - verbose: ensureLogin
+2017-11-17 10:21:35.962 - verbose: canViewAssets$
+2017-11-17 10:21:35.962 - verbose: handleProxy
+2017-11-17 10:21:35.962 - info: Proxy GET:/resVideoUpload/view/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.962 - verbose: ensureLogin
+2017-11-17 10:21:35.962 - verbose: handleProxy
+2017-11-17 10:21:35.962 - info: Proxy POST:/resVideoUpload/view/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.962 - verbose: proxyReject
+2017-11-17 10:21:35.962 - verbose: ensureLogin
+2017-11-17 10:21:35.962 - verbose: handleProxy
+2017-11-17 10:21:35.962 - info: Proxy POST:/sensitiveWord/create To 192.168.0.203:8082
+2017-11-17 10:21:35.962 - verbose: proxyReject
+2017-11-17 10:21:35.962 - verbose: ensureLogin
+2017-11-17 10:21:35.962 - verbose: handleProxy
+2017-11-17 10:21:35.962 - info: Proxy POST:/sensitiveWord/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.962 - verbose: proxyReject
+2017-11-17 10:21:35.962 - verbose: ensureLogin
+2017-11-17 10:21:35.962 - verbose: handleProxy
+2017-11-17 10:21:35.962 - info: Proxy GET:/sensitiveWord/list To 192.168.0.203:8082
+2017-11-17 10:21:35.962 - verbose: proxyReject
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy POST:/sensitiveWord/list To 192.168.0.203:8082
+2017-11-17 10:21:35.963 - verbose: proxyReject
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy GET:/sensitiveWord/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.963 - verbose: proxyReject
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy POST:/sensitiveWord/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.963 - verbose: proxyReject
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy POST:/sensitiveWord/update To 192.168.0.203:8082
+2017-11-17 10:21:35.963 - verbose: proxyReject
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy GET:/sensitiveWord/view To 192.168.0.203:8082
+2017-11-17 10:21:35.963 - verbose: ensureLogin
+2017-11-17 10:21:35.963 - verbose: apiAuth
+2017-11-17 10:21:35.963 - verbose: handleProxy
+2017-11-17 10:21:35.963 - info: Proxy GET:/statistics/countAssetsByFilter To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy GET:/test/getAssetsByGroupId To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy POST:/test/getAssetsByGroupId To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy POST:/test/getVcgDownloadInfo To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy POST:/test/instockvcg To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy GET:/test/isHaveIp To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy POST:/test/isHaveIp To 192.168.0.203:8082
+2017-11-17 10:21:35.964 - verbose: ensureLogin
+2017-11-17 10:21:35.964 - verbose: handleProxy
+2017-11-17 10:21:35.964 - info: Proxy GET:/test/process-video To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: folderAuth
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.965 - debug: find path to rename /assets/upload
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.965 - info: Proxy Rename API POST:/assets/upload To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - info: Proxy POST:/uploadHandler/batchUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.965 - info: Proxy GET:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.965 - info: Proxy HEAD:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.965 - info: Proxy POST:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.965 - verbose: ensureLogin
+2017-11-17 10:21:35.965 - verbose: handleProxy
+2017-11-17 10:21:35.966 - info: Proxy PUT:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.966 - verbose: ensureLogin
+2017-11-17 10:21:35.966 - verbose: handleProxy
+2017-11-17 10:21:35.966 - info: Proxy DELETE:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.966 - verbose: ensureLogin
+2017-11-17 10:21:35.966 - verbose: handleProxy
+2017-11-17 10:21:35.972 - info: Proxy OPTIONS:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.972 - verbose: ensureLogin
+2017-11-17 10:21:35.972 - verbose: handleProxy
+2017-11-17 10:21:35.972 - info: Proxy PATCH:/uploadHandler/file To 192.168.0.203:8082
+2017-11-17 10:21:35.972 - verbose: ensureLogin
+2017-11-17 10:21:35.972 - verbose: handleProxy
+2017-11-17 10:21:35.972 - info: Proxy GET:/uploadHandler/fileUploadType To 192.168.0.203:8082
+2017-11-17 10:21:35.972 - verbose: ensureLogin
+2017-11-17 10:21:35.972 - verbose: handleProxy
+2017-11-17 10:21:35.972 - info: Proxy POST:/uploadHandler/testClarifai To 192.168.0.203:8082
+2017-11-17 10:21:35.972 - verbose: ensureLogin
+2017-11-17 10:21:35.972 - verbose: handleProxy
+2017-11-17 10:21:35.973 - info: Proxy POST:/uploadHandler/testUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.973 - verbose: proxyReject
+2017-11-17 10:21:35.973 - verbose: ensureLogin
+2017-11-17 10:21:35.973 - verbose: handleProxy
+2017-11-17 10:21:35.973 - info: Proxy POST:/uploadHandler/upload To 192.168.0.203:8082
+2017-11-17 10:21:35.973 - verbose: ensureLogin
+2017-11-17 10:21:35.973 - verbose: handleProxy
+2017-11-17 10:21:35.973 - info: Proxy POST:/uploadHandler/uploadBase64File2oss To 192.168.0.203:8082
+2017-11-17 10:21:35.973 - verbose: ensureLogin
+2017-11-17 10:21:35.973 - verbose: handleProxy
+2017-11-17 10:21:35.973 - info: Proxy POST:/uploadHandler/uploadFile2oss To 192.168.0.203:8082
+2017-11-17 10:21:35.973 - verbose: ensureLogin
+2017-11-17 10:21:35.973 - verbose: handleProxy
+2017-11-17 10:21:35.973 - info: Proxy GET:/uploadHandler/uploadPolicy To 192.168.0.203:8082
+2017-11-17 10:21:35.973 - verbose: ensureLogin
+2017-11-17 10:21:35.974 - verbose: handleProxy
+2017-11-17 10:21:35.974 - info: Proxy POST:/uploadOss/saveUpload To 192.168.0.203:8082
+2017-11-17 10:21:35.974 - verbose: ensureLogin
+2017-11-17 10:21:35.974 - verbose: handleProxy
+2017-11-17 10:21:35.974 - info: Proxy GET:/vResIndicesView/addOrupdateIndexByAssetsid To 192.168.0.203:8082
+2017-11-17 10:21:35.974 - verbose: ensureLogin
+2017-11-17 10:21:35.974 - verbose: handleProxy
+2017-11-17 10:21:35.974 - info: Proxy GET:/vResIndicesView/deleteIndex To 192.168.0.203:8082
+2017-11-17 10:21:35.974 - verbose: ensureLogin
+2017-11-17 10:21:35.974 - verbose: handleProxy
+2017-11-17 10:21:35.974 - info: Proxy GET:/vResIndicesView/deleteIndexByAssetsid To 192.168.0.203:8082
+2017-11-17 10:21:35.974 - verbose: ensureLogin
+2017-11-17 10:21:35.974 - verbose: handleProxy
+2017-11-17 10:21:35.974 - info: Proxy GET:/vResIndicesView/deleteIndexByCustomerId To 192.168.0.203:8082
+2017-11-17 10:21:35.974 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy GET:/vResIndicesView/deleteIndexByFolderAndListAsset To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy GET:/vResIndicesView/initIndexData To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy GET:/vcgDownload/down-count To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy GET:/vcgDownload/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy GET:/vcgDownload/update-confirm-status To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: proxyReject
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.975 - verbose: handleProxy
+2017-11-17 10:21:35.975 - info: Proxy POST:/videos/ To 192.168.0.203:8082
+2017-11-17 10:21:35.975 - verbose: ensureLogin
+2017-11-17 10:21:35.976 - verbose: jsonParser
+2017-11-17 10:21:35.976 - verbose: canManageAssets$
+2017-11-17 10:21:35.976 - verbose: handleProxy
+2017-11-17 10:21:35.976 - info: Proxy DELETE:/videos/ To 192.168.0.203:8082
+2017-11-17 10:21:35.976 - verbose: proxyReject
+2017-11-17 10:21:35.976 - verbose: ensureLogin
+2017-11-17 10:21:35.976 - verbose: handleProxy
+2017-11-17 10:21:35.976 - info: Proxy POST:/videos/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.976 - verbose: ensureLogin
+2017-11-17 10:21:35.976 - verbose: canViewAssets$
+2017-11-17 10:21:35.976 - verbose: handleProxy
+2017-11-17 10:21:35.976 - info: Proxy GET:/videos/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.976 - verbose: ensureLogin
+2017-11-17 10:21:35.976 - verbose: canManageAssets$
+2017-11-17 10:21:35.976 - verbose: handleProxy
+2017-11-17 10:21:35.976 - info: Proxy PUT:/videos/:id To 192.168.0.203:8082
+2017-11-17 10:21:35.976 - verbose: proxyReject
+2017-11-17 10:21:35.976 - verbose: ensureLogin
+2017-11-17 10:21:35.976 - verbose: handleProxy
+2017-11-17 10:21:35.976 - info: Proxy POST:/waterRule/create To 192.168.0.203:8082
+2017-11-17 10:21:35.976 - verbose: proxyReject
+2017-11-17 10:21:35.976 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy POST:/waterRule/delete To 192.168.0.203:8082
+2017-11-17 10:21:35.977 - verbose: proxyReject
+2017-11-17 10:21:35.977 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy GET:/waterRule/list To 192.168.0.203:8082
+2017-11-17 10:21:35.977 - verbose: proxyReject
+2017-11-17 10:21:35.977 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy POST:/waterRule/list To 192.168.0.203:8082
+2017-11-17 10:21:35.977 - verbose: proxyReject
+2017-11-17 10:21:35.977 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy GET:/waterRule/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.977 - verbose: proxyReject
+2017-11-17 10:21:35.977 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy POST:/waterRule/pageList To 192.168.0.203:8082
+2017-11-17 10:21:35.977 - verbose: proxyReject
+2017-11-17 10:21:35.977 - verbose: ensureLogin
+2017-11-17 10:21:35.977 - verbose: handleProxy
+2017-11-17 10:21:35.977 - info: Proxy POST:/waterRule/update To 192.168.0.203:8082
+2017-11-17 10:21:35.978 - verbose: proxyReject
+2017-11-17 10:21:35.978 - verbose: ensureLogin
+2017-11-17 10:21:35.978 - verbose: handleProxy
+2017-11-17 10:21:35.978 - info: Proxy GET:/waterRule/view To 192.168.0.203:8082
+2017-11-17 10:21:38.065 - debug:  Router get /message/sendsms
+2017-11-17 10:21:38.066 - debug:  Router get /message/check
+2017-11-17 10:21:38.066 - debug:  Router get /damSearcher/searchDam
+2017-11-17 10:21:38.066 - debug:  Router get /damSearcher/searchDamFolder
+2017-11-17 10:21:38.066 - debug:  Router get /folders
+2017-11-17 10:21:38.066 - debug:  Router post /folders/:id/sub_folders
+2017-11-17 10:21:38.066 - debug:  Router get /folderitems/v2/:folderId
+2017-11-17 10:21:38.066 - debug:  Router post /favorites
+2017-11-17 10:21:38.066 - debug:  Router get /favorites
+2017-11-17 10:21:38.066 - debug:  Router delete /favorites
+2017-11-17 10:21:38.066 - debug:  Router post /assets/downloadurl
+2017-11-17 10:21:38.066 - debug:  Router post /oauth2/access_token
+2017-11-17 10:21:38.066 - debug:  Router post /oauth2/refresh_token
+2017-11-17 10:21:38.066 - debug:  Router post /user
+2017-11-17 10:21:38.067 - debug:  Router post /assets/upload
+2017-11-17 10:21:38.067 - debug:  Router get /workgorups
+2017-11-17 10:21:38.067 - debug:  Router post /users
+2017-11-17 10:21:38.067 - debug:  Router post /userFolderPermissionList
+2017-11-17 10:21:38.067 - debug:  Router post /assets/downloadurl
+2017-11-17 10:21:38.067 - debug:  Router post /download/verify
+2017-11-17 10:21:38.067 - debug:  Router get /workgroups
+2017-11-17 10:21:38.067 - debug:  Router get /assets/:id
+2017-11-17 10:21:38.067 - debug:  Router get /assets/batch
+2017-11-17 10:21:38.067 - debug:  Router get /search
+2017-11-17 10:21:38.067 - debug:  Router get /profile
+2017-11-17 10:21:38.068 - debug:  Router get /download/proxy/:file
+2017-11-17 10:21:39.225 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:39.234 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:39.290 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-11-17 10:21:39.291 - info: begin init user
+2017-11-17 10:21:39.296 - info: init user  error : 
+2017-11-17 10:21:41.286 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:41.287 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:41.301 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-11-17 10:21:41.301 - info: begin init user
+2017-11-17 10:21:41.348 - info: init user  success
+2017-11-17 10:21:41.349 - info:  userId=fe722730046928265bd7372bb281d6516, userName=damtest@test.com, displayName=dam管理员, email=damtest@test.com, permissions=[folder_management_page, assets_upload_page, assets_audit_page, no_audit, view_assets, download_assets, upload_assets, user_add, user_edit, user_view, role_add, role_view, role_edit, auth_view, vcg_view, vcg_download, vcg_edit_download, vcg_edit_view, weixin_matrix, system_manager, contract_manager, used_assets_manager, api_management_page, user_management, system_manager, newResource], customerId=11111, userType=1, isUploadAliYun=false, maxDownCount=10000, downCount=903, maxDownAmount=-1, downAmount=4259.1
+2017-11-17 10:21:56.389 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:56.390 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:57.030 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:57.030 - info: user damtest@test.com posting to login to backend
+2017-11-17 10:21:57.043 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-11-17 10:21:57.044 - info: begin init user
+2017-11-17 10:21:57.103 - info: init user  success
+2017-11-17 10:21:57.103 - info:  userId=fe722730046928265bd7372bb281d6516, userName=damtest@test.com, displayName=dam管理员, email=damtest@test.com, permissions=[folder_management_page, assets_upload_page, assets_audit_page, no_audit, view_assets, download_assets, upload_assets, user_add, user_edit, user_view, role_add, role_view, role_edit, auth_view, vcg_view, vcg_download, vcg_edit_download, vcg_edit_view, weixin_matrix, system_manager, contract_manager, used_assets_manager, api_management_page, user_management, system_manager, newResource], customerId=11111, userType=1, isUploadAliYun=false, maxDownCount=10000, downCount=903, maxDownAmount=-1, downAmount=4259.1
+2017-11-17 10:21:57.221 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:21:57.222 - info: current user is fe722730046928265bd7372bb281d6516
+2017-11-17 10:22:11.467 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.474 - info: set rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.474 - info: del rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.480 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.483 - info: set rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.483 - info: del rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.494 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.497 - info: set rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:11.497 - info: del rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:12.874 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:12.875 - info: current user is fe722730046928265bd7372bb281d6516
+2017-11-17 10:22:12.875 - info: begin init user
+2017-11-17 10:22:12.878 - info: SessionID rq0W8_cIOt240YR7ShbuS0SYDguUwvAe    rq0W8_cIOt240YR7ShbuS0SYDguUwvAe
+2017-11-17 10:22:12.879 - info: current user is fe722730046928265bd7372bb281d6516
+2017-11-17 10:22:12.881 - info: init user  error : 
+2017-11-17 10:22:12.881 - error: initUserSession error {"name":"FetchError","message":"request to http://192.168.0.203:8081/user/view?id=fe722730046928265bd7372bb281d6516 failed, reason: connect ECONNREFUSED 192.168.0.203:8081","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}

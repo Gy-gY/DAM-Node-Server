@@ -1,0 +1,17 @@
+// 对后端微服务接口的代理配置
+export const services = {
+    'passport':  '{{ default .Env.APIPROXY_PASSPORT "http://192.168.2.238:8081" }}',
+    'resource':  '{{ default .Env.APIPROXY_RESOURCE "http://192.168.2.238:6010" }}'
+};
+// 搜索服务地址
+export const search = '{{ default .Env.APIPROXY_SEARCH "http://192.168.2.238:9200" }}';
+
+// 后端微服务swagger-ui代理
+export const microServices = {
+    'passportService':  services.passport + '/swagger-ui.html',
+    'resourceService':  services.resource + '/swagger-ui.html',
+};
+
+export const nodeServices = {
+    // 'nodeAPIService': 'http://192.168.2.238:6088/docs'
+};

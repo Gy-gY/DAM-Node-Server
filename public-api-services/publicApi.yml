@@ -1,0 +1,1484 @@
+# This is an example of the VCG DAM API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: VCG DAM API
+  description: version 1.0
+  version: "1.0.0"
+# the domain of the service
+host: ""
+# array of all schemes that your API supports
+schemes:
+  - http
+# will be prefixed to all paths
+basePath: /v1
+
+produces:
+  - application/json
+
+tags:
+  - Folder
+  - User
+
+paths:
+  /oauth2/access_token:
+    post:
+      summary: Access token
+      description: |
+        根据client id,client secret,username,password以及grant type获取鉴权用户的access token和refres token等详情<br/>
+        采用OAuth2 Passport模式鉴权(参见Oauth2规范, 要求使用basic Auth方式传递client_id， client-sercret)
+      parameters:
+        - name: username
+          in: formData
+          description: |
+            VCG DAM 账号名称
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: |
+            VCG DAM 账号密码
+          required: true
+          type: string
+        - name: grant_type
+          in: formData
+          description: |
+            类型一定为password
+          default: "password"
+          required: true
+          type: string
+      security:
+        - password_auth
+      tags:
+        - OAuth2 Token
+      responses:
+        200:
+          description: |
+            获取access token成功
+          headers:
+            cache-control:
+              type: string
+            pragma:
+              type: string
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+              token_type:
+                type: string
+              refresh_token:
+                type: string
+              expires_in:
+                type: integer
+        403:
+          description: |
+            获取access token失败
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                default: "invalid_request"
+              error_description:
+                type: string
+                default: "Invalid refresh_token"
+        429:
+          $ref: '#/definitions/rate_limit'
+
+  /oauth2/refresh_token:
+    post:
+      summary: Refresh token
+      description: |
+        根据鉴权用户ID和密钥访问refresh_token进行过期token的刷新操作,重新生成token,并恢复token的失效时间.<br/>
+        采用OAuth2 refresh_token 模式鉴权。(参见Oauth2规范, 要求使用basic Auth方式传递client_id， client-sercret)
+      parameters:
+        - name: keywords
+          in: formData
+          required: true
+          description: |
+            鉴权请求类型等于refresh_token.
+          type: string
+          default: refresh_token
+        - name: pageNum
+          in: formData
+          required: true
+          type: string
+          description: refresh token.
+        - name: refresh_token
+          in: formData
+          required: true
+          type: string
+          description: refresh token.
+      tags:
+        - OAuth2 Token
+      security:
+        - password_auth
+      responses:
+        200:
+          description: |
+            刷新token成功
+          schema:
+            type: object
+            properties:
+              refresh_token:
+                type: string
+              token_type:
+                type: string
+              access_token:
+                type: string
+              expires_in:
+                type: integer
+        403:
+          description: |
+            刷新token失败
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                default: "invalid_request"
+              error_description:
+                type: string
+                default: "Invalid refresh_token"
+        429:
+          $ref: '#/definitions/rate_limit'
+
+  #   get:
+  #     description: 查询当前授权用户组的用户列表
+  #     tags:
+  #       - User
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: user
+  #         in: body
+  #         description: 用户信息
+  #         schema:
+  #           type: object
+  #           properties:
+  #             demo:
+  #               type: string
+  #     security:
+  #       - apikey_auth
+  #       - accesstoken_auth
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+  # /users/{id}:
+  #   delete:
+  #     description: 从当前授权用户组中删除某一用户
+  #     tags:
+  #       - User
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: path
+  #         description: 用户ID
+  #         type: string
+  #         required: true
+  #     security:
+  #       - apikey_auth
+  #       - accesstoken_auth
+
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  #   put:
+  #     description: 更新当前授权用户组中用户的信息
+  #     tags:
+  #       - User
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: path
+  #         description: 用户ID
+  #         type: string
+  #         required: true
+  #     security:
+  #       - apikey_auth
+  #       - accesstoken_auth
+
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+  #   get:
+  #     description: 查找当前授权用户组中用户的信息
+  #     tags:
+  #       - User
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: path
+  #         description: 用户ID
+  #         type: string
+  #         required: true
+  #     security:
+  #       - apikey_auth
+  #       - accesstoken_auth
+  #     responses:
+  #         200:
+  #           description: |
+  #             请求成功
+  #         400:
+  #           $ref: '#/definitions/failing_responses_400'
+
+  #         401:
+  #           $ref: '#/definitions/failing_auth_401'
+
+  #         429:
+  #           $ref: '#/definitions/rate_limit'
+
+  # /search/editorial:
+  #   get:
+  #     summary: 通过搜索条件搜索图片详情（编辑图片）
+  #     description: |
+  #       通过图片id和搜索条件(keyword,sort,sort_by,license_type,orientation,page,nums)获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 图片id.
+  #         type: string
+  #       - name: keyword
+  #         in: query
+  #         description: |
+  #           and条件,多个关键词用半角逗号分隔.
+  #         required: false
+  #         type: string
+  #       - name: sort
+  #         in: query
+  #         description: 排序，最佳(best)和时间(time).
+  #         required: false
+  #         type: string
+  #       - name: sort_by
+  #         in: query
+  #         description: 正序倒序.
+  #         required: false
+  #         type: string
+  #       - name: license_type
+  #         in: query
+  #         description: 版权.
+  #         required: false
+  #         type: string
+  #       - name: orientation
+  #         in: query
+  #         description: 1横图2竖图3方图.
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         required: false
+  #         type: integer
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         required: false
+  #         type: integer
+  #       - name: is_need_middle
+  #         in: query
+  #         description: 是否需要加水印的中图800.
+  #         required: false
+  #         type: boolean
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"list":[{"id":"0102401625220","caption":"Happy senior couple with bushel of apples hugging","width":"5120","height":"3413","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/83a07a17a7a945028a4230d11da3e081.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/83a07a17a7a945028a4230d11da3e081.jpg"},{"id":"0102401625188","caption":"Grandfather and grandson wiping hands with cloth in front of car in driveway","width":"5118","height":"3412","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg"},{"id":"0102401625238","caption":"Chapel of Grace (Gnadenkapelle) Alt?tting","width":"4583","height":"3527","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/e27ef6f02584465eb50b90cec41f141f.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/e27ef6f02584465eb50b90cec41f141f.jpg"}],"total_count":14374711,"total_page":4791571,"per_page":"3","cur_page":"2"}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/creative:
+  #   get:
+  #     summary: 通过搜索条件搜索图片详情(创意图片)
+  #     description: |
+  #       通过图片id和搜索条件(keyword,sort,sort_by,license_type,orientation,page,nums)获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 图片id.
+  #         type: string
+  #       - name: keyword
+  #         in: query
+  #         description: |
+  #           and条件,多个关键词用半角逗号分隔.
+  #         required: false
+  #         type: string
+  #       - name: sort
+  #         in: query
+  #         description: 排序，最佳(best)和时间(time).
+  #         required: false
+  #         type: string
+  #       - name: sort_by
+  #         in: query
+  #         description: 正序倒序.
+  #         required: false
+  #         type: string
+  #       - name: license_type
+  #         in: query
+  #         description: 版权.
+  #         required: false
+  #         type: string
+  #       - name: orientation
+  #         in: query
+  #         description: 1横图2竖图3方图.
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         required: false
+  #         type: integer
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         required: false
+  #         type: integer
+  #       - name: is_need_middle
+  #         in: query
+  #         description: 是否需要加水印的中图800.
+  #         required: false
+  #         type: boolean
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"list":[{"id":"0102401625220","caption":"Happy senior couple with bushel of apples hugging","width":"5120","height":"3413","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/83a07a17a7a945028a4230d11da3e081.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/83a07a17a7a945028a4230d11da3e081.jpg"},{"id":"0102401625188","caption":"Grandfather and grandson wiping hands with cloth in front of car in driveway","width":"5118","height":"3412","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg"},{"id":"0102401625238","caption":"Chapel of Grace (Gnadenkapelle) Alt?tting","width":"4583","height":"3527","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/e27ef6f02584465eb50b90cec41f141f.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/e27ef6f02584465eb50b90cec41f141f.jpg"}],"total_count":14374711,"total_page":4791571,"per_page":"3","cur_page":"2"}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/creative/wholly_owned/vcg:
+  #   get:
+  #     summary: 通过搜索条件搜索图片详情（vcg wholly owned）
+  #     description: |
+  #       通过图片id和搜索条件(keyword,sort,sort_by,license_type,orientation,page,nums)获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 图片id.
+  #         type: string
+  #       - name: keyword
+  #         in: query
+  #         description: |
+  #           and条件,多个关键词用半角逗号分隔.
+  #         required: false
+  #         type: string
+  #       - name: sort
+  #         in: query
+  #         description: 排序，最佳(best)和时间(time).
+  #         required: false
+  #         type: string
+  #       - name: sort_by
+  #         in: query
+  #         description: 正序倒序.
+  #         required: false
+  #         type: string
+  #       - name: license_type
+  #         in: query
+  #         description: 版权.
+  #         required: false
+  #         type: string
+  #       - name: orientation
+  #         in: query
+  #         description: 1横图2竖图3方图.
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         required: false
+  #         type: integer
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         required: false
+  #         type: integer
+  #       - name: is_need_middle
+  #         in: query
+  #         description: 是否需要加水印的中图800.
+  #         required: false
+  #         type: boolean
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"list":[{"id":"0102401625220","caption":"Happy senior couple with bushel of apples hugging","width":"5120","height":"3413","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/83a07a17a7a945028a4230d11da3e081.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/83a07a17a7a945028a4230d11da3e081.jpg"},{"id":"0102401625188","caption":"Grandfather and grandson wiping hands with cloth in front of car in driveway","width":"5118","height":"3412","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg"},{"id":"0102401625238","caption":"Chapel of Grace (Gnadenkapelle) Alt?tting","width":"4583","height":"3527","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/e27ef6f02584465eb50b90cec41f141f.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/e27ef6f02584465eb50b90cec41f141f.jpg"}],"total_count":14374711,"total_page":4791571,"per_page":"3","cur_page":"2"}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/creative/wholly_owned/istock:
+  #   get:
+  #     summary: 通过搜索条件搜索图片详情(istock wholly owned）
+  #     description: |
+  #       通过图片id和搜索条件(keyword,sort,sort_by,license_type,orientation,page,nums)获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 图片id.
+  #         type: string
+  #       - name: keyword
+  #         in: query
+  #         description: |
+  #           and条件,多个关键词用半角逗号分隔.
+  #         required: false
+  #         type: string
+  #       - name: sort
+  #         in: query
+  #         description: 排序，最佳(best)和时间(time).
+  #         required: false
+  #         type: string
+  #       - name: sort_by
+  #         in: query
+  #         description: 正序倒序.
+  #         required: false
+  #         type: string
+  #       - name: license_type
+  #         in: query
+  #         description: 版权.
+  #         required: false
+  #         type: string
+  #       - name: orientation
+  #         in: query
+  #         description: 1横图2竖图3方图.
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         required: false
+  #         type: integer
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         required: false
+  #         type: integer
+  #       - name: is_need_middle
+  #         in: query
+  #         description: 是否需要加水印的中图800.
+  #         required: false
+  #         type: boolean
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"list":[{"id":"0102401625220","caption":"Happy senior couple with bushel of apples hugging","width":"5120","height":"3413","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/83a07a17a7a945028a4230d11da3e081.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/83a07a17a7a945028a4230d11da3e081.jpg"},{"id":"0102401625188","caption":"Grandfather and grandson wiping hands with cloth in front of car in driveway","width":"5118","height":"3412","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg"},{"id":"0102401625238","caption":"Chapel of Grace (Gnadenkapelle) Alt?tting","width":"4583","height":"3527","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/e27ef6f02584465eb50b90cec41f141f.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/e27ef6f02584465eb50b90cec41f141f.jpg"}],"total_count":14374711,"total_page":4791571,"per_page":"3","cur_page":"2"}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/creative/wholly_owned/getty:
+  #   get:
+  #     summary: 通过搜索条件搜索图片详情(getty wholly owned）
+  #     description: |
+  #       通过图片id和搜索条件(keyword,sort,sort_by,license_type,orientation,page,nums)获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 图片id.
+  #         type: string
+  #       - name: keyword
+  #         in: query
+  #         description: |
+  #           and条件,多个关键词用半角逗号分隔.
+  #         required: false
+  #         type: string
+  #       - name: sort
+  #         in: query
+  #         description: 排序，最佳(best)和时间(time).
+  #         required: false
+  #         type: string
+  #       - name: sort_by
+  #         in: query
+  #         description: 正序倒序.
+  #         required: false
+  #         type: string
+  #       - name: license_type
+  #         in: query
+  #         description: 版权.
+  #         required: false
+  #         type: string
+  #       - name: orientation
+  #         in: query
+  #         description: 1横图2竖图3方图.
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         required: false
+  #         type: integer
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         required: false
+  #         type: integer
+  #       - name: is_need_middle
+  #         in: query
+  #         description: 是否需要加水印的中图800.
+  #         required: false
+  #         type: boolean
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"list":[{"id":"0102401625220","caption":"Happy senior couple with bushel of apples hugging","width":"5120","height":"3413","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/83a07a17a7a945028a4230d11da3e081.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/83a07a17a7a945028a4230d11da3e081.jpg"},{"id":"0102401625188","caption":"Grandfather and grandson wiping hands with cloth in front of car in driveway","width":"5118","height":"3412","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/0a7c0efb993e4ed6a59355a97d3dde36.jpg"},{"id":"0102401625238","caption":"Chapel of Grace (Gnadenkapelle) Alt?tting","width":"4583","height":"3527","license_type":"rf","asset_format":"jpg","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/176\/new\/e27ef6f02584465eb50b90cec41f141f.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/400\/new\/e27ef6f02584465eb50b90cec41f141f.jpg"}],"total_count":14374711,"total_page":4791571,"per_page":"3","cur_page":"2"}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/creative/photo_from_url:
+  #   get:
+  #     summary: 以图搜图（创意图片）
+  #     description: |
+  #           以图搜图(创意图片)
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: pic_url
+  #         in: query
+  #         description: jpeg图片地址.
+  #         required: true
+  #         type: string
+  #       - name: count
+  #         in: query
+  #         description: |
+  #           图片集总数，最大100个.
+  #         required: true
+  #         type: string
+  #     tags:
+  #       - Search
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data": { "list": [{"asset_format": "JPG","caption": "Killer resting","height": "3744","id": "147504648", "license_type": "rf", "preview_url": "http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/500-nowater/8096000/147504648.jpg","small_url": "http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/170/8096000/147504648.jpg","width": "5616"}],"total_count": "3"},"status_code": 1}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/photo_new:
+  #   get:
+  #     summary: |
+  #       获取新上线的图片合集（创意图片）
+  #     tags:
+  #       - Search
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: from
+  #         in: query
+  #         description: |
+  #           开始日期,不填写是当前日期 00:00:00,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: to
+  #         in: query
+  #         description: |
+  #           结束日期,不填写是当前日期 23:59:59,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.最大2000
+  #         required: false
+  #         type: integer
+  #       - name: perpage
+  #         in: query
+  #         description: 每页数量,最大100
+  #         required: false
+  #         type: integer
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":{"total_page":2,"per_page":"100","cur_page":"1","ids":["400188110","400180491","216694557"]},"status_code":1}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/photo_new/editorial:
+  #   get:
+  #     summary: |
+  #       获取新上线的图片合集（编辑图片）
+  #     tags:
+  #       - Search
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.最大2000
+  #         required: false
+  #         type: integer
+  #         default: 1
+  #       - name: perpage
+  #         in: query
+  #         description: 每页数量,最大100
+  #         required: false
+  #         type: integer
+  #         default: 20
+
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":{"total_page":2,"per_page":"100","cur_page":"1","ids":["400188110","400180491","216694557"]},"status_code":1}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /search/photo_changed:
+  #   get:
+  #     summary: |
+  #               获取详情更新的图片合集（创意图片）
+  #     tags:
+  #       - Search
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: from
+  #         in: query
+  #         description: |
+  #           开始日期,不填写是当前日期 00:00:00,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: to
+  #         in: query
+  #         description: |
+  #           结束日期,不填写是当前日期 23:59:59,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页
+  #         required: false
+  #         type: integer
+  #       - name: perpage
+  #         in: query
+  #         description: 每页数量,默认不填为100
+  #         required: false
+  #         type: integer
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":{"total_page":2,"per_page":"100","cur_page":"1","ids":["400188110","400180491","216694557"]},"status_code":1}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+
+  # /search/photo_removed:
+  #   get:
+  #     summary: |
+  #       获取已经下线的图片合集（创意图片）
+  #     tags:
+  #       - Search
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: from
+  #         in: query
+  #         description: |
+  #           开始日期,不填写是当前日期 00:00:00,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: to
+  #         in: query
+  #         description: |
+  #           结束日期,不填写是当前日期 23:59:59,格式为:YYYY-mm-dd HH:mm:ss
+  #         required: false
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页
+  #         required: false
+  #         type: integer
+  #       - name: perpage
+  #         in: query
+  #         description: 每页数量,默认不填为100
+  #         required: false
+  #         type: integer
+  #     responses:
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":{"total_page":2,"per_page":"100","cur_page":"1","ids":["400188110","400180491","216694557"]},"status_code":1}
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+
+  # /images/detail:
+  #   get:
+  #     summary: 获取图片详情（编辑和创意图片）
+  #     description: |
+  #       通过ids获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: ids
+  #         in: query
+  #         description: 图片id.
+  #         required: true
+  #         type: string
+  #       - name: type
+  #         in: query
+  #         description: 查询类型，1为默认的(对外展示id,resid)，2为表自增id(此时keyword会带权重值).
+  #         type: integer
+  #         default: 1
+  #     tags:
+  #       - Images
+  #     responses:
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           required:
+  #             - "data"
+  #             - "status_code"
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #               default: 1
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":[{"id":"208204553","res_id":"144553120","credit_line":"Jasper James","caption":"double exposure of hand holding toy airplane","width":"5616","height":"3744","origen_pic_byte":"10066329","asset_format":"JPG","middle_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/800-bignowater\/8486000\/144553120.jpg","copyright":"有模特肖像权","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/170\/8486000\/144553120.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/500-nowater\/8486000\/144553120.jpg","keywords":"成年人,仅成年人,青年人,人体,手,人,一个人,户外,白昼,部分,在活动中,旅途,旅行,度假,建筑,运输,图像,摄影,剪影,彩色图片,水平画幅,多重曝光,数码合成,高视角,飞,拿着,中国,广东省,建筑外部,都市风景,飞机,白人,25岁到29岁","brand_name":"Stone"}],"status_code":1}
+
+  # /images/detail/istock:
+  #   get:
+  #     summary: 获取图片详情（istock图片）
+  #     description: |
+  #       通过ids获取图片详情
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: ids
+  #         in: query
+  #         description: 图片id.
+  #         required: true
+  #         type: string
+
+  #     tags:
+  #       - Images
+  #     responses:
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           required:
+  #             - "data"
+  #             - "status_code"
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #               default: 1
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":[{"id":"208204553","res_id":"144553120","credit_line":"Jasper James","caption":"double exposure of hand holding toy airplane","width":"5616","height":"3744","origen_pic_byte":"10066329","asset_format":"JPG","middle_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/800-bignowater\/8486000\/144553120.jpg","copyright":"有模特肖像权","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/170\/8486000\/144553120.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/500-nowater\/8486000\/144553120.jpg","keywords":"成年人,仅成年人,青年人,人体,手,人,一个人,户外,白昼,部分,在活动中,旅途,旅行,度假,建筑,运输,图像,摄影,剪影,彩色图片,水平画幅,多重曝光,数码合成,高视角,飞,拿着,中国,广东省,建筑外部,都市风景,飞机,白人,25岁到29岁","brand_name":"Stone"}],"status_code":1}
+
+  # /group:
+  #   get:
+  #     summary: 根据组照id获取图片列表
+  #     description: |
+  #       根据组照id获取图片列表
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 组id.
+  #         required: true
+  #         type: string
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         type: integer
+  #         default: 1
+  #       - name: page_size
+  #         in: query
+  #         description: 每页数量.默认500.不能超过1000.
+  #         type: integer
+  #         default: 500
+  #     tags:
+  #       - Images Group
+  #     responses:
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           required:
+  #             - "data"
+  #             - "status_code"
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #               default: 1
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":[{"id":"208204553","res_id":"144553120","credit_line":"Jasper James","caption":"double exposure of hand holding toy airplane","width":"5616","height":"3744","origen_pic_byte":"10066329","asset_format":"JPG","middle_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/800-bignowater\/8486000\/144553120.jpg","copyright":"有模特肖像权","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/170\/8486000\/144553120.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/500-nowater\/8486000\/144553120.jpg","keywords":"成年人,仅成年人,青年人,人体,手,人,一个人,户外,白昼,部分,在活动中,旅途,旅行,度假,建筑,运输,图像,摄影,剪影,彩色图片,水平画幅,多重曝光,数码合成,高视角,飞,拿着,中国,广东省,建筑外部,都市风景,飞机,白人,25岁到29岁","brand_name":"Stone"}],"status_code":1}
+
+  # /topic:
+  #   get:
+  #     summary: 根据专题id获取组照列表
+  #     description: |
+  #       根据专题id获取组照列表
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: id
+  #         in: query
+  #         description: 专题id.
+  #         type: string
+  #       - name: type
+  #         in: query
+  #         description: 类型  2.检索专题下的组信息
+  #         required: true
+  #         type: string
+  #         default: 2
+  #       - name: page
+  #         in: query
+  #         description: 第几页.
+  #         type: integer
+  #         default: 1
+  #       - name: nums
+  #         in: query
+  #         description: 每页数量.
+  #         type: integer
+  #         default: 2
+  #     tags:
+  #       - Topic
+  #     responses:
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  #       200:
+  #         description: |
+  #           请求成功
+  #         schema:
+  #           type: object
+  #           required:
+  #             - "data"
+  #             - "status_code"
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #               default: 1
+  #             data:
+  #               type: object
+  #               description: |
+  #                 {"data":[{"id":"208204553","res_id":"144553120","credit_line":"Jasper James","caption":"double exposure of hand holding toy airplane","width":"5616","height":"3744","origen_pic_byte":"10066329","asset_format":"JPG","middle_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/800-bignowater\/8486000\/144553120.jpg","copyright":"有模特肖像权","small_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/170\/8486000\/144553120.jpg","preview_url":"http:\/\/bj-feiyuantu.oss-cn-beijing.aliyuncs.com\/creative\/vcg\/500-nowater\/8486000\/144553120.jpg","keywords":"成年人,仅成年人,青年人,人体,手,人,一个人,户外,白昼,部分,在活动中,旅途,旅行,度假,建筑,运输,图像,摄影,剪影,彩色图片,水平画幅,多重曝光,数码合成,高视角,飞,拿着,中国,广东省,建筑外部,都市风景,飞机,白人,25岁到29岁","brand_name":"Stone"}],"status_code":1}
+
+  # /download:
+  #   get:
+  #     summary: 下载图片（使用api合同条款）
+  #     description: |
+  #       通过photo_id获取图片列表
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: photo_id
+  #         in: query
+  #         description: 图片id.
+  #         required: true
+  #         type: string
+  #     tags:
+  #       - Downloads
+  #     responses:
+  #       200:
+  #         description: |
+  #           下载成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /auth_download:
+  #   get:
+  #     summary: 下载图片（使用VCG网站授权）
+  #     description: |
+  #       通过图片id使用VCG网站授权下载
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: ids
+  #         in: query
+  #         description: 图片id集合,逗号分隔eg:111,22,最多50张
+  #         required: true
+  #         type: string
+  #     tags:
+  #       - Downloads
+  #     responses:
+  #       200:
+  #         description: |
+  #           下载成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+  # /download/istock:
+  #   get:
+  #     summary: 下载istock图片（使用api合同条款）
+  #     description: |
+  #       通过photo_id获取图片列表
+  #     parameters:
+  #       - name: client_id
+  #         in: header
+  #         description: 用户鉴权client id.
+  #         required: true
+  #         type: string
+  #       - name: authorization
+  #         in: header
+  #         description: |
+  #           Bearer+空格+access token值
+  #         required: true
+  #         type: string
+  #       - name: photo_id
+  #         in: query
+  #         description: id,逗号分隔,最多50.
+  #         required: true
+  #         type: string
+  #     tags:
+  #       - Downloads
+  #     responses:
+  #       200:
+  #         description: |
+  #           下载成功
+  #         schema:
+  #           type: object
+  #           properties:
+  #             status_code:
+  #               type: integer
+  #             data:
+  #               type: object
+  #       401:
+  #         $ref: '#/definitions/failing_auth_401'
+
+  #       400:
+  #         $ref: '#/definitions/failing_responses_400'
+
+  #       429:
+  #         $ref: '#/definitions/rate_limit'
+
+
+
+definitions:
+  rate_limit:
+    description: |
+      限速
+    schema:
+      headers:
+        X-RateLimit-Remaining-Minute:
+          description: |
+            "每分钟限速"
+          type: integer
+        X-RateLimit-Remaining-Second:
+          description: |
+            "每秒钟限速"
+          type: integer
+
+  failing_responses_400:
+    description: |
+      请求失败
+    schema:
+      required:
+        - "error_description"
+        - "error"
+      properties:
+        error_description:
+          type: "string"
+        error:
+          type: "string"
+          default: "访问资源不存在"
+
+  failing_responses_404:
+    description: |
+      请求失败
+    schema:
+      required:
+        - "error_description"
+        - "error"
+      properties:
+        error_description:
+         type: "string"
+        error:
+         type: "string"
+         default: "访问资源不存在"
+
+  failing_auth_401:
+    description: |
+      鉴权失败
+    schema:
+      type: object
+      required:
+        - "error_description"
+        - "error"
+      properties:
+        error_description:
+         type: "string"
+         default: "The access token is missing"
+        error:
+         type: "string"
+         default: "身份认证失败"
+
+  not_permitted_403:
+    description: |
+      资源不可用
+    schema:
+      type: object
+      required:
+        - "error_description"
+        - "error"
+      properties:
+        error_description:
+         type: "string"
+         default: "无权限访问该资源"
+        error:
+         type: "string"
+         default: "无权限访问该资源"
+
+securityDefinitions:
+  apikey_auth:
+    type: apiKey
+    description: 访问接口需要携带 client_id(client id)
+    name: client_id
+    in: header
+  accesstoken_auth:
+    type: apiKey
+    description: 访问接口需要携带 Bearer+空格+access token值
+    name: authorization
+    in: header
+
+  password_auth:
+    type: oauth2
+    description: oauth2 password flow
+    flow: password
+    tokenUrl: oauth2/access_token
+
+# security:

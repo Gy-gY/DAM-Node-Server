@@ -1,0 +1,177 @@
+2017-12-01 14:42:55.347 - debug: Format Public API Config
+2017-12-01 14:42:55.471 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-12-01 14:42:55.348 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-12-01 14:42:55.349 - debug: parseField GET:/favorites
+2017-12-01 14:42:55.349 - debug: parseField GET:/workgroups
+2017-12-01 14:42:55.372 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-12-01 14:42:55.628 - error: Loading Remote api passport error. Try it later
+2017-12-01 14:42:55.628 - error:  FetchError: request to http://192.168.0.203:8081/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8081
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:42:55.629 - error: Loading Remote api resource error. Try it later
+2017-12-01 14:42:55.629 - error:  FetchError: request to http://192.168.0.203:8082/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8082
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:42:55.641 - error: Loading Remote api VCGpassport error. Try it later
+2017-12-01 14:42:55.646 - error:  TypeError: Cannot read property 'paths' of undefined
+    at /Users/guoyu/work/project/dam-server/routes/micro-services-proxy.js:39:32
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+2017-12-01 14:42:58.468 - debug:  Router get /message/sendsms
+2017-12-01 14:42:58.469 - debug:  Router get /message/check
+2017-12-01 14:42:58.469 - debug:  Router get /damSearcher/searchDam
+2017-12-01 14:42:58.469 - debug:  Router get /damSearcher/searchDamFolder
+2017-12-01 14:42:58.470 - debug:  Router get /folders
+2017-12-01 14:42:58.470 - debug:  Router post /folders/:id/sub_folders
+2017-12-01 14:42:58.470 - debug:  Router get /folderitems/v2/:folderId
+2017-12-01 14:42:58.473 - debug:  Router post /favorites
+2017-12-01 14:42:58.474 - debug:  Router get /favorites
+2017-12-01 14:42:58.475 - debug:  Router delete /favorites
+2017-12-01 14:42:58.476 - debug:  Router post /assets/downloadurl
+2017-12-01 14:42:58.476 - debug:  Router post /oauth2/access_token
+2017-12-01 14:42:58.477 - debug:  Router post /oauth2/refresh_token
+2017-12-01 14:42:58.477 - debug:  Router post /user
+2017-12-01 14:42:58.477 - debug:  Router post /assets/upload
+2017-12-01 14:42:58.478 - debug:  Router get /workgorups
+2017-12-01 14:42:58.478 - debug:  Router post /users
+2017-12-01 14:42:58.478 - debug:  Router post /userFolderPermissionList
+2017-12-01 14:42:58.478 - debug:  Router post /assets/downloadurl
+2017-12-01 14:42:58.478 - debug:  Router post /download/verify
+2017-12-01 14:42:58.478 - debug:  Router get /workgroups
+2017-12-01 14:42:58.479 - debug:  Router get /assets/:id
+2017-12-01 14:42:58.479 - debug:  Router get /assets/batch
+2017-12-01 14:42:58.479 - debug:  Router get /search
+2017-12-01 14:42:58.479 - debug:  Router get /profile
+2017-12-01 14:42:58.479 - debug:  Router get /download/proxy/:file
+2017-12-01 14:54:16.046 - debug: Format Public API Config
+2017-12-01 14:54:16.146 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-12-01 14:54:16.048 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-12-01 14:54:16.048 - debug: parseField GET:/favorites
+2017-12-01 14:54:16.048 - debug: parseField GET:/workgroups
+2017-12-01 14:54:16.062 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-12-01 14:54:16.320 - error: Loading Remote api resource error. Try it later
+2017-12-01 14:54:16.320 - error:  FetchError: request to http://192.168.0.203:8082/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8082
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:54:16.321 - error: Loading Remote api passport error. Try it later
+2017-12-01 14:54:16.321 - error:  FetchError: request to http://192.168.0.203:8081/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8081
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:54:16.331 - error: Loading Remote api VCGpassport error. Try it later
+2017-12-01 14:54:16.336 - error:  TypeError: Cannot read property 'paths' of undefined
+    at /Users/guoyu/work/project/dam-server/routes/micro-services-proxy.js:39:32
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+2017-12-01 14:54:19.144 - debug:  Router get /message/sendsms
+2017-12-01 14:54:19.144 - debug:  Router get /message/check
+2017-12-01 14:54:19.144 - debug:  Router get /damSearcher/searchDam
+2017-12-01 14:54:19.144 - debug:  Router get /damSearcher/searchDamFolder
+2017-12-01 14:54:19.145 - debug:  Router get /folders
+2017-12-01 14:54:19.145 - debug:  Router post /folders/:id/sub_folders
+2017-12-01 14:54:19.145 - debug:  Router get /folderitems/v2/:folderId
+2017-12-01 14:54:19.146 - debug:  Router post /favorites
+2017-12-01 14:54:19.146 - debug:  Router get /favorites
+2017-12-01 14:54:19.147 - debug:  Router delete /favorites
+2017-12-01 14:54:19.147 - debug:  Router post /assets/downloadurl
+2017-12-01 14:54:19.147 - debug:  Router post /oauth2/access_token
+2017-12-01 14:54:19.147 - debug:  Router post /oauth2/refresh_token
+2017-12-01 14:54:19.147 - debug:  Router post /user
+2017-12-01 14:54:19.147 - debug:  Router post /assets/upload
+2017-12-01 14:54:19.147 - debug:  Router get /workgorups
+2017-12-01 14:54:19.148 - debug:  Router post /users
+2017-12-01 14:54:19.148 - debug:  Router post /userFolderPermissionList
+2017-12-01 14:54:19.148 - debug:  Router post /assets/downloadurl
+2017-12-01 14:54:19.148 - debug:  Router post /download/verify
+2017-12-01 14:54:19.148 - debug:  Router get /workgroups
+2017-12-01 14:54:19.148 - debug:  Router get /assets/:id
+2017-12-01 14:54:19.148 - debug:  Router get /assets/batch
+2017-12-01 14:54:19.149 - debug:  Router get /search
+2017-12-01 14:54:19.149 - debug:  Router get /profile
+2017-12-01 14:54:19.149 - debug:  Router get /download/proxy/:file
+2017-12-01 14:55:12.212 - debug: Format Public API Config
+2017-12-01 14:55:12.319 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-12-01 14:55:12.214 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-12-01 14:55:12.214 - debug: parseField GET:/favorites
+2017-12-01 14:55:12.214 - debug: parseField GET:/workgroups
+2017-12-01 14:55:12.228 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-12-01 14:55:12.491 - error: Loading Remote api passport error. Try it later
+2017-12-01 14:55:12.491 - error:  FetchError: request to http://192.168.0.203:8081/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8081
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:55:12.491 - error: Loading Remote api resource error. Try it later
+2017-12-01 14:55:12.491 - error:  FetchError: request to http://192.168.0.203:8082/v2/api-docs failed, reason: connect ECONNREFUSED 192.168.0.203:8082
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-12-01 14:55:12.504 - error: Loading Remote api VCGpassport error. Try it later
+2017-12-01 14:55:12.509 - error:  TypeError: Cannot read property 'paths' of undefined
+    at /Users/guoyu/work/project/dam-server/routes/micro-services-proxy.js:39:32
+    at <anonymous>
+    at process._tickDomainCallback (internal/process/next_tick.js:228:7)
+2017-12-01 14:55:15.314 - debug:  Router get /message/sendsms
+2017-12-01 14:55:15.314 - debug:  Router get /message/check
+2017-12-01 14:55:15.314 - debug:  Router get /damSearcher/searchDam
+2017-12-01 14:55:15.315 - debug:  Router get /damSearcher/searchDamFolder
+2017-12-01 14:55:15.315 - debug:  Router get /folders
+2017-12-01 14:55:15.315 - debug:  Router post /folders/:id/sub_folders
+2017-12-01 14:55:15.315 - debug:  Router get /folderitems/v2/:folderId
+2017-12-01 14:55:15.316 - debug:  Router post /favorites
+2017-12-01 14:55:15.316 - debug:  Router get /favorites
+2017-12-01 14:55:15.316 - debug:  Router delete /favorites
+2017-12-01 14:55:15.317 - debug:  Router post /assets/downloadurl
+2017-12-01 14:55:15.317 - debug:  Router post /oauth2/access_token
+2017-12-01 14:55:15.318 - debug:  Router post /oauth2/refresh_token
+2017-12-01 14:55:15.318 - debug:  Router post /user
+2017-12-01 14:55:15.318 - debug:  Router post /assets/upload
+2017-12-01 14:55:15.318 - debug:  Router get /workgorups
+2017-12-01 14:55:15.318 - debug:  Router post /users
+2017-12-01 14:55:15.319 - debug:  Router post /userFolderPermissionList
+2017-12-01 14:55:15.319 - debug:  Router post /assets/downloadurl
+2017-12-01 14:55:15.319 - debug:  Router post /download/verify
+2017-12-01 14:55:15.319 - debug:  Router get /workgroups
+2017-12-01 14:55:15.319 - debug:  Router get /assets/:id
+2017-12-01 14:55:15.319 - debug:  Router get /assets/batch
+2017-12-01 14:55:15.320 - debug:  Router get /search
+2017-12-01 14:55:15.320 - debug:  Router get /profile
+2017-12-01 14:55:15.320 - debug:  Router get /download/proxy/:file

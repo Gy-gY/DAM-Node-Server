@@ -1,0 +1,2915 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "dam passport service 1.0相关接口",
+    "version": "1.0",
+    "title": "dam passport service 1.0相关接口",
+    "license": {
+      "name": "VCG 2.0",
+      "url": "http://www.vcg.com"
+    }
+  },
+  "host": "localhost:8081",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "role-permission-controller",
+      "description": "Role Permission Controller"
+    },
+    {
+      "name": "health",
+      "description": "Health"
+    },
+    {
+      "name": "workgroup-folder-permission-controller",
+      "description": "Workgroup Folder Permission Controller"
+    },
+    {
+      "name": "message-controller",
+      "description": "Message Controller"
+    },
+    {
+      "name": "user-controller",
+      "description": "User Controller"
+    },
+    {
+      "name": "workgroup-controller",
+      "description": "Workgroup Controller"
+    },
+    {
+      "name": "role-controller",
+      "description": "Role Controller"
+    },
+    {
+      "name": "群组目录权限管理",
+      "description": "Workgroup Folder Role Controller"
+    },
+    {
+      "name": "permission-controller",
+      "description": "Permission Controller"
+    },
+    {
+      "name": "res-evt-controller",
+      "description": "Res Evt Controller"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "health",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/check": {
+      "get": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "check",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "description": "code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendInvitationCodeSms": {
+      "post": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "发送群组邀请码短信",
+        "description": "将指定ID的群组邀请码发送到指定的用户手机号上",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "workgroupId",
+            "in": "query",
+            "description": "群组ID",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendMail": {
+      "get": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "sendMail",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "content",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "subject",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendNoticeMail": {
+      "post": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "发送自定义邮件",
+        "description": "发送自定义邮件",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "content",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "subject",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "fromType",
+            "in": "query",
+            "description": "fromType",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendNoticeSms": {
+      "post": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "发送自定义短信",
+        "description": "发送自定义短信, 开发过程中如果没有设置card信息，短信发送接口会报错",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "mobile",
+            "in": "query",
+            "description": "mobile",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "smsType",
+            "in": "query",
+            "description": "smsType 1资格审核通过 2资格审核不通过 3合同审核通过 4 稿费发放",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "fee",
+            "in": "query",
+            "description": "当smsType为4的稿费",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "card",
+            "in": "query",
+            "description": "当smsType为4的已发送到您后面的信息(尾号是88888888888888888的卡号上/支付宝账号上)",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendsms": {
+      "get": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "为任意手机号发送短信",
+        "description": "没有检查手机号是否在系统中存在，直接发送",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "mobile",
+            "in": "query",
+            "description": "mobile",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "content",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "countryCode",
+            "in": "query",
+            "description": "countryCode",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/message/sendsmsForExistMobile": {
+      "get": {
+        "tags": [
+          "message-controller"
+        ],
+        "summary": "为系统中存在的手机号发送短信",
+        "description": "系统会先验证手机号是否存在，再决定是否发送",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "mobile",
+            "in": "query",
+            "description": "mobile",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "content",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "countryCode",
+            "in": "query",
+            "description": "countryCode",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/permission/list": {
+      "get": {
+        "tags": [
+          "permission-controller"
+        ],
+        "summary": "获取权限项列表",
+        "description": "获取所有权限，也可以通过条件获取权限项列表，目前只支持type条件， type类型只有两种'SYSTEM_FUNCTION', 'FOLDER_FUNCTION'",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/permission/pageList": {
+      "get": {
+        "tags": [
+          "permission-controller"
+        ],
+        "summary": "pageList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "permission",
+            "description": "permission",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Permission"
+            }
+          },
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "pageNum",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "pageSize",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/resevt/folderadd": {
+      "post": {
+        "tags": [
+          "res-evt-controller"
+        ],
+        "summary": "handleFolderAddEvt",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "resFolder",
+            "description": "resFolder",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResFolder"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/resevt/folderdelete": {
+      "post": {
+        "tags": [
+          "res-evt-controller"
+        ],
+        "summary": "handleFolderDeleteEvt",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "resFolder",
+            "description": "resFolder",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ResFolder"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/role/list": {
+      "get": {
+        "tags": [
+          "role-controller"
+        ],
+        "summary": "list",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Role"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/role/pageList": {
+      "get": {
+        "tags": [
+          "role-controller"
+        ],
+        "summary": "pageList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "pageNum",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "pageSize",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PageInfo«Role»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/rolePermission/list": {
+      "get": {
+        "tags": [
+          "role-permission-controller"
+        ],
+        "summary": "list",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "rolePermission",
+            "description": "rolePermission",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/RolePermission"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/rolePermission/pageList": {
+      "get": {
+        "tags": [
+          "role-permission-controller"
+        ],
+        "summary": "pageList",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "rolePermission",
+            "description": "rolePermission",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/RolePermission"
+            }
+          },
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "pageNum",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "pageSize",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/auth": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "校验用户是否有某种权限",
+        "description": "校验用户是否有某种权限",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "description": "目标权限项目",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/create": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "内部创建用户",
+        "description": "系统管理员在群组或用户列表中新建用户，用户名，真实姓名，手机号不能为空，表单隐式把所属群组号也传递进来",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "user",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/findPwd": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "未登录用户重置密码接口，供找回密码功能使用",
+        "description": "未登录用户重置密码接口，需要手机号，手机验证码，新密码",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "根据手机号修改密码",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/folderauth": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "校验用户对某个目录是否有某种权限",
+        "description": "校验用户对某个目录是否有某种权限",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "userId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "query",
+            "description": "folderId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "description": "code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/getUserByTGT": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "根据TGT获取登录用户信息",
+        "description": "根据TGT获取登录用户信息",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "TGT",
+            "in": "query",
+            "description": "客户端存储的TGT",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/getUserManageFolders": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "【接口废弃】获取用户的管理的目录列表",
+        "description": "罗列当前用户有权限的目录列表",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "userId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/join_workgroup": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "用户加入群组",
+        "description": "将多个用户批量加入到某个群组中",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "user_ids",
+            "in": "query",
+            "description": "用户id列表",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "workgroup_id",
+            "description": " 群组ID",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "登录接口",
+        "description": "用户登录接口，登录成功返回TGT信息",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "可以是用户名或手机号或邮箱，密码",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/logout": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "登出接口",
+        "description": "用户登出接口",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "TGT",
+            "in": "query",
+            "description": "客户端存储的TGT",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/pageList": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "用户列表分页查询",
+        "description": "包括所有用户",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "查询第N页用户列表",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页显示用户数",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/register": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "用户注册",
+        "description": "手机号，密码，邀请码不能为空，会默认把手机号填充到用户名",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "user",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/resetPwd": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "已登录用户修改接口",
+        "description": "重置密码接口，无需任何验证",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "根据用户名或手机号或邮箱,修改密码",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/search": {
+      "post": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "搜索用户",
+        "description": "仅提供根据关键字userName匹配用户user_name， mobile， email，根据workgroupId查询某群组内的用户",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "仅提供userName, workgroupId参数即可，两者都是可选的",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "查询第N页用户列表",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页显示用户数",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/simpleInfoPageList": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "分页查询用户简单信息",
+        "description": "用户简单信息包括：user_id,nick_name,real_name,user_name,mobile,email,address,company,gender,reg_time,status,weixin,qq",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "查询第N页用户列表",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页显示用户数",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          },
+          {
+            "name": "userIds",
+            "in": "query",
+            "description": "userIds",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/ungroupedUsersPageList": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "未分组用户列表查询",
+        "description": "所有未被分配进任何组的用户",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "查询第N页用户列表",
+            "required": false,
+            "type": "integer",
+            "default": 1,
+            "format": "int32"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "每页显示用户数",
+            "required": false,
+            "type": "integer",
+            "default": 10,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/update": {
+      "put": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "更新用户信息",
+        "description": "更新用户信息，数据中要有userId",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "user",
+            "description": "user",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/userFolderPermissionList": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "获取指定用户指定目录的 目录访问权限列表",
+        "description": "目前一个用户属于一个群组，但一个群组可以有多个用户角色，任何一个角色含有编审权限，则获取全部目录；否则根据群组目录权限获取目录",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "folderId",
+            "in": "query",
+            "description": "目录 id，不传时获取所有目录",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/userPermissionList": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "仅仅获取系统权限列表,不包括目录权限",
+        "description": "目前一个用户属于一个群组，但一个群组可以有多个角色，仅仅获取系统权限列表,不包括目录权限",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "用户id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "查询用户信息",
+        "description": "根据用户ID获取用户信息",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "用户ID",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "user-controller"
+        ],
+        "summary": "删除用户",
+        "description": "删除用户",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "用户ID",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
+    "/workgroupFolderPermission/deleteByFolderIds": {
+      "post": {
+        "tags": [
+          "workgroup-folder-permission-controller"
+        ],
+        "summary": "删除目录上的权限",
+        "description": "根据目录id删除设置的权限",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "folderIds",
+            "in": "query",
+            "description": "目录ID",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroupFolderPermission/getByFolderId": {
+      "get": {
+        "tags": [
+          "workgroup-folder-permission-controller"
+        ],
+        "summary": "/getByFolderId",
+        "description": "根据目录id 获取所有相关群组的权限项设置",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "query",
+            "description": "folderId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/WorkgroupWithFolderPermission"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroupFolderPermission/setByFolderId": {
+      "post": {
+        "tags": [
+          "workgroup-folder-permission-controller"
+        ],
+        "summary": "跟新指定目录权限",
+        "description": "更新特定目录的群组权限项 ",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "query",
+            "description": "当前被创建授权的目录ID",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "map",
+            "description": "{ \n workgroupId : permissionid[ ], \n workgroupId : permissionid[ ],  }",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroupFolderRole/getWorkgroupFoldersRole": {
+      "get": {
+        "tags": [
+          "群组目录权限管理"
+        ],
+        "summary": "获取某个群组对目录的控制表",
+        "description": "返回群组的角色配置，以及对应的若干目录。用来渲染群组的目录权限树。如果没有设置任何角色，返回内容为空",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "workgroupId",
+            "in": "query",
+            "description": "workgroupId",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/APIM_WorkgroupFolderRole"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroupFolderRole/setWorkgroupFoldersRole": {
+      "post": {
+        "tags": [
+          "群组目录权限管理"
+        ],
+        "summary": "为某个群组设置对某些目录的控制角色或取消已有角色",
+        "description": "设置某个群组对某些目录的控制角色.  1， 删除旧的设置  2，重新设置当前目录为指定角色和目录。当取消已有角色时，不用传递 roleId参数",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json",
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "reqModel",
+            "description": "reqModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/APIM_WorkgroupFolderRole"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/APIM_WorkgroupFolderRole"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroups": {
+      "get": {
+        "tags": [
+          "workgroup-controller"
+        ],
+        "summary": "获取群组列表",
+        "description": "根据tag，获取相关群组；没有tag则获取所有群组",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "query",
+            "description": "群组tag关键词",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Workgroup"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroups/create": {
+      "post": {
+        "tags": [
+          "workgroup-controller"
+        ],
+        "summary": "添加群组",
+        "description": "添加群组 ",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "workgroup",
+            "description": "workgroup",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Workgroup"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/workgroups/{id}": {
+      "get": {
+        "tags": [
+          "workgroup-controller"
+        ],
+        "summary": "查看详细",
+        "description": "获取讨论组详细信息，不包括子组信息",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Workgroup"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "workgroup-controller"
+        ],
+        "summary": "更新群组",
+        "description": "更新群组的名称和角色设置 ",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "群组ID",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "workgroup",
+            "description": "workgroup",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Workgroup"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "workgroup-controller"
+        ],
+        "summary": "删除群组",
+        "description": "删除目录，包括子节点的所有群组。同时解散当期群组下的所有用户",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Workgroup"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Role": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "description": {
+          "type": "string",
+          "description": "角色描述"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string",
+          "description": "角色名称"
+        },
+        "rolePermissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RolePermission"
+          }
+        },
+        "type": {
+          "type": "string",
+          "description": "分为两类 'user'：用户角色， 'folder'：目录角色"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "accountRights": {
+          "type": "string",
+          "description": "账号权限，各个子系统统一存在此处，业务逻辑由各个子系统自行处理，格式由CRM系统定义"
+        },
+        "accountTypeId": {
+          "type": "string",
+          "description": "帐号类型:0-个人,1企业,2部门"
+        },
+        "address": {
+          "type": "string",
+          "description": "地址"
+        },
+        "admin": {
+          "type": "string",
+          "description": "管理员字段 确定是否为管理员 0为管理员 1为普通用户"
+        },
+        "applyAccountRight": {
+          "type": "string"
+        },
+        "applyChangTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "申请更改时间"
+        },
+        "applyState": {
+          "type": "integer",
+          "format": "int32",
+          "description": "申请权限状态 1 申请 2审核通过 3驳回"
+        },
+        "applyTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "申请权限时间"
+        },
+        "cityId": {
+          "type": "string",
+          "description": "城市"
+        },
+        "code": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string",
+          "description": "公司名称"
+        },
+        "companyType": {
+          "type": "string",
+          "description": "公司类型"
+        },
+        "completeInfo": {
+          "type": "number",
+          "format": "double",
+          "description": "信息完成百分比"
+        },
+        "countryCode": {
+          "type": "string",
+          "description": "国家区号"
+        },
+        "countryId": {
+          "type": "string",
+          "description": "国家"
+        },
+        "dateOfBirth": {
+          "type": "string",
+          "format": "date-time",
+          "description": "出生日期 1990-01-01"
+        },
+        "description": {
+          "type": "string",
+          "description": "备注"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "显示名"
+        },
+        "email": {
+          "type": "string",
+          "description": "邮件"
+        },
+        "fax": {
+          "type": "string",
+          "description": "传真"
+        },
+        "gender": {
+          "type": "integer",
+          "format": "int32",
+          "description": "性别 0男 1女"
+        },
+        "idCard": {
+          "type": "string",
+          "description": "身份证号"
+        },
+        "imgPath": {
+          "type": "string",
+          "description": "头像地址"
+        },
+        "invitationCode": {
+          "type": "string"
+        },
+        "isMsg": {
+          "type": "boolean"
+        },
+        "isWorkgroupAdmin": {
+          "type": "boolean",
+          "example": false,
+          "description": "是否是群组管理员"
+        },
+        "job": {
+          "type": "string",
+          "description": "职位"
+        },
+        "mmpApplyTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "申请签约摄影师时间"
+        },
+        "mmpState": {
+          "type": "integer",
+          "format": "int32",
+          "description": "mmp申请成为签约摄影师"
+        },
+        "mobile": {
+          "type": "string",
+          "description": "手机"
+        },
+        "modifyTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "人工修改用户信息最后编辑时间"
+        },
+        "nickName": {
+          "type": "string",
+          "description": "昵称"
+        },
+        "parentAccountId": {
+          "type": "string",
+          "description": "父账号ID"
+        },
+        "password": {
+          "type": "string",
+          "description": "密码"
+        },
+        "platformType": {
+          "type": "integer",
+          "format": "int32",
+          "description": "平台类型  0:gic 1:cfp 2 社区 3 cfp摄影师 4:qq 5:sina 6:豆瓣 8.编辑部 9:用户中心注册 10:motionchina 11 mmp 12weixin 13mmp重复数据 20.手机端注册 21第三方登录注册"
+        },
+        "postcode": {
+          "type": "string",
+          "description": "邮编"
+        },
+        "provinceId": {
+          "type": "string",
+          "description": "省份"
+        },
+        "qq": {
+          "type": "string"
+        },
+        "realName": {
+          "type": "string",
+          "description": "真实名"
+        },
+        "regTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "注册时间"
+        },
+        "secretAnswer": {
+          "type": "string",
+          "description": "秘密问题答案"
+        },
+        "secretQuestionId": {
+          "type": "string",
+          "description": "秘密问题"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序字段"
+        },
+        "standbyMobile": {
+          "type": "string"
+        },
+        "state": {
+          "type": "integer",
+          "format": "int32",
+          "description": "用户账户验证状态 0 未验证 1 验证手机,2验证邮箱 3验证备用手机 "
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32",
+          "description": "用户账户状态 0 停用 1启用"
+        },
+        "tel": {
+          "type": "string",
+          "description": "电话"
+        },
+        "thirdParty": {
+          "type": "string",
+          "description": "第三方平台 平台id"
+        },
+        "updatedBy": {
+          "type": "string",
+          "description": "人工修改用户信息最后操作人(本表自关联)"
+        },
+        "updatedTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "用户数据库记录最后更新时间，任何一个字段的更新都算"
+        },
+        "userClass": {
+          "type": "string",
+          "description": "社区标记用户权限"
+        },
+        "userId": {
+          "type": "string",
+          "description": "用户ID"
+        },
+        "userName": {
+          "type": "string",
+          "description": "用户名"
+        },
+        "userStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "备用"
+        },
+        "weixin": {
+          "type": "string"
+        },
+        "workgroupId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "所属组ID"
+        }
+      }
+    },
+    "PageInfo«Role»": {
+      "type": "object",
+      "properties": {
+        "endRow": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "firstPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "hasNextPage": {
+          "type": "boolean"
+        },
+        "hasPreviousPage": {
+          "type": "boolean"
+        },
+        "isFirstPage": {
+          "type": "boolean"
+        },
+        "isLastPage": {
+          "type": "boolean"
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Role"
+          }
+        },
+        "navigatePages": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "navigatepageNums": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "orderBy": {
+          "type": "string"
+        },
+        "pageNum": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "pages": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "prePage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "startRow": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "Permission": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string",
+          "description": "权限项描述信息"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "页面显示权限项信息时使用"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "keyName": {
+          "type": "string",
+          "description": "权限项唯一英文标识，代码判断权限中使用"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "path": {
+          "type": "string",
+          "description": "路径信息 使用主键进行逗号分隔, 最后一位为当前的主键1,2,3,4"
+        },
+        "type": {
+          "type": "string",
+          "description": "权限项分类, SYSTEM_FUNCTION 系统权限项，FOLDER_FUNCTION目录权限项"
+        }
+      }
+    },
+    "APIM_WorkgroupFolderRole": {
+      "type": "object",
+      "properties": {
+        "folderIds": {
+          "type": "array",
+          "description": "对应的目录ID",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "roleId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "角色ID"
+        },
+        "workgroupId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "群组ID"
+        }
+      }
+    },
+    "RolePermission": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "permission": {
+          "$ref": "#/definitions/Permission"
+        },
+        "permissionId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "roleId": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "Workgroup": {
+      "type": "object",
+      "properties": {
+        "contact": {
+          "type": "string",
+          "description": "群组联系人"
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "联系人邮箱"
+        },
+        "contactMobile": {
+          "type": "string",
+          "description": "联系人手机"
+        },
+        "createAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "群组id"
+        },
+        "invitationCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "群组名称"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "roleIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Role"
+          }
+        },
+        "sendInvitationCode": {
+          "type": "boolean"
+        },
+        "tags": {
+          "type": "string",
+          "description": "query workgroups by tag"
+        }
+      }
+    },
+    "WorkgroupWithFolderPermission": {
+      "type": "object",
+      "properties": {
+        "contact": {
+          "type": "string",
+          "description": "群组联系人"
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "联系人邮箱"
+        },
+        "contactMobile": {
+          "type": "string",
+          "description": "联系人手机"
+        },
+        "createAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "群组id"
+        },
+        "invitationCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "description": "群组名称"
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Permission"
+          }
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "roleIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Role"
+          }
+        },
+        "sendInvitationCode": {
+          "type": "boolean"
+        },
+        "tags": {
+          "type": "string",
+          "description": "query workgroups by tag"
+        }
+      }
+    },
+    "ResFolder": {
+      "type": "object",
+      "properties": {
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ResFolder"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "自增主键"
+        },
+        "name": {
+          "type": "string",
+          "description": "目录名称"
+        },
+        "ownerId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "目录所属租户，本版本不使用"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int32",
+          "description": "父节点主键Id"
+        },
+        "seq": {
+          "type": "string",
+          "description": "该树路径编码"
+        }
+      }
+    }
+  }
+}

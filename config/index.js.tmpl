@@ -1,0 +1,36 @@
+let Config = {
+    sessionStore: {
+        host: '{{ default .Env.REDIS_HOST "192.168.2.80"}}',
+        port: {{ default .Env.REDIS_PORT "6379"}},
+        db: {{ default .Env.REDIS_DB "1"}},
+        password: '{{ default .Env.REDIS_PASSWD ""}}',
+        logErrors: true
+    },
+    tokenStore: null, //Now the same
+
+    mysql: {
+        host: '{{ default .Env.MYSQL_HOST "192.168.2.80"}}',
+        port: {{ default .Env.MYSQL_PORT "3306"}},
+        database: '{{ default .Env.MYSQL_DATABASE "dam_api"}}',
+        username: '{{ default .Env.MYSQL_USERNAME "root"}}',
+        password: '{{ default .Env.MYSQL_PASSWD "xyroot"}}',
+    },
+
+    log:{
+        meta:false
+    },
+
+    client: {
+        allowDomain: '{{ default .Env.CLIENT_ALLOW_DOMAIN ".dam.vcg.com" }}', //允许设置cookie的域
+        origin: '{{ default .Env.CLIENT_ORIGIN "http://dam.vcg.com:8088"}}', //为了实现客户端跨域访问， 配置客户端的完整Origin
+    },
+
+    redis: { //跟redis有关的配置
+        DOWNLOAD_PREFIX: 'downloadurl:', //下载链接前缀
+        DOWNLOAD_EXPIRE: 10 * 60, //下载链接过期时间(秒)
+    },
+};
+
+Config.tokenStore = Config.sessionStore;
+
+module.exports = Config;

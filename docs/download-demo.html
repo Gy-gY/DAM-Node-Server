@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    
+  <script >
+
+    $(document).ready(function () {
+      var ids = [202561];
+      function download() {
+            $.ajax({
+              url: 'http://api.dam.vcg.com/v1/assets/downloadurl',
+              type: 'POST',
+              data: JSON.stringify(ids),
+              processData: false,
+              contentType : 'application/json',
+              beforeSend: function (XMLHttpRequest) {
+              //HttpUtility.UrlEncode
+                XMLHttpRequest.setRequestHeader('Client-Id', '02390867-e0c4-4173-b6d3-4ba22cd8c3d7');
+                XMLHttpRequest.setRequestHeader('Authorization', 'Bearer fb6deb14-e9a1-4eea-a87f-b15af968983b');
+              },
+              success : function(responseStr) { 
+                const url = responseStr.proxy;
+                jsDownload(url);
+              }
+            })
+          };
+
+      //Javascript下载 上网上搜一个方案
+      function jsDownload(url) {
+          console.log(url);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = '';
+          a.click();
+      };
+        
+      $('#onDownload').click(function (){
+          download();
+      }); 
+          
+    });
+   </script>
+  </head>
+
+  <body>
+    <div>
+      <a id='onDownload'>下载</a>
+    </div>
+  </body>
+</html>

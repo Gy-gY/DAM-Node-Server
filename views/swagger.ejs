@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1><%= title %></h1>
+        <h2>前端自定义接口列表： 该接口主要给前端React App调用</h2>
+    <ul>
+      <% Object.keys(nodeServices).forEach((key)=>{ %>
+        <h3><%= key %></h3>
+        <iframe width="100%"  height="600px;" src="<%= nodeServices[key] %>"></iframe>
+      <% }) %>
+     </ul>
+
+    <h2>后端微服务接口列表： 前端不直接调用下列接口， 如需调用，需要node API server做代理转发</h2>
+    <ul>
+    <% Object.keys(microServices).forEach((key)=>{ %>
+      <h3><%= key %></h3>
+      <iframe width="100%"  height="600px;" src="<%= microServices[key] %>"></iframe>
+    <% }) %>
+     </ul>
+  </body>
+</html>

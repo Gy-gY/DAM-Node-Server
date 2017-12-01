@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+   <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    
+  <script >
+
+    $(document).ready(function () {
+      $('#onUpload').click(function (){
+          //Build Multipart Form
+          var formData = new FormData();
+          formData.append("file", $("#files")[0].files[0]);
+          // formData.append("file", $("#files")[0].files[1]); //TODO 如果想一次性上传更多文件, 
+          $.ajax({
+            url: 'http://predam.vcg.com/v1/assets/upload?resType=1&folderId=801',
+            type: 'POST',
+            contentType : false,
+            enctype: "multipart/form-data",
+            processData: false,
+            data: formData,
+            beforeSend: function (XMLHttpRequest) {
+              //HttpUtility.UrlEncode
+                XMLHttpRequest.setRequestHeader('Client-Id', '738a0959-08b0-43c0-ba38-5ff3f32d6cda');
+                XMLHttpRequest.setRequestHeader('Authorization', 'Bearer fcba1855-624c-4386-8d39-bab78f7b11f1');
+              },
+            success : function(responseStr) { 
+              if(responseStr.status===0){
+                console.log("成功"+responseStr);
+              }else{
+                console.log("失败");
+              }
+              }, 
+            error : function(responseStr) { 
+                console.log(responseStr);
+              } 
+          });
+        });
+    });
+   </script>
+  </head>
+
+  <body>
+    <form id='upload'>
+      <input id='files' type='file' name='file' multiple="multiple"/>
+      <a id='onUpload'>上传</a>
+    </form>
+  </body>
+</html>

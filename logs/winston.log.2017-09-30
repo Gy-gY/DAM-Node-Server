@@ -1,0 +1,1601 @@
+2017-09-30 10:05:31.035 - debug: Format Public API Config
+2017-09-30 10:05:31.177 - info: LOADING WEB APP FROM /Users/guoyu/work/project/dam-server/node_modules/dam-web-client
+2017-09-30 10:05:31.037 - debug: parseField GET:/folderitems/v2/{folderId}
+2017-09-30 10:05:31.037 - debug: parseField GET:/favorites
+2017-09-30 10:05:31.038 - debug: parseField GET:/workgroups
+2017-09-30 10:05:31.060 - info: [ API ] ==============Start Setting Up Proxy For Micro Services================
+2017-09-30 10:05:31.352 - error: Loading Remote api VCGpassport error. Try it later
+2017-09-30 10:05:31.352 - error:  FetchError: request to http://dev.passportservice.vcg.com/v2/api-docs failed, reason: getaddrinfo ENOTFOUND dev.passportservice.vcg.com dev.passportservice.vcg.com:80
+    at ClientRequest.<anonymous> (/Users/guoyu/work/project/dam-server/node_modules/node-fetch/index.js:133:11)
+    at emitOne (events.js:115:13)
+    at ClientRequest.emit (events.js:210:7)
+    at Socket.socketErrorListener (_http_client.js:401:9)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:218:9)
+2017-09-30 10:05:31.400 - verbose: ensureLogin
+2017-09-30 10:05:31.401 - verbose: handleProxy
+2017-09-30 10:05:31.401 - info: Proxy GET:/customer/view To 192.168.3.203:8081
+2017-09-30 10:05:31.401 - verbose: proxyReject
+2017-09-30 10:05:31.401 - verbose: ensureLogin
+2017-09-30 10:05:31.401 - verbose: handleProxy
+2017-09-30 10:05:31.401 - info: Proxy GET:/health To 192.168.3.203:8081
+2017-09-30 10:05:31.401 - verbose: handleProxy
+2017-09-30 10:05:31.402 - info: Proxy GET:/message/check To 192.168.3.203:8081
+2017-09-30 10:05:31.402 - verbose: ensureLogin
+2017-09-30 10:05:31.402 - verbose: handleProxy
+2017-09-30 10:05:31.403 - info: Proxy POST:/message/sendInvitationCodeSms To 192.168.3.203:8081
+2017-09-30 10:05:31.403 - verbose: proxyReject
+2017-09-30 10:05:31.403 - verbose: ensureLogin
+2017-09-30 10:05:31.403 - verbose: handleProxy
+2017-09-30 10:05:31.403 - info: Proxy GET:/message/sendMail To 192.168.3.203:8081
+2017-09-30 10:05:31.403 - verbose: proxyReject
+2017-09-30 10:05:31.403 - verbose: ensureLogin
+2017-09-30 10:05:31.403 - verbose: handleProxy
+2017-09-30 10:05:31.403 - info: Proxy POST:/message/sendNoticeMail To 192.168.3.203:8081
+2017-09-30 10:05:31.404 - verbose: proxyReject
+2017-09-30 10:05:31.404 - verbose: ensureLogin
+2017-09-30 10:05:31.404 - verbose: handleProxy
+2017-09-30 10:05:31.404 - info: Proxy POST:/message/sendNoticeSms To 192.168.3.203:8081
+2017-09-30 10:05:31.404 - verbose: handleProxy
+2017-09-30 10:05:31.404 - info: Proxy GET:/message/sendsms To 192.168.3.203:8081
+2017-09-30 10:05:31.404 - verbose: handleProxy
+2017-09-30 10:05:31.404 - info: Proxy GET:/message/sendsmsForExistMobile To 192.168.3.203:8081
+2017-09-30 10:05:31.404 - verbose: ensureLogin
+2017-09-30 10:05:31.404 - verbose: handleProxy
+2017-09-30 10:05:31.404 - info: Proxy GET:/oauth/view To 192.168.3.203:8081
+2017-09-30 10:05:31.405 - verbose: ensureLogin
+2017-09-30 10:05:31.405 - verbose: apiAuth
+2017-09-30 10:05:31.405 - verbose: handleProxy
+2017-09-30 10:05:31.405 - info: Proxy GET:/permission/list To 192.168.3.203:8081
+2017-09-30 10:05:31.405 - verbose: ensureLogin
+2017-09-30 10:05:31.405 - verbose: handleProxy
+2017-09-30 10:05:31.406 - info: Proxy GET:/permission/rolePermission To 192.168.3.203:8081
+2017-09-30 10:05:31.406 - verbose: ensureLogin
+2017-09-30 10:05:31.406 - verbose: handleProxy
+2017-09-30 10:05:31.406 - info: Proxy GET:/permission/userPermission To 192.168.3.203:8081
+2017-09-30 10:05:31.406 - verbose: ensureLogin
+2017-09-30 10:05:31.406 - verbose: handleProxy
+2017-09-30 10:05:31.406 - info: Proxy GET:/permission/view To 192.168.3.203:8081
+2017-09-30 10:05:31.406 - verbose: ensureLogin
+2017-09-30 10:05:31.406 - verbose: handleProxy
+2017-09-30 10:05:31.406 - info: Proxy GET:/permission/viewByCode To 192.168.3.203:8081
+2017-09-30 10:05:31.406 - verbose: proxyReject
+2017-09-30 10:05:31.406 - verbose: ensureLogin
+2017-09-30 10:05:31.406 - verbose: handleProxy
+2017-09-30 10:05:31.406 - info: Proxy POST:/resevt/folderadd To 192.168.3.203:8081
+2017-09-30 10:05:31.406 - verbose: proxyReject
+2017-09-30 10:05:31.407 - verbose: ensureLogin
+2017-09-30 10:05:31.407 - verbose: handleProxy
+2017-09-30 10:05:31.407 - info: Proxy POST:/resevt/folderdelete To 192.168.3.203:8081
+2017-09-30 10:05:31.407 - verbose: ensureLogin
+2017-09-30 10:05:31.407 - verbose: handleProxy
+2017-09-30 10:05:31.408 - info: Proxy POST:/role/create To 192.168.3.203:8081
+2017-09-30 10:05:31.408 - verbose: ensureLogin
+2017-09-30 10:05:31.408 - verbose: handleProxy
+2017-09-30 10:05:31.408 - info: Proxy GET:/role/initRoles To 192.168.3.203:8081
+2017-09-30 10:05:31.408 - verbose: proxyReject
+2017-09-30 10:05:31.408 - verbose: ensureLogin
+2017-09-30 10:05:31.409 - verbose: handleProxy
+2017-09-30 10:05:31.409 - info: Proxy GET:/role/list To 192.168.3.203:8081
+2017-09-30 10:05:31.411 - verbose: ensureLogin
+2017-09-30 10:05:31.411 - verbose: handleProxy
+2017-09-30 10:05:31.411 - info: Proxy POST:/role/update To 192.168.3.203:8081
+2017-09-30 10:05:31.411 - verbose: ensureLogin
+2017-09-30 10:05:31.411 - verbose: handleProxy
+2017-09-30 10:05:31.412 - info: Proxy GET:/role/:id To 192.168.3.203:8081
+2017-09-30 10:05:31.412 - verbose: ensureLogin
+2017-09-30 10:05:31.412 - verbose: apiAuth
+2017-09-30 10:05:31.412 - verbose: handleProxy
+2017-09-30 10:05:31.412 - info: Proxy GET:/rolePermission/list To 192.168.3.203:8081
+2017-09-30 10:05:31.412 - verbose: ensureLogin
+2017-09-30 10:05:31.412 - verbose: apiAuth
+2017-09-30 10:05:31.412 - verbose: handleProxy
+2017-09-30 10:05:31.412 - info: Proxy GET:/rolePermission/pageList To 192.168.3.203:8081
+2017-09-30 10:05:31.412 - verbose: ensureLogin
+2017-09-30 10:05:31.412 - verbose: customIdMid
+2017-09-30 10:05:31.412 - verbose: handleProxy
+2017-09-30 10:05:31.413 - info: Proxy GET:/user/allUserList To 192.168.3.203:8081
+2017-09-30 10:05:31.413 - verbose: ensureLogin
+2017-09-30 10:05:31.413 - verbose: handleProxy
+2017-09-30 10:05:31.413 - info: Proxy GET:/user/auth To 192.168.3.203:8081
+2017-09-30 10:05:31.413 - verbose: ensureLogin
+2017-09-30 10:05:31.413 - verbose: apiAuth
+2017-09-30 10:05:31.414 - verbose: handleProxy
+2017-09-30 10:05:31.414 - info: Proxy POST:/user/create To 192.168.3.203:8081
+2017-09-30 10:05:31.414 - verbose: ensureLogin
+2017-09-30 10:05:31.414 - verbose: handleProxy
+2017-09-30 10:05:31.414 - info: Proxy GET:/user/customerUserList To 192.168.3.203:8081
+2017-09-30 10:05:31.414 - verbose: handleProxy
+2017-09-30 10:05:31.414 - info: Proxy POST:/user/findPwd To 192.168.3.203:8081
+2017-09-30 10:05:31.414 - verbose: ensureLogin
+2017-09-30 10:05:31.414 - verbose: handleProxy
+2017-09-30 10:05:31.414 - info: Proxy GET:/user/folderauth To 192.168.3.203:8081
+2017-09-30 10:05:31.415 - verbose: ensureLogin
+2017-09-30 10:05:31.415 - verbose: handleProxy
+2017-09-30 10:05:31.415 - info: Proxy GET:/user/getUserByTGT To 192.168.3.203:8081
+2017-09-30 10:05:31.415 - verbose: ensureLogin
+2017-09-30 10:05:31.415 - verbose: handleProxy
+2017-09-30 10:05:31.415 - info: Proxy GET:/user/getUserManageFolders To 192.168.3.203:8081
+2017-09-30 10:05:31.415 - verbose: ensureLogin
+2017-09-30 10:05:31.415 - verbose: handleProxy
+2017-09-30 10:05:31.415 - info: Proxy POST:/user/get_userlist To 192.168.3.203:8081
+2017-09-30 10:05:31.415 - verbose: ensureLogin
+2017-09-30 10:05:31.415 - verbose: handleProxy
+2017-09-30 10:05:31.415 - info: Proxy GET:/user/isVcgLogin To 192.168.3.203:8081
+2017-09-30 10:05:31.415 - verbose: proxyReject
+2017-09-30 10:05:31.416 - verbose: ensureLogin
+2017-09-30 10:05:31.416 - verbose: handleProxy
+2017-09-30 10:05:31.416 - info: Proxy POST:/user/join_workgroup To 192.168.3.203:8081
+2017-09-30 10:05:31.416 - verbose: proxyReject
+2017-09-30 10:05:31.417 - verbose: ensureLogin
+2017-09-30 10:05:31.417 - verbose: handleProxy
+2017-09-30 10:05:31.417 - info: Proxy POST:/user/login To 192.168.3.203:8081
+2017-09-30 10:05:31.417 - verbose: proxyReject
+2017-09-30 10:05:31.417 - verbose: ensureLogin
+2017-09-30 10:05:31.417 - verbose: handleProxy
+2017-09-30 10:05:31.417 - info: Proxy GET:/user/logout To 192.168.3.203:8081
+2017-09-30 10:05:31.418 - verbose: ensureLogin
+2017-09-30 10:05:31.418 - verbose: handleProxy
+2017-09-30 10:05:31.419 - info: Proxy GET:/user/modifyPwd To 192.168.3.203:8081
+2017-09-30 10:05:31.419 - verbose: proxyReject
+2017-09-30 10:05:31.419 - verbose: ensureLogin
+2017-09-30 10:05:31.420 - verbose: handleProxy
+2017-09-30 10:05:31.420 - info: Proxy GET:/user/pageList To 192.168.3.203:8081
+2017-09-30 10:05:31.420 - verbose: ensureLogin
+2017-09-30 10:05:31.420 - verbose: handleProxy
+2017-09-30 10:05:31.420 - info: Proxy GET:/user/resetPwd To 192.168.3.203:8081
+2017-09-30 10:05:31.420 - verbose: proxyReject
+2017-09-30 10:05:31.421 - verbose: ensureLogin
+2017-09-30 10:05:31.421 - verbose: handleProxy
+2017-09-30 10:05:31.421 - info: Proxy POST:/user/search To 192.168.3.203:8081
+2017-09-30 10:05:31.421 - verbose: ensureLogin
+2017-09-30 10:05:31.421 - verbose: handleProxy
+2017-09-30 10:05:31.421 - info: Proxy POST:/user/setStatus To 192.168.3.203:8081
+2017-09-30 10:05:31.421 - verbose: proxyReject
+2017-09-30 10:05:31.422 - verbose: ensureLogin
+2017-09-30 10:05:31.422 - verbose: handleProxy
+2017-09-30 10:05:31.422 - info: Proxy GET:/user/simpleInfoPageList To 192.168.3.203:8081
+2017-09-30 10:05:31.422 - verbose: ensureLogin
+2017-09-30 10:05:31.423 - verbose: handleProxy
+2017-09-30 10:05:31.423 - info: Proxy GET:/user/surplusDownAmount To 192.168.3.203:8081
+2017-09-30 10:05:31.423 - verbose: ensureLogin
+2017-09-30 10:05:31.423 - verbose: handleProxy
+2017-09-30 10:05:31.424 - info: Proxy GET:/user/surplusDownCount To 192.168.3.203:8081
+2017-09-30 10:05:31.424 - verbose: proxyReject
+2017-09-30 10:05:31.424 - verbose: ensureLogin
+2017-09-30 10:05:31.424 - verbose: handleProxy
+2017-09-30 10:05:31.424 - info: Proxy GET:/user/ungroupedUsersPageList To 192.168.3.203:8081
+2017-09-30 10:05:31.424 - verbose: proxyReject
+2017-09-30 10:05:31.424 - verbose: ensureLogin
+2017-09-30 10:05:31.424 - verbose: handleProxy
+2017-09-30 10:05:31.425 - info: Proxy POST:/user/update To 192.168.3.203:8081
+2017-09-30 10:05:31.425 - verbose: ensureLogin
+2017-09-30 10:05:31.425 - verbose: handleProxy
+2017-09-30 10:05:31.425 - info: Proxy GET:/user/updateDownAmount To 192.168.3.203:8081
+2017-09-30 10:05:31.425 - verbose: ensureLogin
+2017-09-30 10:05:31.425 - verbose: handleProxy
+2017-09-30 10:05:31.425 - info: Proxy GET:/user/updateDownCount To 192.168.3.203:8081
+2017-09-30 10:05:31.425 - verbose: ensureLogin
+2017-09-30 10:05:31.426 - verbose: handleProxy
+2017-09-30 10:05:31.426 - info: Proxy GET:/user/userCustomerId To 192.168.3.203:8081
+2017-09-30 10:05:31.426 - verbose: ensureLogin
+2017-09-30 10:05:31.426 - verbose: handleProxy
+2017-09-30 10:05:31.426 - info: Proxy GET:/user/userFolderPermissionList To 192.168.3.203:8081
+2017-09-30 10:05:31.427 - verbose: ensureLogin
+2017-09-30 10:05:31.427 - verbose: handleProxy
+2017-09-30 10:05:31.427 - info: Proxy GET:/user/userFolderPermissionListByextendid To 192.168.3.203:8081
+2017-09-30 10:05:31.427 - verbose: ensureLogin
+2017-09-30 10:05:31.427 - verbose: handleProxy
+2017-09-30 10:05:31.427 - info: Proxy GET:/user/userInfo To 192.168.3.203:8081
+2017-09-30 10:05:31.427 - verbose: ensureLogin
+2017-09-30 10:05:31.427 - verbose: handleProxy
+2017-09-30 10:05:31.427 - info: Proxy GET:/user/userPermissionList To 192.168.3.203:8081
+2017-09-30 10:05:31.428 - verbose: ensureLogin
+2017-09-30 10:05:31.428 - verbose: handleProxy
+2017-09-30 10:05:31.428 - info: Proxy GET:/user/view To 192.168.3.203:8081
+2017-09-30 10:05:31.429 - verbose: ensureLogin
+2017-09-30 10:05:31.429 - verbose: apiAuth
+2017-09-30 10:05:31.429 - verbose: handleProxy
+2017-09-30 10:05:31.429 - info: Proxy GET:/user/:id To 192.168.3.203:8081
+2017-09-30 10:05:31.430 - verbose: ensureLogin
+2017-09-30 10:05:31.430 - verbose: handleProxy
+2017-09-30 10:05:31.430 - info: Proxy POST:/userFolderPermission/deleteByFolderIds To 192.168.3.203:8081
+2017-09-30 10:05:31.430 - verbose: ensureLogin
+2017-09-30 10:05:31.430 - verbose: handleProxy
+2017-09-30 10:05:31.431 - info: Proxy GET:/userFolderPermission/getByFolderId To 192.168.3.203:8081
+2017-09-30 10:05:31.431 - verbose: ensureLogin
+2017-09-30 10:05:31.431 - verbose: handleProxy
+2017-09-30 10:05:31.431 - info: Proxy GET:/userFolderPermission/getListByFolderId To 192.168.3.203:8081
+2017-09-30 10:05:31.432 - verbose: ensureLogin
+2017-09-30 10:05:31.432 - verbose: handleProxy
+2017-09-30 10:05:31.432 - info: Proxy GET:/userFolderPermission/getListByUserId To 192.168.3.203:8081
+2017-09-30 10:05:31.432 - verbose: ensureLogin
+2017-09-30 10:05:31.432 - verbose: handleProxy
+2017-09-30 10:05:31.433 - info: Proxy POST:/userFolderPermission/insertList To 192.168.3.203:8081
+2017-09-30 10:05:31.433 - verbose: ensureLogin
+2017-09-30 10:05:31.433 - verbose: handleProxy
+2017-09-30 10:05:31.433 - info: Proxy POST:/userFolderPermission/setByFolderId To 192.168.3.203:8081
+2017-09-30 10:05:31.434 - verbose: ensureLogin
+2017-09-30 10:05:31.434 - verbose: handleProxy
+2017-09-30 10:05:31.434 - info: Proxy GET:/vcg/vcgOAuth2Info To 192.168.3.203:8081
+2017-09-30 10:05:31.434 - verbose: ensureLogin
+2017-09-30 10:05:31.434 - verbose: handleProxy
+2017-09-30 10:05:31.435 - info: Proxy POST:/vcgMediaPurpose/create To 192.168.3.203:8081
+2017-09-30 10:05:31.435 - verbose: ensureLogin
+2017-09-30 10:05:31.435 - verbose: handleProxy
+2017-09-30 10:05:31.435 - info: Proxy POST:/vcgMediaPurpose/delete To 192.168.3.203:8081
+2017-09-30 10:05:31.436 - verbose: ensureLogin
+2017-09-30 10:05:31.436 - verbose: handleProxy
+2017-09-30 10:05:31.436 - info: Proxy GET:/vcgMediaPurpose/finListBycusid To 192.168.3.203:8081
+2017-09-30 10:05:31.436 - verbose: ensureLogin
+2017-09-30 10:05:31.436 - verbose: handleProxy
+2017-09-30 10:05:31.437 - info: Proxy GET:/vcgMediaPurpose/finObjBycusidAndcode To 192.168.3.203:8081
+2017-09-30 10:05:31.437 - verbose: ensureLogin
+2017-09-30 10:05:31.437 - verbose: handleProxy
+2017-09-30 10:05:31.437 - info: Proxy GET:/vcgMediaPurpose/list To 192.168.3.203:8081
+2017-09-30 10:05:31.437 - verbose: ensureLogin
+2017-09-30 10:05:31.437 - verbose: handleProxy
+2017-09-30 10:05:31.437 - info: Proxy POST:/vcgMediaPurpose/list To 192.168.3.203:8081
+2017-09-30 10:05:31.437 - verbose: ensureLogin
+2017-09-30 10:05:31.437 - verbose: handleProxy
+2017-09-30 10:05:31.437 - info: Proxy GET:/vcgMediaPurpose/pageList To 192.168.3.203:8081
+2017-09-30 10:05:31.437 - verbose: ensureLogin
+2017-09-30 10:05:31.438 - verbose: handleProxy
+2017-09-30 10:05:31.438 - info: Proxy POST:/vcgMediaPurpose/pageList To 192.168.3.203:8081
+2017-09-30 10:05:31.438 - verbose: ensureLogin
+2017-09-30 10:05:31.438 - verbose: handleProxy
+2017-09-30 10:05:31.438 - info: Proxy POST:/vcgMediaPurpose/update To 192.168.3.203:8081
+2017-09-30 10:05:31.438 - verbose: ensureLogin
+2017-09-30 10:05:31.438 - verbose: handleProxy
+2017-09-30 10:05:31.439 - info: Proxy GET:/vcgMediaPurpose/view To 192.168.3.203:8081
+2017-09-30 10:05:31.439 - verbose: ensureLogin
+2017-09-30 10:05:31.439 - verbose: handleProxy
+2017-09-30 10:05:31.439 - info: Proxy POST:/workgroupFolderPermission/deleteByFolderIds To 192.168.3.203:8081
+2017-09-30 10:05:31.439 - verbose: ensureLogin
+2017-09-30 10:05:31.439 - verbose: handleProxy
+2017-09-30 10:05:31.439 - info: Proxy GET:/workgroupFolderPermission/getByFolderId To 192.168.3.203:8081
+2017-09-30 10:05:31.439 - verbose: ensureLogin
+2017-09-30 10:05:31.439 - verbose: handleProxy
+2017-09-30 10:05:31.439 - info: Proxy POST:/workgroupFolderPermission/setByFolderId To 192.168.3.203:8081
+2017-09-30 10:05:31.440 - verbose: ensureLogin
+2017-09-30 10:05:31.440 - verbose: handleProxy
+2017-09-30 10:05:31.440 - info: Proxy POST:/workgroupFolderPermission/setByFolderIdAndseq To 192.168.3.203:8081
+2017-09-30 10:05:31.440 - verbose: ensureLogin
+2017-09-30 10:05:31.440 - verbose: handleProxy
+2017-09-30 10:05:31.441 - info: Proxy GET:/workgroupFolderRole/getWorkgroupFoldersRole To 192.168.3.203:8081
+2017-09-30 10:05:31.441 - verbose: ensureLogin
+2017-09-30 10:05:31.441 - verbose: handleProxy
+2017-09-30 10:05:31.441 - info: Proxy POST:/workgroupFolderRole/setWorkgroupFoldersRole To 192.168.3.203:8081
+2017-09-30 10:05:31.441 - verbose: proxyReject
+2017-09-30 10:05:31.441 - verbose: ensureLogin
+2017-09-30 10:05:31.441 - verbose: apiAuth
+2017-09-30 10:05:31.441 - verbose: handleProxy
+2017-09-30 10:05:31.442 - info: Proxy GET:/workgroups To 192.168.3.203:8081
+2017-09-30 10:05:31.442 - verbose: proxyReject
+2017-09-30 10:05:31.442 - verbose: ensureLogin
+2017-09-30 10:05:31.442 - verbose: apiAuth
+2017-09-30 10:05:31.442 - verbose: handleProxy
+2017-09-30 10:05:31.442 - info: Proxy POST:/workgroups/create To 192.168.3.203:8081
+2017-09-30 10:05:31.443 - verbose: ensureLogin
+2017-09-30 10:05:31.443 - verbose: apiAuth
+2017-09-30 10:05:31.443 - verbose: handleProxy
+2017-09-30 10:05:31.443 - info: Proxy GET:/workgroups/:id To 192.168.3.203:8081
+2017-09-30 10:05:31.443 - verbose: ensureLogin
+2017-09-30 10:05:31.443 - verbose: apiAuth
+2017-09-30 10:05:31.443 - verbose: handleProxy
+2017-09-30 10:05:31.443 - info: Proxy PUT:/workgroups/:id To 192.168.3.203:8081
+2017-09-30 10:05:31.443 - verbose: ensureLogin
+2017-09-30 10:05:31.443 - verbose: apiAuth
+2017-09-30 10:05:31.443 - verbose: handleProxy
+2017-09-30 10:05:31.444 - info: Proxy DELETE:/workgroups/:id To 192.168.3.203:8081
+2017-09-30 10:05:31.469 - verbose: ensureLogin
+2017-09-30 10:05:31.470 - verbose: handleProxy
+2017-09-30 10:05:31.470 - info: Proxy POST:/applydownload/create To 192.168.3.203:8082
+2017-09-30 10:05:31.470 - verbose: ensureLogin
+2017-09-30 10:05:31.471 - verbose: handleProxy
+2017-09-30 10:05:31.471 - info: Proxy GET:/applydownload/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.471 - verbose: ensureLogin
+2017-09-30 10:05:31.472 - verbose: handleProxy
+2017-09-30 10:05:31.472 - info: Proxy POST:/applydownload/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.472 - verbose: ensureLogin
+2017-09-30 10:05:31.473 - verbose: handleProxy
+2017-09-30 10:05:31.474 - info: Proxy GET:/applydownload/updateStatus To 192.168.3.203:8082
+2017-09-30 10:05:31.474 - verbose: ensureLogin
+2017-09-30 10:05:31.474 - verbose: handleProxy
+2017-09-30 10:05:31.474 - info: Proxy GET:/applydownload/view To 192.168.3.203:8082
+2017-09-30 10:05:31.476 - verbose: ensureLogin
+2017-09-30 10:05:31.476 - verbose: apiAuth
+2017-09-30 10:05:31.476 - verbose: handleProxy
+2017-09-30 10:05:31.476 - info: Proxy POST:/assets To 192.168.3.203:8082
+2017-09-30 10:05:31.477 - verbose: ensureLogin
+2017-09-30 10:05:31.477 - verbose: canViewAssets$
+2017-09-30 10:05:31.477 - verbose: handleProxy
+2017-09-30 10:05:31.477 - info: Proxy GET:/assets/batch To 192.168.3.203:8082
+2017-09-30 10:05:31.478 - verbose: ensureLogin
+2017-09-30 10:05:31.478 - verbose: canManageAssets$
+2017-09-30 10:05:31.478 - verbose: handleProxy
+2017-09-30 10:05:31.478 - info: Proxy DELETE:/assets/batchDel/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.479 - verbose: ensureLogin
+2017-09-30 10:05:31.479 - verbose: canManageAssets$
+2017-09-30 10:05:31.479 - verbose: handleProxy
+2017-09-30 10:05:31.480 - info: Proxy POST:/assets/batchUpdate To 192.168.3.203:8082
+2017-09-30 10:05:31.481 - verbose: proxyReject
+2017-09-30 10:05:31.481 - verbose: ensureLogin
+2017-09-30 10:05:31.481 - verbose: jsonParser
+2017-09-30 10:05:31.481 - verbose: canDownloadAssets$
+2017-09-30 10:05:31.482 - verbose: handleProxy
+2017-09-30 10:05:31.482 - debug: find path to rename /assets/downloadurl
+2017-09-30 10:05:31.482 - verbose: ensureLogin
+2017-09-30 10:05:31.482 - verbose: handleProxy
+2017-09-30 10:05:31.483 - info: Proxy Rename API POST:/assets/downloadurl To 192.168.3.203:8082
+2017-09-30 10:05:31.483 - info: Proxy POST:/assets/download To 192.168.3.203:8082
+2017-09-30 10:05:31.483 - verbose: ensureLogin
+2017-09-30 10:05:31.483 - verbose: customIdMid
+2017-09-30 10:05:31.483 - verbose: handleProxy
+2017-09-30 10:05:31.484 - info: Proxy GET:/assets/downloadCheck To 192.168.3.203:8082
+2017-09-30 10:05:31.484 - verbose: ensureLogin
+2017-09-30 10:05:31.485 - verbose: handleProxy
+2017-09-30 10:05:31.485 - info: Proxy POST:/assets/downloadMaster To 192.168.3.203:8082
+2017-09-30 10:05:31.485 - verbose: ensureLogin
+2017-09-30 10:05:31.486 - verbose: handleProxy
+2017-09-30 10:05:31.486 - info: Proxy GET:/assets/getFolders To 192.168.3.203:8082
+2017-09-30 10:05:31.486 - verbose: ensureLogin
+2017-09-30 10:05:31.486 - verbose: folderAuth
+2017-09-30 10:05:31.486 - verbose: handleProxy
+2017-09-30 10:05:31.487 - info: Proxy GET:/assets/loadAssets/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.488 - verbose: ensureLogin
+2017-09-30 10:05:31.488 - verbose: jsonParser
+2017-09-30 10:05:31.489 - verbose: apiAuth
+2017-09-30 10:05:31.489 - verbose:  
+2017-09-30 10:05:31.489 - verbose: handleProxy
+2017-09-30 10:05:31.490 - info: Proxy PUT:/assets/review To 192.168.3.203:8082
+2017-09-30 10:05:31.490 - verbose: ensureLogin
+2017-09-30 10:05:31.491 - verbose: handleProxy
+2017-09-30 10:05:31.491 - info: Proxy GET:/assets/save-vcg-assets To 192.168.3.203:8082
+2017-09-30 10:05:31.491 - verbose: ensureLogin
+2017-09-30 10:05:31.491 - verbose: handleProxy
+2017-09-30 10:05:31.492 - info: Proxy GET:/assets/search To 192.168.3.203:8082
+2017-09-30 10:05:31.492 - verbose: ensureLogin
+2017-09-30 10:05:31.492 - verbose: canManageAssets$
+2017-09-30 10:05:31.492 - verbose: handleProxy
+2017-09-30 10:05:31.492 - info: Proxy POST:/assets/update/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.493 - verbose: ensureLogin
+2017-09-30 10:05:31.493 - verbose: handleProxy
+2017-09-30 10:05:31.493 - info: Proxy GET:/assets/vcgDownload To 192.168.3.203:8082
+2017-09-30 10:05:31.493 - verbose: ensureLogin
+2017-09-30 10:05:31.493 - verbose: canViewAssets$
+2017-09-30 10:05:31.494 - verbose: handleProxy
+2017-09-30 10:05:31.494 - info: Proxy GET:/assets/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.494 - verbose: ensureLogin
+2017-09-30 10:05:31.494 - verbose: canManageAssets$
+2017-09-30 10:05:31.495 - verbose: handleProxy
+2017-09-30 10:05:31.495 - info: Proxy DELETE:/assets/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.496 - verbose: ensureLogin
+2017-09-30 10:05:31.496 - verbose: canViewAssets$
+2017-09-30 10:05:31.496 - verbose: handleProxy
+2017-09-30 10:05:31.496 - info: Proxy GET:/assets/:id/keywords To 192.168.3.203:8082
+2017-09-30 10:05:31.496 - verbose: ensureLogin
+2017-09-30 10:05:31.496 - verbose: canManageAssets$
+2017-09-30 10:05:31.497 - verbose: handleProxy
+2017-09-30 10:05:31.497 - info: Proxy PUT:/assets/:id/keywords To 192.168.3.203:8082
+2017-09-30 10:05:31.497 - verbose: ensureLogin
+2017-09-30 10:05:31.497 - verbose: apiAuth
+2017-09-30 10:05:31.497 - verbose: handleProxy
+2017-09-30 10:05:31.497 - info: Proxy PUT:/assets/:id/online To 192.168.3.203:8082
+2017-09-30 10:05:31.497 - verbose: ensureLogin
+2017-09-30 10:05:31.498 - verbose: handleProxy
+2017-09-30 10:05:31.498 - info: Proxy POST:/damSearcher/clientSearchDam To 192.168.3.203:8082
+2017-09-30 10:05:31.498 - verbose: ensureLogin
+2017-09-30 10:05:31.498 - verbose: handleProxy
+2017-09-30 10:05:31.499 - info: Proxy GET:/damSearcher/searchDam To 192.168.3.203:8082
+2017-09-30 10:05:31.499 - verbose: ensureLogin
+2017-09-30 10:05:31.499 - verbose: handleProxy
+2017-09-30 10:05:31.499 - info: Proxy GET:/damSearcher/searchDamFolder To 192.168.3.203:8082
+2017-09-30 10:05:31.500 - verbose: ensureLogin
+2017-09-30 10:05:31.500 - verbose: handleProxy
+2017-09-30 10:05:31.500 - info: Proxy GET:/damSearcher/searchFordambom To 192.168.3.203:8082
+2017-09-30 10:05:31.500 - verbose: ensureLogin
+2017-09-30 10:05:31.501 - verbose: handleProxy
+2017-09-30 10:05:31.501 - info: Proxy GET:/damSearcher/searchSubfolders To 192.168.3.203:8082
+2017-09-30 10:05:31.503 - verbose: ensureLogin
+2017-09-30 10:05:31.503 - verbose: handleProxy
+2017-09-30 10:05:31.507 - info: Proxy GET:/demo/userFolderPermissionList To 192.168.3.203:8082
+2017-09-30 10:05:31.508 - verbose: ensureLogin
+2017-09-30 10:05:31.508 - verbose: handleProxy
+2017-09-30 10:05:31.508 - info: Proxy GET:/demo/workgroupFolderRole To 192.168.3.203:8082
+2017-09-30 10:05:31.508 - verbose: ensureLogin
+2017-09-30 10:05:31.508 - verbose: handleProxy
+2017-09-30 10:05:31.508 - info: Proxy DELETE:/download/batch To 192.168.3.203:8082
+2017-09-30 10:05:31.508 - verbose: ensureLogin
+2017-09-30 10:05:31.512 - verbose: handleProxy
+2017-09-30 10:05:31.512 - info: Proxy POST:/download/checkDownPermission To 192.168.3.203:8082
+2017-09-30 10:05:31.512 - verbose: ensureLogin
+2017-09-30 10:05:31.512 - verbose: handleProxy
+2017-09-30 10:05:31.512 - info: Proxy POST:/download/create4Vcg To 192.168.3.203:8082
+2017-09-30 10:05:31.512 - verbose: ensureLogin
+2017-09-30 10:05:31.513 - verbose: handleProxy
+2017-09-30 10:05:31.513 - info: Proxy GET:/download/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.513 - verbose: ensureLogin
+2017-09-30 10:05:31.513 - verbose: handleProxy
+2017-09-30 10:05:31.513 - info: Proxy GET:/download/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.513 - verbose: ensureLogin
+2017-09-30 10:05:31.513 - verbose: handleProxy
+2017-09-30 10:05:31.514 - debug: find path to rename /favorites
+2017-09-30 10:05:31.514 - verbose: ensureLogin
+2017-09-30 10:05:31.514 - verbose: handleProxy
+2017-09-30 10:05:31.514 - info: Proxy Rename API POST:/favorites To 192.168.3.203:8082
+2017-09-30 10:05:31.514 - info: Proxy POST:/favorite/create To 192.168.3.203:8082
+2017-09-30 10:05:31.515 - verbose: ensureLogin
+2017-09-30 10:05:31.515 - verbose: handleProxy
+2017-09-30 10:05:31.515 - info: Proxy POST:/favorite/createVcg To 192.168.3.203:8082
+2017-09-30 10:05:31.515 - verbose: ensureLogin
+2017-09-30 10:05:31.515 - verbose: handleProxy
+2017-09-30 10:05:31.515 - debug: find path to rename /favorites
+2017-09-30 10:05:31.515 - verbose: ensureLogin
+2017-09-30 10:05:31.515 - verbose: handleProxy
+2017-09-30 10:05:31.515 - info: Proxy Rename API DELETE:/favorites To 192.168.3.203:8082
+2017-09-30 10:05:31.515 - info: Proxy DELETE:/favorite/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.515 - verbose: ensureLogin
+2017-09-30 10:05:31.515 - verbose: handleProxy
+2017-09-30 10:05:31.516 - info: Proxy DELETE:/favorite/deleteVcg To 192.168.3.203:8082
+2017-09-30 10:05:31.516 - verbose: ensureLogin
+2017-09-30 10:05:31.516 - verbose: handleProxy
+2017-09-30 10:05:31.516 - info: Proxy GET:/favorite/download-check To 192.168.3.203:8082
+2017-09-30 10:05:31.516 - verbose: ensureLogin
+2017-09-30 10:05:31.516 - verbose: handleProxy
+2017-09-30 10:05:31.516 - debug: find path to rename /favorites
+2017-09-30 10:05:31.516 - verbose: ensureLogin
+2017-09-30 10:05:31.516 - verbose: handleProxy
+2017-09-30 10:05:31.516 - info: Proxy Rename API GET:/favorites To 192.168.3.203:8082
+2017-09-30 10:05:31.516 - info: Proxy GET:/favorite/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.516 - verbose: ensureLogin
+2017-09-30 10:05:31.517 - verbose: handleProxy
+2017-09-30 10:05:31.517 - info: Proxy GET:/favorite/vcgFavorites To 192.168.3.203:8082
+2017-09-30 10:05:31.517 - verbose: ensureLogin
+2017-09-30 10:05:31.517 - verbose: handleProxy
+2017-09-30 10:05:31.517 - info: Proxy POST:/folderitems/copy To 192.168.3.203:8082
+2017-09-30 10:05:31.517 - verbose: ensureLogin
+2017-09-30 10:05:31.517 - verbose: apiAuth
+2017-09-30 10:05:31.517 - verbose: handleProxy
+2017-09-30 10:05:31.518 - info: Proxy GET:/folderitems/count To 192.168.3.203:8082
+2017-09-30 10:05:31.519 - verbose: ensureLogin
+2017-09-30 10:05:31.519 - verbose: handleProxy
+2017-09-30 10:05:31.519 - info: Proxy POST:/folderitems/move To 192.168.3.203:8082
+2017-09-30 10:05:31.519 - verbose: ensureLogin
+2017-09-30 10:05:31.519 - verbose: handleProxy
+2017-09-30 10:05:31.519 - info: Proxy GET:/folderitems/unInstockAssetsCount To 192.168.3.203:8082
+2017-09-30 10:05:31.519 - verbose: ensureLogin
+2017-09-30 10:05:31.520 - verbose: handleProxy
+2017-09-30 10:05:31.520 - info: Proxy GET:/folderitems/v2/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.520 - verbose: ensureLogin
+2017-09-30 10:05:31.520 - verbose: folderAuth
+2017-09-30 10:05:31.520 - verbose: handleProxy
+2017-09-30 10:05:31.520 - info: Proxy GET:/folderitems/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.521 - verbose: ensureLogin
+2017-09-30 10:05:31.521 - verbose: folderAuth
+2017-09-30 10:05:31.521 - verbose: handleProxy
+2017-09-30 10:05:31.521 - info: Proxy POST:/folderitems/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.521 - verbose: ensureLogin
+2017-09-30 10:05:31.521 - verbose: jsonParser
+2017-09-30 10:05:31.521 - verbose: canManageAssets$
+2017-09-30 10:05:31.521 - verbose: handleProxy
+2017-09-30 10:05:31.521 - info: Proxy DELETE:/folderitems/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.521 - verbose: ensureLogin
+2017-09-30 10:05:31.521 - verbose: apiAuth
+2017-09-30 10:05:31.521 - verbose: customIdMid
+2017-09-30 10:05:31.521 - verbose: handleProxy
+2017-09-30 10:05:31.521 - info: Proxy POST:/folders/copy To 192.168.3.203:8082
+2017-09-30 10:05:31.522 - verbose: ensureLogin
+2017-09-30 10:05:31.522 - verbose: handleProxy
+2017-09-30 10:05:31.522 - info: Proxy POST:/folders/count To 192.168.3.203:8082
+2017-09-30 10:05:31.522 - verbose: ensureLogin
+2017-09-30 10:05:31.522 - verbose: handleProxy
+2017-09-30 10:05:31.522 - info: Proxy GET:/folders/getById To 192.168.3.203:8082
+2017-09-30 10:05:31.522 - verbose: ensureLogin
+2017-09-30 10:05:31.522 - verbose: handleProxy
+2017-09-30 10:05:31.523 - info: Proxy GET:/folders/getPermissionFolderidsByFolderId To 192.168.3.203:8082
+2017-09-30 10:05:31.523 - verbose: ensureLogin
+2017-09-30 10:05:31.523 - verbose: handleProxy
+2017-09-30 10:05:31.523 - info: Proxy GET:/folders/getPermissionFolderidsByseq To 192.168.3.203:8082
+2017-09-30 10:05:31.523 - verbose: proxyReject
+2017-09-30 10:05:31.523 - verbose: ensureLogin
+2017-09-30 10:05:31.523 - verbose: handleProxy
+2017-09-30 10:05:31.524 - info: Proxy GET:/folders/isBatchExist To 192.168.3.203:8082
+2017-09-30 10:05:31.524 - verbose: proxyReject
+2017-09-30 10:05:31.524 - verbose: ensureLogin
+2017-09-30 10:05:31.524 - verbose: handleProxy
+2017-09-30 10:05:31.524 - info: Proxy GET:/folders/isExist To 192.168.3.203:8082
+2017-09-30 10:05:31.524 - verbose: ensureLogin
+2017-09-30 10:05:31.524 - verbose: handleProxy
+2017-09-30 10:05:31.524 - info: Proxy GET:/folders/list To 192.168.3.203:8082
+2017-09-30 10:05:31.525 - verbose: ensureLogin
+2017-09-30 10:05:31.525 - verbose: customIdMid
+2017-09-30 10:05:31.525 - verbose: handleProxy
+2017-09-30 10:05:31.525 - info: Proxy POST:/folders/merge To 192.168.3.203:8082
+2017-09-30 10:05:31.526 - verbose: ensureLogin
+2017-09-30 10:05:31.526 - verbose: apiAuth
+2017-09-30 10:05:31.526 - verbose: customIdMid
+2017-09-30 10:05:31.526 - verbose: handleProxy
+2017-09-30 10:05:31.526 - info: Proxy POST:/folders/move To 192.168.3.203:8082
+2017-09-30 10:05:31.526 - verbose: ensureLogin
+2017-09-30 10:05:31.526 - verbose: handleProxy
+2017-09-30 10:05:31.526 - info: Proxy GET:/folders/updateextendByid To 192.168.3.203:8082
+2017-09-30 10:05:31.526 - verbose: ensureLogin
+2017-09-30 10:05:31.527 - verbose: customIdMid
+2017-09-30 10:05:31.527 - verbose: handleProxy
+2017-09-30 10:05:31.527 - info: Proxy GET:/folders/viewVcgFolder To 192.168.3.203:8082
+2017-09-30 10:05:31.527 - verbose: ensureLogin
+2017-09-30 10:05:31.528 - verbose: handleProxy
+2017-09-30 10:05:31.528 - info: Proxy GET:/folders/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.528 - verbose: ensureLogin
+2017-09-30 10:05:31.528 - verbose: apiAuth
+2017-09-30 10:05:31.528 - verbose: customIdMid
+2017-09-30 10:05:31.528 - verbose: handleProxy
+2017-09-30 10:05:31.528 - info: Proxy POST:/folders/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.528 - verbose: ensureLogin
+2017-09-30 10:05:31.528 - verbose: apiAuth
+2017-09-30 10:05:31.528 - verbose: customIdMid
+2017-09-30 10:05:31.528 - verbose: handleProxy
+2017-09-30 10:05:31.528 - info: Proxy PUT:/folders/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.528 - verbose: ensureLogin
+2017-09-30 10:05:31.528 - verbose: apiAuth
+2017-09-30 10:05:31.528 - verbose: customIdMid
+2017-09-30 10:05:31.528 - verbose: handleProxy
+2017-09-30 10:05:31.528 - info: Proxy DELETE:/folders/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.528 - verbose: ensureLogin
+2017-09-30 10:05:31.528 - verbose: handleProxy
+2017-09-30 10:05:31.529 - info: Proxy POST:/folders/:id/parent_sub_folders To 192.168.3.203:8082
+2017-09-30 10:05:31.529 - verbose: ensureLogin
+2017-09-30 10:05:31.529 - verbose: folderPermissionsMid
+2017-09-30 10:05:31.529 - verbose: customIdMid
+2017-09-30 10:05:31.529 - verbose: handleProxy
+2017-09-30 10:05:31.529 - info: Proxy POST:/folders/:id/sub_folders To 192.168.3.203:8082
+2017-09-30 10:05:31.529 - verbose: proxyReject
+2017-09-30 10:05:31.529 - verbose: ensureLogin
+2017-09-30 10:05:31.529 - verbose: handleProxy
+2017-09-30 10:05:31.529 - info: Proxy GET:/health To 192.168.3.203:8082
+2017-09-30 10:05:31.529 - verbose: ensureLogin
+2017-09-30 10:05:31.529 - verbose: canViewAssets$
+2017-09-30 10:05:31.529 - verbose: handleProxy
+2017-09-30 10:05:31.529 - info: Proxy GET:/image/:id/extension/ To 192.168.3.203:8082
+2017-09-30 10:05:31.529 - verbose: ensureLogin
+2017-09-30 10:05:31.529 - verbose: canManageAssets$
+2017-09-30 10:05:31.529 - verbose: handleProxy
+2017-09-30 10:05:31.529 - info: Proxy POST:/image/:id/extension/ To 192.168.3.203:8082
+2017-09-30 10:05:31.530 - verbose: ensureLogin
+2017-09-30 10:05:31.530 - verbose: canManageAssets$
+2017-09-30 10:05:31.530 - verbose: handleProxy
+2017-09-30 10:05:31.530 - info: Proxy PUT:/image/:id/extension/ To 192.168.3.203:8082
+2017-09-30 10:05:31.530 - verbose: ensureLogin
+2017-09-30 10:05:31.530 - verbose: canManageAssets$
+2017-09-30 10:05:31.530 - verbose: handleProxy
+2017-09-30 10:05:31.530 - info: Proxy DELETE:/image/:id/extension/ To 192.168.3.203:8082
+2017-09-30 10:05:31.530 - verbose: proxyReject
+2017-09-30 10:05:31.531 - verbose: ensureLogin
+2017-09-30 10:05:31.531 - verbose: handleProxy
+2017-09-30 10:05:31.531 - info: Proxy POST:/images To 192.168.3.203:8082
+2017-09-30 10:05:31.531 - verbose: ensureLogin
+2017-09-30 10:05:31.531 - verbose: jsonParser
+2017-09-30 10:05:31.531 - verbose: canManageAssets$
+2017-09-30 10:05:31.531 - verbose: handleProxy
+2017-09-30 10:05:31.531 - info: Proxy DELETE:/images/ To 192.168.3.203:8082
+2017-09-30 10:05:31.531 - verbose: ensureLogin
+2017-09-30 10:05:31.531 - verbose: jsonParser
+2017-09-30 10:05:31.531 - verbose: canViewAssets$
+2017-09-30 10:05:31.531 - verbose: handleProxy
+2017-09-30 10:05:31.531 - info: Proxy POST:/images/batch To 192.168.3.203:8082
+2017-09-30 10:05:31.531 - verbose: ensureLogin
+2017-09-30 10:05:31.531 - verbose: apiAuth
+2017-09-30 10:05:31.531 - verbose: handleProxy
+2017-09-30 10:05:31.531 - info: Proxy GET:/images/page To 192.168.3.203:8082
+2017-09-30 10:05:31.531 - verbose: ensureLogin
+2017-09-30 10:05:31.531 - verbose: folderPermissionsMid
+2017-09-30 10:05:31.532 - verbose: canViewAssets$
+2017-09-30 10:05:31.532 - verbose: handleProxy
+2017-09-30 10:05:31.532 - info: Proxy GET:/images/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.532 - verbose: ensureLogin
+2017-09-30 10:05:31.532 - verbose: canManageAssets$
+2017-09-30 10:05:31.532 - verbose: handleProxy
+2017-09-30 10:05:31.532 - info: Proxy PUT:/images/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.532 - verbose: ensureLogin
+2017-09-30 10:05:31.532 - verbose: canManageAssets$
+2017-09-30 10:05:31.532 - verbose: handleProxy
+2017-09-30 10:05:31.532 - info: Proxy DELETE:/images/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.532 - verbose: ensureLogin
+2017-09-30 10:05:31.532 - verbose: canViewAssets$
+2017-09-30 10:05:31.532 - verbose: handleProxy
+2017-09-30 10:05:31.532 - info: Proxy GET:/images/:id/exif To 192.168.3.203:8082
+2017-09-30 10:05:31.532 - verbose: proxyReject
+2017-09-30 10:05:31.532 - verbose: ensureLogin
+2017-09-30 10:05:31.532 - verbose: handleProxy
+2017-09-30 10:05:31.533 - info: Proxy GET:/images/:id/folders To 192.168.3.203:8082
+2017-09-30 10:05:31.533 - verbose: ensureLogin
+2017-09-30 10:05:31.533 - verbose: canManageAssets$
+2017-09-30 10:05:31.533 - verbose: handleProxy
+2017-09-30 10:05:31.533 - info: Proxy PUT:/images/:id/rotation To 192.168.3.203:8082
+2017-09-30 10:05:31.533 - verbose: ensureLogin
+2017-09-30 10:05:31.533 - verbose: jsonParser
+2017-09-30 10:05:31.533 - verbose: canSubmitUploadedAssets$
+2017-09-30 10:05:31.533 - verbose: handleProxy
+2017-09-30 10:05:31.533 - info: Proxy POST:/instocks/ To 192.168.3.203:8082
+2017-09-30 10:05:31.533 - verbose: ensureLogin
+2017-09-30 10:05:31.533 - verbose: handleProxy
+2017-09-30 10:05:31.533 - info: Proxy POST:/instocks/localIn To 192.168.3.203:8082
+2017-09-30 10:05:31.533 - verbose: proxyReject
+2017-09-30 10:05:31.533 - verbose: ensureLogin
+2017-09-30 10:05:31.533 - verbose: handleProxy
+2017-09-30 10:05:31.533 - info: Proxy POST:/resAudioUpload/create To 192.168.3.203:8082
+2017-09-30 10:05:31.533 - verbose: proxyReject
+2017-09-30 10:05:31.533 - verbose: ensureLogin
+2017-09-30 10:05:31.533 - verbose: handleProxy
+2017-09-30 10:05:31.534 - info: Proxy POST:/resAudioUpload/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.534 - verbose: proxyReject
+2017-09-30 10:05:31.534 - verbose: ensureLogin
+2017-09-30 10:05:31.534 - verbose: handleProxy
+2017-09-30 10:05:31.534 - info: Proxy GET:/resAudioUpload/list To 192.168.3.203:8082
+2017-09-30 10:05:31.534 - verbose: proxyReject
+2017-09-30 10:05:31.534 - verbose: ensureLogin
+2017-09-30 10:05:31.534 - verbose: handleProxy
+2017-09-30 10:05:31.534 - info: Proxy POST:/resAudioUpload/list To 192.168.3.203:8082
+2017-09-30 10:05:31.534 - verbose: proxyReject
+2017-09-30 10:05:31.534 - verbose: ensureLogin
+2017-09-30 10:05:31.534 - verbose: handleProxy
+2017-09-30 10:05:31.534 - info: Proxy GET:/resAudioUpload/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.534 - verbose: proxyReject
+2017-09-30 10:05:31.534 - verbose: ensureLogin
+2017-09-30 10:05:31.534 - verbose: handleProxy
+2017-09-30 10:05:31.534 - info: Proxy POST:/resAudioUpload/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.534 - verbose: proxyReject
+2017-09-30 10:05:31.534 - verbose: ensureLogin
+2017-09-30 10:05:31.534 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy POST:/resAudioUpload/update To 192.168.3.203:8082
+2017-09-30 10:05:31.535 - verbose: proxyReject
+2017-09-30 10:05:31.535 - verbose: ensureLogin
+2017-09-30 10:05:31.535 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy GET:/resAudioUpload/view To 192.168.3.203:8082
+2017-09-30 10:05:31.535 - verbose: ensureLogin
+2017-09-30 10:05:31.535 - verbose: canManageAssets$
+2017-09-30 10:05:31.535 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy GET:/resImageUpload/batchDelByIds/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.535 - verbose: ensureLogin
+2017-09-30 10:05:31.535 - verbose: canManageAssets$
+2017-09-30 10:05:31.535 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy POST:/resImageUpload/batchUpdate To 192.168.3.203:8082
+2017-09-30 10:05:31.535 - verbose: proxyReject
+2017-09-30 10:05:31.535 - verbose: ensureLogin
+2017-09-30 10:05:31.535 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy POST:/resImageUpload/create To 192.168.3.203:8082
+2017-09-30 10:05:31.535 - verbose: ensureLogin
+2017-09-30 10:05:31.535 - verbose: canManageAssets$
+2017-09-30 10:05:31.535 - verbose: handleProxy
+2017-09-30 10:05:31.535 - info: Proxy GET:/resImageUpload/delById/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.536 - verbose: ensureLogin
+2017-09-30 10:05:31.536 - verbose: apiAuth
+2017-09-30 10:05:31.536 - verbose: handleProxy
+2017-09-30 10:05:31.536 - info: Proxy GET:/resImageUpload/folderUploads/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.536 - verbose: ensureLogin
+2017-09-30 10:05:31.536 - verbose: apiAuth
+2017-09-30 10:05:31.536 - verbose: handleProxy
+2017-09-30 10:05:31.536 - info: Proxy GET:/resImageUpload/list To 192.168.3.203:8082
+2017-09-30 10:05:31.536 - verbose: ensureLogin
+2017-09-30 10:05:31.536 - verbose: apiAuth
+2017-09-30 10:05:31.537 - verbose: handleProxy
+2017-09-30 10:05:31.537 - info: Proxy POST:/resImageUpload/list To 192.168.3.203:8082
+2017-09-30 10:05:31.537 - verbose: ensureLogin
+2017-09-30 10:05:31.537 - verbose: folderAuth
+2017-09-30 10:05:31.537 - verbose: handleProxy
+2017-09-30 10:05:31.537 - info: Proxy GET:/resImageUpload/myFolderUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.537 - verbose: ensureLogin
+2017-09-30 10:05:31.537 - verbose: handleProxy
+2017-09-30 10:05:31.537 - info: Proxy GET:/resImageUpload/myUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.537 - verbose: ensureLogin
+2017-09-30 10:05:31.537 - verbose: handleProxy
+2017-09-30 10:05:31.537 - info: Proxy POST:/resImageUpload/myUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.537 - verbose: ensureLogin
+2017-09-30 10:05:31.538 - verbose: canManageAssets$
+2017-09-30 10:05:31.538 - verbose: handleProxy
+2017-09-30 10:05:31.538 - info: Proxy GET:/resImageUpload/rotate/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.538 - verbose: proxyReject
+2017-09-30 10:05:31.538 - verbose: ensureLogin
+2017-09-30 10:05:31.538 - verbose: handleProxy
+2017-09-30 10:05:31.540 - info: Proxy GET:/resImageUpload/testResize/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.540 - verbose: ensureLogin
+2017-09-30 10:05:31.540 - verbose: canManageAssets$
+2017-09-30 10:05:31.540 - verbose: handleProxy
+2017-09-30 10:05:31.541 - info: Proxy POST:/resImageUpload/update/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.541 - verbose: ensureLogin
+2017-09-30 10:05:31.541 - verbose: canViewAssets$
+2017-09-30 10:05:31.541 - verbose: handleProxy
+2017-09-30 10:05:31.541 - info: Proxy GET:/resImageUpload/view/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.541 - verbose: ensureLogin
+2017-09-30 10:05:31.541 - verbose: canViewAssets$
+2017-09-30 10:05:31.541 - verbose: handleProxy
+2017-09-30 10:05:31.541 - info: Proxy GET:/resImageUpload/:id/exif To 192.168.3.203:8082
+2017-09-30 10:05:31.541 - verbose: proxyReject
+2017-09-30 10:05:31.541 - verbose: ensureLogin
+2017-09-30 10:05:31.541 - verbose: handleProxy
+2017-09-30 10:05:31.541 - info: Proxy POST:/resImageUploadBatch/create To 192.168.3.203:8082
+2017-09-30 10:05:31.541 - verbose: proxyReject
+2017-09-30 10:05:31.541 - verbose: ensureLogin
+2017-09-30 10:05:31.541 - verbose: handleProxy
+2017-09-30 10:05:31.542 - info: Proxy POST:/resImageUploadBatch/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.542 - verbose: proxyReject
+2017-09-30 10:05:31.542 - verbose: ensureLogin
+2017-09-30 10:05:31.542 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy GET:/resImageUploadBatch/list To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.543 - verbose: ensureLogin
+2017-09-30 10:05:31.543 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy POST:/resImageUploadBatch/list To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.543 - verbose: ensureLogin
+2017-09-30 10:05:31.543 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy GET:/resImageUploadBatch/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.543 - verbose: ensureLogin
+2017-09-30 10:05:31.543 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy POST:/resImageUploadBatch/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.543 - verbose: ensureLogin
+2017-09-30 10:05:31.543 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy POST:/resImageUploadBatch/update To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.543 - verbose: ensureLogin
+2017-09-30 10:05:31.543 - verbose: handleProxy
+2017-09-30 10:05:31.543 - info: Proxy GET:/resImageUploadBatch/view To 192.168.3.203:8082
+2017-09-30 10:05:31.543 - verbose: proxyReject
+2017-09-30 10:05:31.544 - verbose: ensureLogin
+2017-09-30 10:05:31.544 - verbose: handleProxy
+2017-09-30 10:05:31.544 - info: Proxy POST:/resImageUploadMeta/create To 192.168.3.203:8082
+2017-09-30 10:05:31.544 - verbose: proxyReject
+2017-09-30 10:05:31.544 - verbose: ensureLogin
+2017-09-30 10:05:31.544 - verbose: handleProxy
+2017-09-30 10:05:31.544 - info: Proxy POST:/resImageUploadMeta/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.544 - verbose: proxyReject
+2017-09-30 10:05:31.544 - verbose: ensureLogin
+2017-09-30 10:05:31.544 - verbose: handleProxy
+2017-09-30 10:05:31.544 - info: Proxy GET:/resImageUploadMeta/list To 192.168.3.203:8082
+2017-09-30 10:05:31.544 - verbose: proxyReject
+2017-09-30 10:05:31.544 - verbose: ensureLogin
+2017-09-30 10:05:31.544 - verbose: handleProxy
+2017-09-30 10:05:31.544 - info: Proxy POST:/resImageUploadMeta/list To 192.168.3.203:8082
+2017-09-30 10:05:31.544 - verbose: proxyReject
+2017-09-30 10:05:31.544 - verbose: ensureLogin
+2017-09-30 10:05:31.544 - verbose: handleProxy
+2017-09-30 10:05:31.544 - info: Proxy GET:/resImageUploadMeta/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.544 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.545 - info: Proxy POST:/resImageUploadMeta/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.545 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.545 - info: Proxy POST:/resImageUploadMeta/update To 192.168.3.203:8082
+2017-09-30 10:05:31.545 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.545 - info: Proxy GET:/resImageUploadMeta/view To 192.168.3.203:8082
+2017-09-30 10:05:31.545 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.545 - info: Proxy POST:/resImageUploadRelease/create To 192.168.3.203:8082
+2017-09-30 10:05:31.545 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.545 - info: Proxy POST:/resImageUploadRelease/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.545 - verbose: proxyReject
+2017-09-30 10:05:31.545 - verbose: ensureLogin
+2017-09-30 10:05:31.545 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy GET:/resImageUploadRelease/list To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.546 - verbose: ensureLogin
+2017-09-30 10:05:31.546 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy POST:/resImageUploadRelease/list To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.546 - verbose: ensureLogin
+2017-09-30 10:05:31.546 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy GET:/resImageUploadRelease/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.546 - verbose: ensureLogin
+2017-09-30 10:05:31.546 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy POST:/resImageUploadRelease/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.546 - verbose: ensureLogin
+2017-09-30 10:05:31.546 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy POST:/resImageUploadRelease/update To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.546 - verbose: ensureLogin
+2017-09-30 10:05:31.546 - verbose: handleProxy
+2017-09-30 10:05:31.546 - info: Proxy GET:/resImageUploadRelease/view To 192.168.3.203:8082
+2017-09-30 10:05:31.546 - verbose: proxyReject
+2017-09-30 10:05:31.547 - verbose: ensureLogin
+2017-09-30 10:05:31.547 - verbose: handleProxy
+2017-09-30 10:05:31.547 - info: Proxy POST:/resRootFolders/create To 192.168.3.203:8082
+2017-09-30 10:05:31.547 - verbose: proxyReject
+2017-09-30 10:05:31.547 - verbose: ensureLogin
+2017-09-30 10:05:31.547 - verbose: handleProxy
+2017-09-30 10:05:31.547 - info: Proxy POST:/resRootFolders/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.547 - verbose: proxyReject
+2017-09-30 10:05:31.547 - verbose: ensureLogin
+2017-09-30 10:05:31.547 - verbose: handleProxy
+2017-09-30 10:05:31.547 - info: Proxy GET:/resRootFolders/list To 192.168.3.203:8082
+2017-09-30 10:05:31.547 - verbose: proxyReject
+2017-09-30 10:05:31.547 - verbose: ensureLogin
+2017-09-30 10:05:31.547 - verbose: handleProxy
+2017-09-30 10:05:31.547 - info: Proxy POST:/resRootFolders/list To 192.168.3.203:8082
+2017-09-30 10:05:31.547 - verbose: proxyReject
+2017-09-30 10:05:31.547 - verbose: ensureLogin
+2017-09-30 10:05:31.547 - verbose: handleProxy
+2017-09-30 10:05:31.547 - info: Proxy GET:/resRootFolders/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.547 - verbose: proxyReject
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.548 - info: Proxy POST:/resRootFolders/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.548 - verbose: proxyReject
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.548 - info: Proxy POST:/resRootFolders/update To 192.168.3.203:8082
+2017-09-30 10:05:31.548 - verbose: proxyReject
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.548 - info: Proxy GET:/resRootFolders/view To 192.168.3.203:8082
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: canManageAssets$
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.548 - info: Proxy GET:/resVideoUpload/batchDelByIds/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.548 - verbose: proxyReject
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.548 - info: Proxy POST:/resVideoUpload/create To 192.168.3.203:8082
+2017-09-30 10:05:31.548 - verbose: ensureLogin
+2017-09-30 10:05:31.548 - verbose: canManageAssets$
+2017-09-30 10:05:31.548 - verbose: handleProxy
+2017-09-30 10:05:31.549 - info: Proxy GET:/resVideoUpload/delById/:folderId To 192.168.3.203:8082
+2017-09-30 10:05:31.549 - verbose: ensureLogin
+2017-09-30 10:05:31.549 - verbose: canDownloadAssets$
+2017-09-30 10:05:31.549 - verbose: handleProxy
+2017-09-30 10:05:31.549 - info: Proxy GET:/resVideoUpload/getOrigURL/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.549 - verbose: ensureLogin
+2017-09-30 10:05:31.549 - verbose: canDownloadAssets$
+2017-09-30 10:05:31.549 - verbose: handleProxy
+2017-09-30 10:05:31.549 - info: Proxy POST:/resVideoUpload/getOrigURL/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.549 - verbose: ensureLogin
+2017-09-30 10:05:31.549 - verbose: folderAuth
+2017-09-30 10:05:31.549 - verbose: handleProxy
+2017-09-30 10:05:31.549 - info: Proxy GET:/resVideoUpload/myFolderUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.549 - verbose: ensureLogin
+2017-09-30 10:05:31.549 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy GET:/resVideoUpload/unFolders To 192.168.3.203:8082
+2017-09-30 10:05:31.550 - verbose: ensureLogin
+2017-09-30 10:05:31.550 - verbose: canManageAssets$
+2017-09-30 10:05:31.550 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy POST:/resVideoUpload/update/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.550 - verbose: ensureLogin
+2017-09-30 10:05:31.550 - verbose: canViewAssets$
+2017-09-30 10:05:31.550 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy GET:/resVideoUpload/view/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.550 - verbose: ensureLogin
+2017-09-30 10:05:31.550 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy POST:/resVideoUpload/view/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.550 - verbose: proxyReject
+2017-09-30 10:05:31.550 - verbose: ensureLogin
+2017-09-30 10:05:31.550 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy POST:/sensitiveWord/create To 192.168.3.203:8082
+2017-09-30 10:05:31.550 - verbose: proxyReject
+2017-09-30 10:05:31.550 - verbose: ensureLogin
+2017-09-30 10:05:31.550 - verbose: handleProxy
+2017-09-30 10:05:31.550 - info: Proxy POST:/sensitiveWord/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.551 - verbose: handleProxy
+2017-09-30 10:05:31.551 - info: Proxy GET:/sensitiveWord/list To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.551 - verbose: handleProxy
+2017-09-30 10:05:31.551 - info: Proxy POST:/sensitiveWord/list To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.551 - verbose: handleProxy
+2017-09-30 10:05:31.551 - info: Proxy GET:/sensitiveWord/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.551 - verbose: handleProxy
+2017-09-30 10:05:31.551 - info: Proxy POST:/sensitiveWord/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.551 - verbose: handleProxy
+2017-09-30 10:05:31.551 - info: Proxy POST:/sensitiveWord/update To 192.168.3.203:8082
+2017-09-30 10:05:31.551 - verbose: proxyReject
+2017-09-30 10:05:31.551 - verbose: ensureLogin
+2017-09-30 10:05:31.552 - verbose: handleProxy
+2017-09-30 10:05:31.552 - info: Proxy GET:/sensitiveWord/view To 192.168.3.203:8082
+2017-09-30 10:05:31.552 - verbose: ensureLogin
+2017-09-30 10:05:31.552 - verbose: apiAuth
+2017-09-30 10:05:31.552 - verbose: handleProxy
+2017-09-30 10:05:31.552 - info: Proxy GET:/statistics/countAssetsByFilter To 192.168.3.203:8082
+2017-09-30 10:05:31.552 - verbose: ensureLogin
+2017-09-30 10:05:31.552 - verbose: folderAuth
+2017-09-30 10:05:31.552 - verbose: handleProxy
+2017-09-30 10:05:31.552 - debug: find path to rename /assets/upload
+2017-09-30 10:05:31.552 - verbose: ensureLogin
+2017-09-30 10:05:31.552 - verbose: handleProxy
+2017-09-30 10:05:31.552 - info: Proxy Rename API POST:/assets/upload To 192.168.3.203:8082
+2017-09-30 10:05:31.552 - info: Proxy POST:/uploadHandler/batchUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.553 - verbose: ensureLogin
+2017-09-30 10:05:31.553 - verbose: handleProxy
+2017-09-30 10:05:31.553 - info: Proxy GET:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.553 - verbose: ensureLogin
+2017-09-30 10:05:31.553 - verbose: handleProxy
+2017-09-30 10:05:31.553 - info: Proxy HEAD:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.553 - verbose: ensureLogin
+2017-09-30 10:05:31.553 - verbose: handleProxy
+2017-09-30 10:05:31.553 - info: Proxy POST:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.553 - verbose: ensureLogin
+2017-09-30 10:05:31.553 - verbose: handleProxy
+2017-09-30 10:05:31.553 - info: Proxy PUT:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.553 - verbose: ensureLogin
+2017-09-30 10:05:31.553 - verbose: handleProxy
+2017-09-30 10:05:31.553 - info: Proxy DELETE:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.554 - verbose: handleProxy
+2017-09-30 10:05:31.554 - info: Proxy OPTIONS:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.554 - verbose: handleProxy
+2017-09-30 10:05:31.554 - info: Proxy PATCH:/uploadHandler/file To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.554 - verbose: handleProxy
+2017-09-30 10:05:31.554 - info: Proxy GET:/uploadHandler/fileUploadType To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.554 - verbose: handleProxy
+2017-09-30 10:05:31.554 - info: Proxy POST:/uploadHandler/testClarifai To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: proxyReject
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.554 - verbose: handleProxy
+2017-09-30 10:05:31.554 - info: Proxy POST:/uploadHandler/upload To 192.168.3.203:8082
+2017-09-30 10:05:31.554 - verbose: ensureLogin
+2017-09-30 10:05:31.555 - verbose: handleProxy
+2017-09-30 10:05:31.555 - info: Proxy POST:/uploadHandler/uploadBase64File2oss To 192.168.3.203:8082
+2017-09-30 10:05:31.555 - verbose: ensureLogin
+2017-09-30 10:05:31.555 - verbose: handleProxy
+2017-09-30 10:05:31.555 - info: Proxy POST:/uploadHandler/uploadFile2oss To 192.168.3.203:8082
+2017-09-30 10:05:31.555 - verbose: ensureLogin
+2017-09-30 10:05:31.555 - verbose: handleProxy
+2017-09-30 10:05:31.555 - info: Proxy GET:/uploadHandler/uploadPolicy To 192.168.3.203:8082
+2017-09-30 10:05:31.555 - verbose: ensureLogin
+2017-09-30 10:05:31.555 - verbose: handleProxy
+2017-09-30 10:05:31.555 - info: Proxy POST:/uploadOss/saveUpload To 192.168.3.203:8082
+2017-09-30 10:05:31.556 - verbose: ensureLogin
+2017-09-30 10:05:31.556 - verbose: handleProxy
+2017-09-30 10:05:31.556 - info: Proxy GET:/vResIndicesView/addOrupdateIndexByAssetsid To 192.168.3.203:8082
+2017-09-30 10:05:31.556 - verbose: ensureLogin
+2017-09-30 10:05:31.556 - verbose: handleProxy
+2017-09-30 10:05:31.556 - info: Proxy GET:/vResIndicesView/deleteIndex To 192.168.3.203:8082
+2017-09-30 10:05:31.556 - verbose: ensureLogin
+2017-09-30 10:05:31.556 - verbose: handleProxy
+2017-09-30 10:05:31.556 - info: Proxy GET:/vResIndicesView/deleteIndexByAssetsid To 192.168.3.203:8082
+2017-09-30 10:05:31.556 - verbose: ensureLogin
+2017-09-30 10:05:31.556 - verbose: handleProxy
+2017-09-30 10:05:31.556 - info: Proxy GET:/vResIndicesView/deleteIndexByCustomerId To 192.168.3.203:8082
+2017-09-30 10:05:31.556 - verbose: ensureLogin
+2017-09-30 10:05:31.557 - verbose: handleProxy
+2017-09-30 10:05:31.557 - info: Proxy GET:/vResIndicesView/deleteIndexByFolderAndListAsset To 192.168.3.203:8082
+2017-09-30 10:05:31.557 - verbose: ensureLogin
+2017-09-30 10:05:31.557 - verbose: handleProxy
+2017-09-30 10:05:31.557 - info: Proxy GET:/vResIndicesView/initIndexData To 192.168.3.203:8082
+2017-09-30 10:05:31.557 - verbose: ensureLogin
+2017-09-30 10:05:31.557 - verbose: handleProxy
+2017-09-30 10:05:31.557 - info: Proxy GET:/vcgDownload/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.557 - verbose: ensureLogin
+2017-09-30 10:05:31.557 - verbose: handleProxy
+2017-09-30 10:05:31.557 - info: Proxy GET:/vcgDownload/update-confirm-status To 192.168.3.203:8082
+2017-09-30 10:05:31.557 - verbose: ensureLogin
+2017-09-30 10:05:31.557 - verbose: handleProxy
+2017-09-30 10:05:31.557 - info: Proxy POST:/vcgDownloadVerify/create To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: handleProxy
+2017-09-30 10:05:31.558 - info: Proxy POST:/vcgDownloadVerify/list To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: handleProxy
+2017-09-30 10:05:31.558 - info: Proxy POST:/vcgDownloadVerify/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: handleProxy
+2017-09-30 10:05:31.558 - info: Proxy GET:/vcgDownloadVerify/view To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: handleProxy
+2017-09-30 10:05:31.558 - info: Proxy GET:/vcgDownloadVerify/viewByVcgDownloadId To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: proxyReject
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: handleProxy
+2017-09-30 10:05:31.558 - info: Proxy POST:/videos/ To 192.168.3.203:8082
+2017-09-30 10:05:31.558 - verbose: ensureLogin
+2017-09-30 10:05:31.558 - verbose: jsonParser
+2017-09-30 10:05:31.558 - verbose: canManageAssets$
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.559 - info: Proxy DELETE:/videos/ To 192.168.3.203:8082
+2017-09-30 10:05:31.559 - verbose: proxyReject
+2017-09-30 10:05:31.559 - verbose: ensureLogin
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.559 - info: Proxy POST:/videos/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.559 - verbose: ensureLogin
+2017-09-30 10:05:31.559 - verbose: canViewAssets$
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.559 - info: Proxy GET:/videos/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.559 - verbose: ensureLogin
+2017-09-30 10:05:31.559 - verbose: canManageAssets$
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.559 - info: Proxy PUT:/videos/:id To 192.168.3.203:8082
+2017-09-30 10:05:31.559 - verbose: proxyReject
+2017-09-30 10:05:31.559 - verbose: ensureLogin
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.559 - info: Proxy POST:/waterRule/create To 192.168.3.203:8082
+2017-09-30 10:05:31.559 - verbose: proxyReject
+2017-09-30 10:05:31.559 - verbose: ensureLogin
+2017-09-30 10:05:31.559 - verbose: handleProxy
+2017-09-30 10:05:31.560 - info: Proxy POST:/waterRule/delete To 192.168.3.203:8082
+2017-09-30 10:05:31.560 - verbose: proxyReject
+2017-09-30 10:05:31.560 - verbose: ensureLogin
+2017-09-30 10:05:31.560 - verbose: handleProxy
+2017-09-30 10:05:31.560 - info: Proxy GET:/waterRule/list To 192.168.3.203:8082
+2017-09-30 10:05:31.560 - verbose: proxyReject
+2017-09-30 10:05:31.560 - verbose: ensureLogin
+2017-09-30 10:05:31.560 - verbose: handleProxy
+2017-09-30 10:05:31.560 - info: Proxy POST:/waterRule/list To 192.168.3.203:8082
+2017-09-30 10:05:31.560 - verbose: proxyReject
+2017-09-30 10:05:31.560 - verbose: ensureLogin
+2017-09-30 10:05:31.560 - verbose: handleProxy
+2017-09-30 10:05:31.560 - info: Proxy GET:/waterRule/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.560 - verbose: proxyReject
+2017-09-30 10:05:31.560 - verbose: ensureLogin
+2017-09-30 10:05:31.560 - verbose: handleProxy
+2017-09-30 10:05:31.560 - info: Proxy POST:/waterRule/pageList To 192.168.3.203:8082
+2017-09-30 10:05:31.560 - verbose: proxyReject
+2017-09-30 10:05:31.561 - verbose: ensureLogin
+2017-09-30 10:05:31.561 - verbose: handleProxy
+2017-09-30 10:05:31.561 - info: Proxy POST:/waterRule/update To 192.168.3.203:8082
+2017-09-30 10:05:31.562 - verbose: proxyReject
+2017-09-30 10:05:31.562 - verbose: ensureLogin
+2017-09-30 10:05:31.562 - verbose: handleProxy
+2017-09-30 10:05:31.562 - info: Proxy GET:/waterRule/view To 192.168.3.203:8082
+2017-09-30 10:05:34.171 - debug:  Router get /message/sendsms
+2017-09-30 10:05:34.172 - debug:  Router get /message/check
+2017-09-30 10:05:34.172 - debug:  Router get /damSearcher/searchDam
+2017-09-30 10:05:34.172 - debug:  Router get /damSearcher/searchDamFolder
+2017-09-30 10:05:34.172 - debug:  Router get /folders
+2017-09-30 10:05:34.172 - debug:  Router post /folders/:id/sub_folders
+2017-09-30 10:05:34.173 - debug:  Router get /folderitems/v2/:folderId
+2017-09-30 10:05:34.173 - debug:  Router post /favorites
+2017-09-30 10:05:34.173 - debug:  Router get /favorites
+2017-09-30 10:05:34.174 - debug:  Router delete /favorites
+2017-09-30 10:05:34.174 - debug:  Router post /assets/downloadurl
+2017-09-30 10:05:34.174 - debug:  Router post /oauth2/access_token
+2017-09-30 10:05:34.174 - debug:  Router post /oauth2/refresh_token
+2017-09-30 10:05:34.174 - debug:  Router post /user
+2017-09-30 10:05:34.174 - debug:  Router post /assets/upload
+2017-09-30 10:05:34.175 - debug:  Router get /workgorups
+2017-09-30 10:05:34.175 - debug:  Router post /users
+2017-09-30 10:05:34.175 - debug:  Router post /userFolderPermissionList
+2017-09-30 10:05:34.175 - debug:  Router post /assets/downloadurl
+2017-09-30 10:05:34.175 - debug:  Router post /download/verify
+2017-09-30 10:05:34.175 - debug:  Router get /workgroups
+2017-09-30 10:05:34.175 - debug:  Router get /assets/:id
+2017-09-30 10:05:34.176 - debug:  Router get /assets/batch
+2017-09-30 10:05:34.176 - debug:  Router get /search
+2017-09-30 10:05:34.176 - debug:  Router get /profile
+2017-09-30 10:05:34.176 - debug:  Router get /download/proxy/:file
+2017-09-30 10:06:02.083 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:02.134 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:02.177 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:05.636 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:07.632 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:07.633 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:12.689 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:12.707 - info: user damtest@test.com posting to login to backend
+2017-09-30 10:06:12.731 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-09-30 10:06:12.732 - info: begin init user
+2017-09-30 10:06:12.864 - info: init user  success
+2017-09-30 10:06:12.865 - info:  userId=fe722730046928265bd7372bb281d6516, userName=damtest@test.com, displayName=dam管理员, email=damtest@test.com, permissions=[folder_management_page, assets_upload_page, assets_audit_page, no_audit, view_assets, download_assets, upload_assets, user_add, user_edit, user_view, role_add, role_view, role_edit, auth_view, vcg_view, vcg_download, vcg_edit_download, vcg_edit_view, weixin_matrix, system_manager, contract_manager, used_assets_manager, api_management_page, user_management, system_manager, newResource], customerId=11111, userType=1, isUploadAliYun=false, maxDownCount=10000, downCount=711, maxDownAmount=-1, downAmount=59.1
+2017-09-30 10:06:12.913 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:12.914 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:06:20.967 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:20.967 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:06:20.995 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:06:20.996 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:06:20.997 - info: proxy request path /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21 -> /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21
+2017-09-30 10:07:28.004 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:28.004 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:07:28.004 - info: begin init user
+2017-09-30 10:07:28.008 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:28.008 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:07:28.135 - info: init user  success
+2017-09-30 10:07:34.546 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:34.546 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:07:34.585 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:34.586 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:07:34.586 - info: proxy request path /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21 -> /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21
+2017-09-30 10:07:43.832 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:43.832 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:07:46.139 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:07:46.139 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:15:31.085 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:15:31.086 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:15:31.086 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:15:31.086 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:15:31.087 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:15:31.087 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:17:27.141 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:17:27.142 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:17:27.142 - info: begin init user
+2017-09-30 10:17:27.144 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:17:27.144 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:17:27.297 - info: init user  success
+2017-09-30 10:17:27.376 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:17:27.378 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:17:27.378 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:17:27.378 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 10:17:27.379 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 10:17:27.380 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:37.465 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:37.465 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:37.466 - info: begin init user
+2017-09-30 11:01:37.467 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:37.468 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:37.612 - info: init user  success
+2017-09-30 11:01:37.748 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:37.748 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:37.750 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:37.751 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:37.753 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:37.753 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:59.798 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:59.798 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:59.798 - info: begin init user
+2017-09-30 11:01:59.800 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:01:59.800 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:01:59.938 - info: init user  success
+2017-09-30 11:02:04.329 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:02:04.329 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:02:04.330 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:02:04.330 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:02:04.332 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:02:04.332 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:04:47.522 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:04:47.522 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:04:47.522 - info: begin init user
+2017-09-30 11:04:47.643 - info: init user  success
+2017-09-30 11:04:48.980 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:04:48.981 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:04:52.844 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:04:52.844 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:04:52.857 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:04:52.857 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:04:52.859 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:04:52.859 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:09:52.767 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:09:52.767 - info: user damtest@test.com posting to login to backend
+2017-09-30 11:09:52.779 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-09-30 11:09:52.779 - info: begin init user
+2017-09-30 11:09:52.899 - info: init user  success
+2017-09-30 11:09:52.899 - info:  userId=fe722730046928265bd7372bb281d6516, userName=damtest@test.com, displayName=dam管理员, email=damtest@test.com, permissions=[folder_management_page, assets_upload_page, assets_audit_page, no_audit, view_assets, download_assets, upload_assets, user_add, user_edit, user_view, role_add, role_view, role_edit, auth_view, vcg_view, vcg_download, vcg_edit_download, vcg_edit_view, weixin_matrix, system_manager, contract_manager, used_assets_manager, api_management_page, user_management, system_manager, newResource], customerId=11111, userType=1, isUploadAliYun=false, maxDownCount=10000, downCount=712, maxDownAmount=-1, downAmount=59.1
+2017-09-30 11:09:52.941 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:09:52.942 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:09:59.407 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:09:59.408 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:09:59.412 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:09:59.412 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:09:59.414 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:09:59.414 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:28.627 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:28.627 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:28.627 - info: begin init user
+2017-09-30 11:16:28.629 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:28.630 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:28.760 - info: init user  success
+2017-09-30 11:16:28.834 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:28.835 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:28.843 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:28.843 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:28.843 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:28.844 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:16:32.763 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:16:32.764 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:05.823 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:05.824 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:05.824 - info: begin init user
+2017-09-30 11:17:05.825 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:05.825 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:05.949 - info: init user  success
+2017-09-30 11:17:06.029 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:06.029 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:06.038 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:06.039 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:06.039 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:06.040 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:06.040 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:06.040 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:30.976 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:30.976 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:30.976 - info: begin init user
+2017-09-30 11:17:30.977 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:30.977 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:31.105 - info: init user  success
+2017-09-30 11:17:31.188 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:31.188 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:31.197 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:31.197 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:31.199 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:31.200 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:17:31.200 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:17:31.200 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:34.857 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:34.857 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:34.857 - info: begin init user
+2017-09-30 11:19:34.858 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:34.859 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:34.985 - info: init user  success
+2017-09-30 11:19:35.070 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:35.071 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:35.076 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:35.077 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:35.078 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:35.079 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:19:35.079 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:19:35.080 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.128 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.129 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.129 - info: begin init user
+2017-09-30 11:20:03.131 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.131 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.248 - info: init user  success
+2017-09-30 11:20:03.350 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.350 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.356 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.356 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.361 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.361 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:20:03.363 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:20:03.363 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.773 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.774 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.774 - info: begin init user
+2017-09-30 11:28:08.774 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.775 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.897 - info: init user  success
+2017-09-30 11:28:08.977 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.977 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.984 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.984 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.987 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.987 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:08.987 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:08.988 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.242 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.242 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.242 - info: begin init user
+2017-09-30 11:28:47.245 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.245 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.371 - info: init user  success
+2017-09-30 11:28:47.447 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.447 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.455 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.456 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.457 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.457 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:28:47.458 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:28:47.459 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:14.924 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:14.924 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:14.924 - info: begin init user
+2017-09-30 11:30:14.925 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:14.925 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:15.046 - info: init user  success
+2017-09-30 11:30:15.133 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:15.133 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:15.153 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:15.154 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:15.156 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:15.156 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:30:15.156 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:30:15.157 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.242 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.242 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.243 - info: begin init user
+2017-09-30 11:31:33.243 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.244 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.365 - info: init user  success
+2017-09-30 11:31:33.445 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.446 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.453 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.453 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.454 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.455 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 11:31:33.456 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 11:31:33.456 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:18:26.185 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:18:26.186 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:18:29.250 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:18:29.250 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.053 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.053 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.053 - info: begin init user
+2017-09-30 13:20:08.055 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.055 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.184 - info: init user  success
+2017-09-30 13:20:08.279 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.279 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.281 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.281 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.282 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.282 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:08.282 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:08.283 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:12.000 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:12.000 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:15.481 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:15.481 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:33.506 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:33.506 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:20:39.892 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:20:39.893 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:21:26.546 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:21:26.546 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:21:52.521 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:21:52.521 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:22:12.003 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:22:33.528 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:13.635 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:13.635 - info: user damtest@test.com posting to login to backend
+2017-09-30 13:28:13.648 - info: user fe722730046928265bd7372bb281d6516 login success..
+2017-09-30 13:28:13.649 - info: begin init user
+2017-09-30 13:28:13.774 - info: init user  success
+2017-09-30 13:28:13.775 - info:  userId=fe722730046928265bd7372bb281d6516, userName=damtest@test.com, displayName=dam管理员, email=damtest@test.com, permissions=[folder_management_page, assets_upload_page, assets_audit_page, no_audit, view_assets, download_assets, upload_assets, user_add, user_edit, user_view, role_add, role_view, role_edit, auth_view, vcg_view, vcg_download, vcg_edit_download, vcg_edit_view, weixin_matrix, system_manager, contract_manager, used_assets_manager, api_management_page, user_management, system_manager, newResource], customerId=11111, userType=1, isUploadAliYun=false, maxDownCount=10000, downCount=712, maxDownAmount=-1, downAmount=59.1
+2017-09-30 13:28:13.814 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:13.814 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:15.669 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:15.669 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:15.669 - info: [ SERVER ] [ passIfHaveAnyOneIn ] getting user permission list   url=/user/pageList?orderby=1&pageNum=1&pageSize=10, permissionCodes=[user_add, user_edit, user_view]
+2017-09-30 13:28:15.692 - info: [ SERVER ] [ passIfHaveAnyOneIn ] got user  permission List : folder_management_page,assets_upload_page,assets_audit_page,no_audit,view_assets,download_assets,upload_assets,user_add,user_edit,user_view,role_add,role_view,role_edit,auth_view,vcg_view,vcg_download,vcg_edit_download,vcg_edit_view,weixin_matrix,system_manager,contract_manager,used_assets_manager,api_management_page url=/user/pageList?orderby=1&pageNum=1&pageSize=10, permissionCodes=[user_add, user_edit, user_view]
+2017-09-30 13:28:15.692 - info: [ SERVER ] [ passIfHaveAnyOneIn ] passed ,go next  url=/user/pageList?orderby=1&pageNum=1&pageSize=10, permissionCodes=[user_add, user_edit, user_view]
+2017-09-30 13:28:20.464 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:20.464 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:20.470 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:20.471 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:20.471 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:20.472 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:20.472 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:20.472 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:24.037 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:24.037 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.594 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.595 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.595 - info: begin init user
+2017-09-30 13:28:48.604 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.605 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.715 - info: init user  success
+2017-09-30 13:28:48.792 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.792 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.802 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.802 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.807 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.807 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:48.808 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:48.808 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:28:52.371 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:28:52.371 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:29:01.953 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:29:01.954 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:52.962 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:52.962 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:52.962 - info: begin init user
+2017-09-30 13:40:52.963 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:52.964 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:53.090 - info: init user  success
+2017-09-30 13:40:53.169 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:53.170 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:53.178 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:53.179 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:53.179 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:53.180 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:40:53.180 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:40:53.180 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.574 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.575 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.575 - info: begin init user
+2017-09-30 13:41:04.576 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.576 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.713 - info: init user  success
+2017-09-30 13:41:04.827 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.828 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.835 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.836 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.836 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.837 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:04.837 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:04.837 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:41:19.756 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:41:19.757 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.502 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.502 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.502 - info: begin init user
+2017-09-30 13:44:22.503 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.503 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.626 - info: init user  success
+2017-09-30 13:44:22.722 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.722 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.725 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.725 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.726 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.726 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:44:22.726 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:44:22.727 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:15.990 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:15.991 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:15.991 - info: begin init user
+2017-09-30 13:45:15.992 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:15.992 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:16.110 - info: init user  success
+2017-09-30 13:45:16.204 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:16.204 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:16.205 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:16.205 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:16.206 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:16.206 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:45:16.206 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:45:16.207 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.484 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.484 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.484 - info: begin init user
+2017-09-30 13:47:05.485 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.486 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.625 - info: init user  success
+2017-09-30 13:47:05.722 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.722 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.723 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.723 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.724 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.724 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 13:47:05.724 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 13:47:05.725 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.361 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.362 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.362 - info: begin init user
+2017-09-30 14:09:21.363 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.363 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.493 - info: init user  success
+2017-09-30 14:09:21.606 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.607 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.609 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.610 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.610 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.610 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:09:21.611 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:09:21.612 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.263 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.263 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.264 - info: begin init user
+2017-09-30 14:20:46.265 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.265 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.392 - info: init user  success
+2017-09-30 14:20:46.462 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.462 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.472 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.472 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.473 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.473 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:20:46.474 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:20:46.474 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.199 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.199 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.199 - info: begin init user
+2017-09-30 14:21:24.200 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.201 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.323 - info: init user  success
+2017-09-30 14:21:24.398 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.398 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.406 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.406 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.409 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.409 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:21:24.409 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:21:24.409 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.695 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.695 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.695 - info: begin init user
+2017-09-30 14:29:45.696 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.697 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.820 - info: init user  success
+2017-09-30 14:29:45.899 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.899 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.906 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.907 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.908 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.908 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:29:45.909 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:29:45.910 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:10.764 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:10.765 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:10.765 - info: begin init user
+2017-09-30 14:30:10.766 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:10.766 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:10.892 - info: init user  success
+2017-09-30 14:30:10.979 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:10.980 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:10.999 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:11.000 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:11.001 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:11.001 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:30:11.003 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:30:11.003 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.004 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.004 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.004 - info: begin init user
+2017-09-30 14:33:12.006 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.006 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.125 - info: init user  success
+2017-09-30 14:33:12.200 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.201 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.207 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.208 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.209 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.209 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:33:12.210 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:33:12.210 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.098 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.098 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.098 - info: begin init user
+2017-09-30 14:42:40.099 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.099 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.228 - info: init user  success
+2017-09-30 14:42:40.288 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.289 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.296 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.297 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.300 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.300 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:42:40.300 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:42:40.301 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.718 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.718 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.718 - info: begin init user
+2017-09-30 14:54:56.719 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.720 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.842 - info: init user  success
+2017-09-30 14:54:56.914 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.914 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.927 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.928 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.931 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.931 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:54:56.931 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:54:56.932 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:00.187 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:00.188 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:00.188 - info: begin init user
+2017-09-30 14:59:00.189 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:00.190 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:04.586 - info: init user  success
+2017-09-30 14:59:04.653 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:04.653 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:04.869 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:04.870 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:04.870 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:04.871 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 14:59:04.871 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 14:59:04.872 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:23:41.184 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:23:41.185 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:23:41.212 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:23:41.213 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:23:41.213 - info: proxy request path /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21 -> /favorite/pageList?user_id=fe722730046928265bd7372bb281d6516&asset_type=1&source=2&pageNum=1&pageSize=21
+2017-09-30 16:23:53.151 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:23:53.151 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:24:09.427 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:24:09.428 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:55:27.508 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:55:27.508 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:55:27.508 - info: begin init user
+2017-09-30 16:55:27.509 - info: SessionID i2l-cxCn6trrqft2REBGFNyY53ZKVN_7    i2l-cxCn6trrqft2REBGFNyY53ZKVN_7
+2017-09-30 16:55:27.509 - info: current user is fe722730046928265bd7372bb281d6516
+2017-09-30 16:55:27.636 - info: init user  success
